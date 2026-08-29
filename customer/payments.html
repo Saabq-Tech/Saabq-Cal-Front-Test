@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -51,8 +51,8 @@
         <div class="flex items-center gap-3">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
           <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
             <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
@@ -73,7 +73,7 @@
       </div>
 
       <!-- Consumer Metrics Pills -->
-      <div class="grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         
         <div class="card p-5 shadow-sm border-s-4 border-s-[var(--primary)] space-y-1">
           <span class="text-xs text-[var(--text-tertiary)] font-bold block" data-ar="إجمالي المدفوعات الناجحة" data-en="Total Paid">إجمالي المدفوعات الناجحة</span>
@@ -100,21 +100,21 @@
     <div class="space-y-4">
       <div class="flex items-center justify-between">
         <h2 class="text-base sm:text-lg font-bold text-[var(--text-primary)]" data-ar="سجل الحجوزات والعمليات الأخيرة" data-en="Recent Transactions">سجل الحجوزات والعمليات الأخيرة</h2>
-        <span class="badge-primary text-xs">شوف كله</span>
+        <span class="badge badge-primary text-xs">شوف كله</span>
       </div>
 
       <div class="space-y-3">
 
         <!-- Transaction 1 (Paid & Confirmed) -->
-        <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+        <div class="card p-5 hover:border-[var(--primary)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
           <div class="flex items-start sm:items-center gap-4">
             <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
               💳
             </div>
             <div>
               <div class="flex-wrap items-center gap-2 mb-1">
-                <span class="badge-emerald text-[10px] font-bold">مدفوع ومؤكد ✓</span>
-                <span class="badge-primary text-[10px]">مدى (Mada)</span>
+                <span class="badge badge-emerald text-[10px] font-bold">مدفوع ومؤكد ✓</span>
+                <span class="badge badge-primary text-[10px]">مدى (Mada)</span>
                 <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-94821</span>
               </div>
               <h3 class="font-bold text-sm text-[var(--text-primary)]">كشف واستشارة طب أسرة • عيادات رعاية الأسرة</h3>
@@ -134,15 +134,15 @@
         </div>
 
         <!-- Transaction 2 (Pending Bank Transfer) -->
-        <div class="card p-5 border-amber-500/40 bg-amber-500/5 hover:border-amber-500 transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+        <div class="card p-5 border-amber-500/40 bg-amber-500/5 hover:border-amber-500 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
           <div class="flex items-start sm:items-center gap-4">
             <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
               ⏳
             </div>
             <div>
               <div class="flex-wrap items-center gap-2 mb-1">
-                <span class="badge-amber text-[10px] font-bold">بانتظار التحقق من الإيصال</span>
-                <span class="badge-secondary text-[10px]">تحويل بنكي الراجحي</span>
+                <span class="badge badge-amber text-[10px] font-bold">بانتظار التحقق من الإيصال</span>
+                <span class="badge badge-secondary text-[10px]">تحويل بنكي الراجحي</span>
                 <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-94804</span>
               </div>
               <h3 class="font-bold text-sm text-[var(--text-primary)]">استشارة قانونية وتجارية • مكتب النخبة للمحاماة</h3>
@@ -162,15 +162,15 @@
         </div>
 
         <!-- Transaction 3 (Previous Completed) -->
-        <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+        <div class="card p-5 hover:border-[var(--primary)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
           <div class="flex items-start sm:items-center gap-4">
             <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
               💳
             </div>
             <div>
               <div class="flex-wrap items-center gap-2 mb-1">
-                <span class="badge-emerald text-[10px] font-bold">مكتمل ومدفوع ✓</span>
-                <span class="badge-primary text-[10px]">Apple Pay</span>
+                <span class="badge badge-emerald text-[10px] font-bold">مكتمل ومدفوع ✓</span>
+                <span class="badge badge-primary text-[10px]">Apple Pay</span>
                 <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-88310</span>
               </div>
               <h3 class="font-bold text-sm text-[var(--text-primary)]">جلسة هيدرافيشل ملكية • مركز جلو للعناية والتجميل</h3>

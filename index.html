@@ -30,7 +30,7 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- Header Banner -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -47,8 +47,8 @@
         <div class="flex items-center gap-2">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
         </div>
       </div>
@@ -78,16 +78,16 @@
             <p class="text-[11px] text-[var(--text-secondary)]" data-ar="إدارة المواعيد، الجداول، الخدمات، العملاء، الصلاحيات، الإعدادات، والمحادثات" data-en="Manage bookings, schedules, services, CRM, roles, settings & live chat">إدارة المواعيد، الجداول، الخدمات، العملاء، الصلاحيات، الإعدادات، والمحادثات</p>
           </div>
         </div>
-        <span class="badge-primary text-xs">Member Portal</span>
+        <span class="badge badge-primary text-xs">Member Portal</span>
       </div>
 
-      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         
-        <a href="member/dashboard.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/dashboard.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">📊</span>
-              <span class="badge-emerald text-[10px]">الرئيسية</span>
+              <span class="badge badge-emerald text-[10px]">الرئيسية</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">لوحة التحكم (Dashboard)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">المؤشرات الحية، جدول اليوم، والإحصائيات</p>
@@ -98,11 +98,11 @@
           </div>
         </a>
 
-        <a href="member/bookings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/bookings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">📅</span>
-              <span class="badge-primary text-[10px]">المواعيد</span>
+              <span class="badge badge-primary text-[10px]">المواعيد</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">إدارة الحجوزات (Bookings)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">فلترة المواعيد، جدول المواعيد، والتصدير</p>
@@ -113,11 +113,11 @@
           </div>
         </a>
 
-        <a href="member/booking-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/booking-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">📋</span>
-              <span class="badge-secondary text-[10px]">تفاصيل</span>
+              <span class="badge badge-secondary text-[10px]">تفاصيل</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">تفاصيل الحجز (Booking Dossier)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">ملف العميل، فحص الإيصال، وملاحظات الفريق</p>
@@ -128,11 +128,11 @@
           </div>
         </a>
 
-        <a href="member/services.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/services.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🏷️</span>
-              <span class="badge-primary text-[10px]">الخدمات</span>
+              <span class="badge badge-primary text-[10px]">الخدمات</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الخدمات والأسعار (Services)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">كتالوج الخدمات، المدد، والأسعار ومودال الإضافة</p>
@@ -143,11 +143,11 @@
           </div>
         </a>
 
-        <a href="member/schedules.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/schedules.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">⏰</span>
-              <span class="badge-amber text-[10px]">الجداول</span>
+              <span class="badge badge-amber text-[10px]">الجداول</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">أوقات العمل (Schedules)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">بناء فترات العمل الأسبوعية والإجازات والاستثناءات</p>
@@ -158,11 +158,11 @@
           </div>
         </a>
 
-        <a href="member/customers.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/customers.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">👥</span>
-              <span class="badge-primary text-[10px]">العملاء</span>
+              <span class="badge badge-primary text-[10px]">العملاء</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">دليل العملاء (Customers CRM)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة العملاء، إجمالي الزيارات، والمصروفات</p>
@@ -173,11 +173,11 @@
           </div>
         </a>
 
-        <a href="member/resources.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/resources.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🏥</span>
-              <span class="badge-secondary text-[10px]">الموارد</span>
+              <span class="badge badge-secondary text-[10px]">الموارد</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">العيادات والغرف (Resources)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">إدارة غرف الكشف والمعدات المشتركة</p>
@@ -188,11 +188,11 @@
           </div>
         </a>
 
-        <a href="member/members.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/members.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">👨‍⚕️</span>
-              <span class="badge-primary text-[10px]">الفريق</span>
+              <span class="badge badge-primary text-[10px]">الفريق</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">أعضاء الفريق (Members)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة الأطباء والموظفين والأدوار ودعوة عضو</p>
@@ -203,11 +203,11 @@
           </div>
         </a>
 
-        <a href="member/roles.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/roles.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🛡️</span>
-              <span class="badge-emerald text-[10px]">الصلاحيات</span>
+              <span class="badge badge-emerald text-[10px]">الصلاحيات</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الأدوار والصلاحيات (Roles)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">مصفوفة الصلاحيات الـ 25+ لمساحة العمل</p>
@@ -218,11 +218,11 @@
           </div>
         </a>
 
-        <a href="member/settings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/settings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">⚙️</span>
-              <span class="badge-primary text-[10px]">8 تبويبات</span>
+              <span class="badge badge-primary text-[10px]">8 تبويبات</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">إعدادات المنشأة (Settings)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">الهوية، الأسئلة المخصصة، الفواتير والقوالب</p>
@@ -233,11 +233,11 @@
           </div>
         </a>
 
-        <a href="member/subscription.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/subscription.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">💳</span>
-              <span class="badge-secondary text-[10px]">الاشتراك</span>
+              <span class="badge badge-secondary text-[10px]">الاشتراك</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الاشتراك والفوترة (Subscription)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">عدادات الاستخدام، الترقية، وتاريخ الفواتير</p>
@@ -248,11 +248,11 @@
           </div>
         </a>
 
-        <a href="member/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">💰</span>
-              <span class="badge-amber text-[10px]">المالية</span>
+              <span class="badge badge-amber text-[10px]">المالية</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">المدفوعات والإيصالات (Finance)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة مراجعة وتأكيد الإيصالات البنكية</p>
@@ -263,11 +263,11 @@
           </div>
         </a>
 
-        <a href="member/notifications.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/notifications.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🔔</span>
-              <span class="badge-primary text-[10px]">التكامل</span>
+              <span class="badge badge-primary text-[10px]">التكامل</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">التكامل والتنبيهات (Integrations)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">تقويم جوجل، تليجرام، والرسائل النصية SMS</p>
@@ -278,11 +278,11 @@
           </div>
         </a>
 
-        <a href="member/chat.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="member/chat.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">💬</span>
-              <span class="badge-emerald text-[10px]">المحادثات</span>
+              <span class="badge badge-emerald text-[10px]">المحادثات</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">المحادثات المباشرة (Live Chat)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">مركز الدعم والمراسلة الفورية مع العملاء</p>
@@ -306,16 +306,16 @@
             <p class="text-[11px] text-[var(--text-secondary)]" data-ar="استكشاف العيادات، حجز المواعيد، التقويم الشهري، التذاكر، والمدفوعات" data-en="Explore clinics, multi-step booking, calendar view, tickets & payments">استكشاف العيادات، حجز المواعيد، التقويم الشهري، التذاكر، والمدفوعات</p>
           </div>
         </div>
-        <span class="badge-emerald text-xs">Customer Portal</span>
+        <span class="badge badge-emerald text-xs">Customer Portal</span>
       </div>
 
-      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         
-        <a href="customer/explore.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/explore.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🔍</span>
-              <span class="badge-emerald text-[10px]">استكشف</span>
+              <span class="badge badge-emerald text-[10px]">استكشف</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">استكشاف المراكز والخدمات</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">دليل المنشآت والعيادات مع فلاتر المدن والتقييمات</p>
@@ -326,11 +326,11 @@
           </div>
         </a>
 
-        <a href="customer/workspace.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/workspace.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🏥</span>
-              <span class="badge-primary text-[10px]">الملف التعريفي</span>
+              <span class="badge badge-primary text-[10px]">الملف التعريفي</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">صفحة المنشأة العامة</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">غلاف المنشأة، قائمة الخدمات، والفريق الطبي</p>
@@ -341,11 +341,11 @@
           </div>
         </a>
 
-        <a href="customer/booking.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/booking.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">📝</span>
-              <span class="badge-primary text-[10px]">حجز فوري</span>
+              <span class="badge badge-primary text-[10px]">حجز فوري</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">معالج حجز الموعد المتكامل</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">اختيار المختص، التقويم والأوقات، ورفع الإيصال</p>
@@ -356,11 +356,11 @@
           </div>
         </a>
 
-        <a href="customer/appointments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/appointments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">📅</span>
-              <span class="badge-emerald text-[10px]">تقويم + قائمة</span>
+              <span class="badge badge-emerald text-[10px]">تقويم + قائمة</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">مواعيدي</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">عرض التقويم الافتراضي وبطاقات المواعيد السابقة</p>
@@ -371,11 +371,11 @@
           </div>
         </a>
 
-        <a href="customer/appointment-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/appointment-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">🎫</span>
-              <span class="badge-secondary text-[10px]">رمز QR</span>
+              <span class="badge badge-secondary text-[10px]">رمز QR</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">تذكرة الموعد (Ticket)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">تذكرة الدخول، الباركود، وإلغاء/تعديل الموعد</p>
@@ -386,11 +386,11 @@
           </div>
         </a>
 
-        <a href="customer/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">💳</span>
-              <span class="badge-amber text-[10px]">الفواتير</span>
+              <span class="badge badge-amber text-[10px]">الفواتير</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الحسابات والفواتير</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">سجل المعاملات الضريبية وتحميل الفواتير PDF</p>
@@ -401,11 +401,11 @@
           </div>
         </a>
 
-        <a href="customer/profile.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="customer/profile.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="text-lg">⚙️</span>
-              <span class="badge-primary text-[10px]">الأمان</span>
+              <span class="badge badge-primary text-[10px]">الأمان</span>
             </div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الملف الشخصي والأمان</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">التحقق بخطوتين، مفاتيح المرور، والأجهزة النشطة</p>
@@ -429,11 +429,11 @@
             <p class="text-[11px] text-[var(--text-secondary)]" data-ar="سجل دخولك، معالج المنشأة، استرجاع الباسورد، و 2FA" data-en="Sign in, 3-step workspace registration wizard, password reset & 2FA">تسجيل الدخول، معالج المنشأة، استعادة كلمة المرور، و 2FA</p>
           </div>
         </div>
-        <span class="badge-amber text-xs">Auth Portal</span>
+        <span class="badge badge-amber text-xs">Auth Portal</span>
       </div>
 
-      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-        <a href="shared/login.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <a href="shared/login.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">تسجيل الدخول (Login)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">Google One-Tap وPasskeys ومفاتيح المرور</p>
@@ -443,7 +443,7 @@
           </div>
         </a>
 
-        <a href="shared/register.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="shared/register.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">إنشاء حساب ومعالج المنشأة</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">معالج تسجيل مساحة العمل من 3 خطوات</p>
@@ -453,7 +453,7 @@
           </div>
         </a>
 
-        <a href="shared/two-factor.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="shared/two-factor.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">التحقق بخطوتين (2FA)</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">إدخال رمز المصادقة واستخدام رموز الاسترداد</p>
@@ -463,7 +463,7 @@
           </div>
         </a>
 
-        <a href="shared/forgot-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="shared/forgot-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">نسيت كلمة المرور</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">طلب رابط الاستعادة بالبريد الإلكتروني</p>
@@ -473,7 +473,7 @@
           </div>
         </a>
 
-        <a href="shared/reset-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="shared/reset-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">إعادة تعيين كلمة المرور</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">تعيين كلمة المرور الجديدة وتأكيدها</p>
@@ -483,7 +483,7 @@
           </div>
         </a>
 
-        <a href="shared/verify-email.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="shared/verify-email.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div>
             <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">تأكيد البريد الإلكتروني</h3>
             <p class="text-[11px] text-[var(--text-secondary)] mt-1">شاشة التحقق وإعادة إرسال رابط التفعيل</p>
@@ -505,35 +505,35 @@
             <p class="text-[11px] text-[var(--text-secondary)]" data-ar="الرئيسية، الأسعار، المميزات، مين إحنا وحكايتنا، الأسئلة، والشروط" data-en="Landing, pricing, features, about, FAQ & terms">الرئيسية، الأسعار، المميزات، من نحن، الأسئلة، والشروط</p>
           </div>
         </div>
-        <span class="badge-secondary text-xs">Public Site</span>
+        <span class="badge badge-secondary text-xs">Public Site</span>
       </div>
 
-      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <a href="public/index.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <a href="public/index.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الرئيسية (Landing Page)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">واجهة المنصة مع بطاقة العرض الحية</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/index.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/pricing.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/pricing.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الأسعار والخطط (Pricing)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">مقارنة الخطط ومحول الشهري/السنوي</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/pricing.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/features.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/features.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">المميزات (Features)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">استعراض إمكانيات الجدولة والتكامل</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/features.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/about.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/about.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">من نحن (About)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">قصة سابق، الرؤية، والقيم الأساسية</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/about.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/faq.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/faq.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الأسئلة الشائعة (FAQ)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">أكورديون تفاعلي مصنف حسب المواضيع</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/faq.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/terms.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/terms.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الشروط والأحكام (Terms)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">الاتفاقية القانونية وقواعد الخدمة</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/terms.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>
-        <a href="public/privacy.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+        <a href="public/privacy.html" class="card p-4 hover:border-[var(--primary)] transition-all flex flex-col justify-between group">
           <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">سياسة الخصوصية (Privacy)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">سياسات أمان وتشفير بيانات المستخدمين</p></div>
           <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/privacy.html</span><span class="font-sans font-bold">فتح ←</span></div>
         </a>

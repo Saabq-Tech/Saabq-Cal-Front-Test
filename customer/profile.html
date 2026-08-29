@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -51,8 +51,8 @@
         <div class="flex items-center gap-3">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
           <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border-[var(--primary)]" style="background:var(--bg-secondary)">
             <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
@@ -66,7 +66,7 @@
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-6 lg:py-10 flex-1 w-full space-y-8">
 
     <!-- ── CONSUMER PROFILE HERO CARD (Apple/Airbnb Style) ── -->
-    <div class="card p-6 sm:p-8 bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-secondary)] shadow-lg flex-col sm:flex-row sm:items-center justify-between gap-6 border-2 border-[var(--border-color)]">
+    <div class="card p-6 sm:p-8 bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-secondary)] shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-2 border-[var(--border-color)]">
       <div class="flex items-center gap-5">
         <div class="relative">
           <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl gradient-brand text-white font-black text-3xl sm:text-4xl flex items-center justify-center shadow-xl">
@@ -80,7 +80,7 @@
         <div class="space-y-1">
           <div class="flex items-center gap-2">
             <h1 class="text-xl sm:text-2xl font-black text-[var(--text-primary)]">أحمد علي الغامدي</h1>
-            <span class="badge-emerald text-xs font-bold">موثق ✓</span>
+            <span class="badge badge-emerald text-xs font-bold">موثق ✓</span>
           </div>
           <p class="text-xs text-[var(--text-secondary)] font-mono">ahmed.ghamdi@example.com</p>
           <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
@@ -96,7 +96,7 @@
           <span class="text-[10px] text-[var(--text-tertiary)] block">إجمالي المواعيد والحجوزات</span>
           <span class="text-base font-extrabold text-[var(--primary)]">10 مواعيد</span>
         </div>
-        <span class="badge-primary text-[10px]">حساب عميل نشط</span>
+        <span class="badge badge-primary text-[10px]">حساب عميل نشط</span>
       </div>
     </div>
 
@@ -172,7 +172,7 @@
             <span class="text-[10px] text-[var(--text-tertiary)] font-mono">تم الإنشاء في 28 أغسطس 2026 • آخر استخدام اليوم</span>
           </div>
         </div>
-        <span class="badge-emerald text-[10px] font-bold">نشط ومفعل ✓</span>
+        <span class="badge badge-emerald text-[10px] font-bold">نشط ومفعل ✓</span>
       </div>
     </div>
 
@@ -186,10 +186,10 @@
             <p class="text-xs text-[var(--text-secondary)]">حماية إضافية لحسابك عبر تطبيقات المصادقة (Google Authenticator)</p>
           </div>
         </div>
-        <span class="badge-emerald text-xs font-bold">مفعل 🔒</span>
+        <span class="badge badge-emerald text-xs font-bold">مفعل 🔒</span>
       </div>
 
-      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)]">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)]">
         <div class="space-y-1">
           <span class="text-xs font-bold text-[var(--text-primary)] block">تطبيق المصادقة (TOTP Authenticator)</span>
           <p class="text-[11px] text-[var(--text-secondary)]">تم ربط الحساب برمز QR في 15 أغسطس 2026.</p>

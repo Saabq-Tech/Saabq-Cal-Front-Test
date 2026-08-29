@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -51,8 +51,8 @@
         <div class="flex items-center gap-3">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
           <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
             <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
@@ -81,18 +81,18 @@
   <!-- Workspace Identity Bar -->
   <div class="border-b" style="background: var(--bg-card); border-color: var(--border-color)">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex-col lg:flex-row lg:items-end justify-between gap-6 -mt-16 sm:-mt-20 pb-6 relative z-20">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 -mt-16 sm:-mt-20 pb-6 relative z-20">
         
         <!-- Logo & Title -->
-        <div class="flex-col sm:flex-row items-start sm:items-end gap-5">
+        <div class="flex flex-col sm:flex-row items-start sm:items-end gap-5">
           <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white shadow-2xl p-3 border-4 flex items-center justify-center text-4xl sm:text-5xl font-extrabold text-teal-700 flex-shrink-0" style="border-color: var(--bg-card)">
             🌿
           </div>
           <div>
             <div class="flex-wrap items-center gap-2.5 mb-1.5">
               <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:var(--text-primary)" data-ar="عيادات رعاية الأسرة" data-en="Family Care Clinics">عيادات رعاية الأسرة</h1>
-              <span class="badge-emerald text-xs font-bold" data-ar="منشأة موثقة ✓" data-en="Verified ✓">منشأة موثقة ✓</span>
-              <span class="badge-primary text-xs" data-ar="تأكيد فوري ⚡" data-en="Instant Confirmation ⚡">تأكيد فوري ⚡</span>
+              <span class="badge badge-emerald text-xs font-bold" data-ar="منشأة موثقة ✓" data-en="Verified ✓">منشأة موثقة ✓</span>
+              <span class="badge badge-primary text-xs" data-ar="تأكيد فوري ⚡" data-en="Instant Confirmation ⚡">تأكيد فوري ⚡</span>
             </div>
             
             <div class="flex-wrap items-center gap-3 text-xs sm:text-sm text-[var(--text-secondary)]">
@@ -117,7 +117,7 @@
         <!-- Direct Booking Call to Action -->
         <div class="flex items-center gap-3">
           <a href="booking.html" class="btn-primary !py-3.5 !px-8 !rounded-2xl text-sm font-bold shadow-xl flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
             <span data-ar="حجز موعد الآن ←" data-en="Book an Appointment →">حجز موعد الآن ←</span>
           </a>
         </div>
@@ -149,13 +149,13 @@
               <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="الخدمات والمواعيد المتاحة للحجز (3)" data-en="Available Booking Services (3)">الخدمات والمواعيد المتاحة للحجز (3)</h2>
               <p class="text-xs text-[var(--text-secondary)]" data-ar="اختر الخدمة المناسبة وحدد الموعد المباشر مع الاستشاري" data-en="Select a service to choose your preferred slot">اختر الخدمة المناسبة وحدد الموعد المباشر مع الاستشاري</p>
             </div>
-            <span class="badge-primary text-xs font-bold">تأكيد إلكتروني فوري</span>
+            <span class="badge badge-primary text-xs font-bold">تأكيد إلكتروني فوري</span>
           </div>
 
           <div class="space-y-3">
 
             <!-- Service 1 -->
-            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
                   🩺
@@ -163,7 +163,7 @@
                 <div class="space-y-1">
                   <div class="flex items-center gap-2">
                     <h3 class="font-bold text-sm:text-base text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">كشف واستشارة طب أسرة</h3>
-                    <span class="badge-emerald text-[10px]">حضوري</span>
+                    <span class="badge badge-emerald text-[10px]">حضوري</span>
                   </div>
                   <p class="text-xs text-[var(--text-secondary)]">فحص سريري متكامل، قياس المؤشرات الحيوية، وكتابة الوصفة الطبية المعتمدة.</p>
                   <div class="flex items-center gap-4 text-xs font-medium text-[var(--text-tertiary)] pt-1">
@@ -186,7 +186,7 @@
             </div>
 
             <!-- Service 2 -->
-            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
                   🦷
@@ -194,7 +194,7 @@
                 <div class="space-y-1">
                   <div class="flex items-center gap-2">
                     <h3 class="font-bold text-sm:text-base text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">فحص وتنظيف أسنان شامل</h3>
-                    <span class="badge-emerald text-[10px]">حضوري</span>
+                    <span class="badge badge-emerald text-[10px]">حضوري</span>
                   </div>
                   <p class="text-xs text-[var(--text-secondary)]">إزالة الجير والتكلسات، فحص اللثة بالأشعة السينية، وتلميع الأسنان.</p>
                   <div class="flex items-center gap-4 text-xs font-medium text-[var(--text-tertiary)] pt-1">
@@ -217,7 +217,7 @@
             </div>
 
             <!-- Service 3 -->
-            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
                   💻
@@ -270,25 +270,25 @@
           <div class="slider-container">
             <div id="galleryTrack" class="slider-track">
               <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-                <div class="h-44 rounded-2xl bg-gradient-to-br from-teal-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-teal-800 to-slate-900 p-4 text-white flex flex-col justify-end shadow-md relative overflow-hidden">
                   <span class="text-2xl mb-1">🛋️</span>
                   <span class="font-bold text-xs">صالة الاستقبال والانتظار VIP</span>
                 </div>
               </div>
               <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-                <div class="h-44 rounded-2xl bg-gradient-to-br from-blue-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-blue-800 to-slate-900 p-4 text-white flex flex-col justify-end shadow-md relative overflow-hidden">
                   <span class="text-2xl mb-1">🩺</span>
                   <span class="font-bold text-xs">غرفة الفحص والاستشارات (1)</span>
                 </div>
               </div>
               <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-                <div class="h-44 rounded-2xl bg-gradient-to-br from-purple-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-purple-800 to-slate-900 p-4 text-white flex flex-col justify-end shadow-md relative overflow-hidden">
                   <span class="text-2xl mb-1">🦷</span>
                   <span class="font-bold text-xs">وحدة علاج الأسنان والتعقيم المتطور</span>
                 </div>
               </div>
               <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-                <div class="h-44 rounded-2xl bg-gradient-to-br from-emerald-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-emerald-800 to-slate-900 p-4 text-white flex flex-col justify-end shadow-md relative overflow-hidden">
                   <span class="text-2xl mb-1">🧪</span>
                   <span class="font-bold text-xs">مختبر التحاليل الطبية الفورية</span>
                 </div>
@@ -300,7 +300,7 @@
         <!-- Specialists Team Section -->
         <div class="space-y-4">
           <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الفريق الطبي والأخصائيين" data-en="Medical Specialists">الفريق الطبي والأخصائيين</h2>
-          <div class="grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             
             <div class="card p-4 flex items-center gap-3.5 shadow-sm">
               <div class="w-14 h-14 rounded-2xl gradient-brand text-white text-xl font-bold flex items-center justify-center shadow-md">
@@ -356,7 +356,7 @@
             <div id="reviewsTrack" class="slider-track">
               
               <div class="slider-slider-slide-sm-2">
-                <div class="card p-4 space-y-2 h-full flex-col justify-between shadow-sm">
+                <div class="card p-4 space-y-2 h-full flex flex-col justify-between shadow-sm">
                   <div>
                     <div class="flex text-amber-400 text-xs mb-1">★★★★★</div>
                     <p class="text-xs text-[var(--text-secondary)]">تجربة ممتازة جداً، الدخول بدون انتظار عبر مسح رمز الـ QR مباشرة، والدكتور فهد قمة في الذوق والاحترافية.</p>
@@ -368,7 +368,7 @@
               </div>
 
               <div class="slider-slider-slide-sm-2">
-                <div class="card p-4 space-y-2 h-full flex-col justify-between shadow-sm">
+                <div class="card p-4 space-y-2 h-full flex flex-col justify-between shadow-sm">
                   <div>
                     <div class="flex text-amber-400 text-xs mb-1">★★★★★</div>
                     <p class="text-xs text-[var(--text-secondary)]">جلسة تنظيف الأسنان مع د. سارة كانت مريحة وغير مؤلمة إطلاقاً. العيادة نظيفة جداً وراقية.</p>

@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -49,8 +49,8 @@
         <div class="flex items-center gap-2">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-2.5 py-1 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
         </div>
       </div>
@@ -61,7 +61,7 @@
   <main class="max-w-4xl mx-auto px-4 sm:px-6 py-6 lg:py-10 flex-1 w-full space-y-6">
 
     <!-- Live Countdown Banner -->
-    <div class="p-4 rounded-2xl border bg-gradient-to-r from-emerald-500/10 via-[var(--bg-card)] to-emerald-500/5 border-emerald-500/30 flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+    <div class="p-4 rounded-2xl border bg-gradient-to-r from-emerald-500/10 via-[var(--bg-card)] to-emerald-500/5 border-emerald-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
       <div class="flex items-center gap-3">
         <span class="text-2xl">⏳</span>
         <div>
@@ -86,7 +86,7 @@
       <div class="p-6 sm:p-8 bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)] text-white relative overflow-hidden">
         <div class="absolute orb orb-secondary w-72 h-72 -top-20 -right-20 opacity-30"></div>
 
-        <div class="flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
           <div>
             <div class="flex items-center gap-2 mb-2">
               <span class="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[11px] font-extrabold">مؤكد وجاهز ✓</span>
@@ -119,7 +119,7 @@
           
           <!-- Appointment Meta (2 Cols) -->
           <div class="sm:col-span-2 space-y-4">
-            <div class="grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-4">
               <div>
                 <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">التاريخ:</span>
                 <span class="text-sm font-extrabold text-[var(--text-primary)]">الخميس، 10 سبتمبر 2026</span>
@@ -265,7 +265,7 @@
         </div>
         <div>
           <label class="input-label text-xs">الفترة المتاحة</label>
-          <div class="grid-cols-3 gap-2">
+          <div class="grid grid-cols-3 gap-2">
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-2 border-[var(--primary)] bg-[var(--primary-subtle)] text-[var(--primary)]">10:00 ص</button>
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">11:30 ص</button>
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">04:30 م</button>

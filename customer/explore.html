@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ CUSTOMER NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -54,8 +54,8 @@
         <div class="flex items-center gap-3">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
 
           <!-- User Profile Pill -->
@@ -76,14 +76,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
       <!-- ── UPCOMING APPOINTMENT ALERT BANNER (Consumer Pass Style) ── -->
-      <div class="p-4 sm:p-5 rounded-3xl border bg-gradient-to-r from-[var(--primary-subtle)] via-[var(--bg-card)] to-[var(--bg-secondary)] border-[var(--primary)]/30 flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-fade-in-up">
+      <div class="p-4 sm:p-5 rounded-3xl border bg-gradient-to-r from-[var(--primary-subtle)] via-[var(--bg-card)] to-[var(--bg-secondary)] border-[var(--primary)]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm animate-fade-in-up">
         <div class="flex items-center gap-4">
           <div class="w-12 h-12 rounded-2xl bg-[var(--primary)] text-white flex items-center justify-center text-xl shadow-md flex-shrink-0">
             🗓️
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <span class="badge-primary text-[10px] font-bold" data-ar="موعدك القادم بعد يومين" data-en="Upcoming in 2 Days">موعدك القادم بعد يومين</span>
+              <span class="badge badge-primary text-[10px] font-bold" data-ar="موعدك القادم بعد يومين" data-en="Upcoming in 2 Days">موعدك القادم بعد يومين</span>
               <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94821</span>
             </div>
             <h3 class="text-sm:text-base font-bold text-[var(--text-primary)] mt-0.5">كشف واستشارة طب أسرة • د. فهد العتيبي</h3>
@@ -117,10 +117,10 @@
 
           <!-- Search Bar with City Selector -->
           <div class="pt-3">
-            <div class="flex-col sm:flex-row items-center gap-2 p-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-white/20 shadow-2xl text-slate-800 dark:text-slate-100">
+            <div class="flex flex-col sm:flex-row items-center gap-2 p-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-white/20 shadow-2xl text-slate-800 dark:text-slate-100">
               <!-- Keyword Search -->
               <div class="flex items-center gap-3 px-3 py-2 flex-1 w-full">
-                <svg class="w-5 h-5 text-[var(--primary)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 0114 0z"/></svg>
+                <svg class="w-5 h-5 text-[var(--primary)] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 1 1 -14 0 7 0 0 1 14 0z"/></svg>
                 <input type="text" class="w-full bg-transparent border-0 focus:outline-none text-xs sm:text-sm font-medium text-[var(--text-primary)] placeholder-gray-400" data-ar-placeholder="ابحث باسم المركز، التخصص (مثل: طب أسرة، أسنان، محاماة)..." data-en-placeholder="Search by clinic, doctor, or specialty..." placeholder="ابحث باسم المركز، التخصص (مثل: طب أسرة، أسنان، محاماة)...">
               </div>
 
@@ -128,7 +128,7 @@
 
               <!-- City Dropdown -->
               <div class="flex items-center gap-2 px-3 py-2 w-full sm:w-auto">
-                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 016 0z"/></svg>
+                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 1 1 -6 0 3 0 0 1 6 0z"/></svg>
                 <select class="bg-transparent border-0 focus:outline-none text-xs font-bold text-[var(--text-primary)] cursor-pointer">
                   <option value="" data-ar="جميع المدن" data-en="All Cities">جميع المدن</option>
                   <option value="riyadh" data-ar="الرياض" data-en="Riyadh">الرياض</option>
@@ -203,7 +203,7 @@
             
             <!-- Offer Banner 1 -->
             <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-              <div class="card p-5 bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex-col justify-between">
+              <div class="card p-5 bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex flex-col justify-between">
                 <div class="absolute orb orb-primary w-44 h-44 -top-10 -right-10 opacity-30"></div>
                 <div class="relative z-10 space-y-2">
                   <span class="px-2.5 py-0.5 rounded-full bg-teal-500/30 border-teal-400/30 text-teal-200 text-[10px] font-bold">خصم 25% حصري</span>
@@ -219,7 +219,7 @@
 
             <!-- Offer Banner 2 -->
             <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-              <div class="card p-5 bg-gradient-to-br from-purple-900 via-indigo-950 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex-col justify-between">
+              <div class="card p-5 bg-gradient-to-br from-purple-900 via-indigo-950 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex flex-col justify-between">
                 <div class="absolute orb orb-secondary w-44 h-44 -top-10 -right-10 opacity-30"></div>
                 <div class="relative z-10 space-y-2">
                   <span class="px-2.5 py-0.5 rounded-full bg-purple-500/30 border-purple-400/30 text-purple-200 text-[10px] font-bold">جلسة مجانية إضافية</span>
@@ -235,7 +235,7 @@
 
             <!-- Offer Banner 3 -->
             <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
-              <div class="card p-5 bg-gradient-to-br from-amber-900 via-amber-950 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex-col justify-between">
+              <div class="card p-5 bg-gradient-to-br from-amber-900 via-amber-950 to-slate-900 text-white relative overflow-hidden shadow-lg h-full flex flex-col justify-between">
                 <div class="absolute orb orb-amber w-44 h-44 -top-10 -right-10 opacity-30"></div>
                 <div class="relative z-10 space-y-2">
                   <span class="px-2.5 py-0.5 rounded-full bg-amber-500/30 border-amber-400/30 text-amber-200 text-[10px] font-bold">استشارة عن بُعد</span>
@@ -260,18 +260,18 @@
             <h2 class="text-lg sm:text-xl font-bold text-[var(--text-primary)]" data-ar="المراكز الأكثر طلباً وموصى بها" data-en="Featured & Highly Rated">المراكز الأكثر طلباً وموصى بها</h2>
             <p class="text-xs text-[var(--text-secondary)]" data-ar="عيادات ومراكز معتمدة توفر إمكانية الحجز المباشر والتأكيد الفوري" data-en="Verified centers offering instant booking confirmation">عيادات ومراكز معتمدة توفر إمكانية الحجز المباشر والتأكيد الفوري</p>
           </div>
-          <span class="badge-emerald text-xs font-bold">متاح اليوم</span>
+          <span class="badge badge-emerald text-xs font-bold">متاح اليوم</span>
         </div>
 
-        <div class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           <!-- Card 1: Family Care Clinics -->
-          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex-col justify-between shadow-sm">
+          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex flex-col justify-between shadow-sm">
             <div>
               <!-- Cover with badges -->
-              <div class="h-44 relative bg-gradient-to-br from-teal-700 via-teal-900 to-slate-900 p-4 flex-col justify-between text-white overflow-hidden">
+              <div class="h-44 relative bg-gradient-to-br from-teal-700 via-teal-900 to-slate-900 p-4 flex flex-col justify-between text-white overflow-hidden">
                 <div class="flex items-center justify-between relative z-10">
-                  <span class="badge-emerald text-[11px] font-bold shadow-sm">مفتوح الآن 🟢</span>
+                  <span class="badge badge-emerald text-[11px] font-bold shadow-sm">مفتوح الآن 🟢</span>
                   <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-black/40 backdrop-blur-md text-amber-300 font-extrabold text-xs">
                     <span>★ 4.9</span>
                     <span class="text-white/70 text-[10px] font-normal">(128)</span>
@@ -320,10 +320,10 @@
           </div>
 
           <!-- Card 2: Al-Nokhba Law Firm -->
-          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex-col justify-between shadow-sm">
+          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex flex-col justify-between shadow-sm">
             <div>
               <!-- Cover -->
-              <div class="h-44 relative bg-gradient-to-br from-blue-900 via-slate-900 to-sky-950 p-4 flex-col justify-between text-white overflow-hidden">
+              <div class="h-44 relative bg-gradient-to-br from-blue-900 via-slate-900 to-sky-950 p-4 flex flex-col justify-between text-white overflow-hidden">
                 <div class="flex items-center justify-between relative z-10">
                   <span class="badge-blue text-[11px] font-bold shadow-sm">عن بُعد + حضوري 💻</span>
                   <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-black/40 backdrop-blur-md text-amber-300 font-extrabold text-xs">
@@ -373,12 +373,12 @@
           </div>
 
           <!-- Card 3: Glow & Beauty Spa -->
-          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex-col justify-between shadow-sm">
+          <div class="card overflow-hidden hover:border-[var(--primary)] transition-all group flex flex-col justify-between shadow-sm">
             <div>
               <!-- Cover -->
-              <div class="h-44 relative bg-gradient-to-br from-rose-800 via-purple-900 to-slate-950 p-4 flex-col justify-between text-white overflow-hidden">
+              <div class="h-44 relative bg-gradient-to-br from-rose-800 via-purple-900 to-slate-950 p-4 flex flex-col justify-between text-white overflow-hidden">
                 <div class="flex items-center justify-between relative z-10">
-                  <span class="badge-violet text-[11px] font-bold shadow-sm">حجز نسائي مخصص 🌸</span>
+                  <span class="badge badge-violet text-[11px] font-bold shadow-sm">حجز نسائي مخصص 🌸</span>
                   <div class="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-black/40 backdrop-blur-md text-amber-300 font-extrabold text-xs">
                     <span>★ 5.0</span>
                     <span class="text-white/70 text-[10px] font-normal">(210)</span>

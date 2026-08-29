@@ -32,7 +32,7 @@
 <body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex transition-colors duration-300">
 
   <!-- ═══════════ MEMBER SIDEBAR ═══════════ -->
-  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
+  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
     <!-- Workspace Brand Header -->
     <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-color)">
       <div class="flex items-center gap-3">
@@ -52,61 +52,61 @@
     <!-- Navigation Menu -->
     <nav class="flex-1 overflow-y-auto p-4 space-y-1.5 text-xs font-semibold">
       <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2V6zM14 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2V6zM4 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2v-2zM14 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2v-2z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zM14 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V6zM4 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2zM14 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2z"/></svg>
         <span data-ar="لوحة التحكم" data-en="Dashboard">لوحة التحكم</span>
       </a>
 
       <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
         <span data-ar="المواعيد والحجوزات" data-en="Bookings">المواعيد والحجوزات</span>
-        <span class="ms-auto badge-violet text-[10px]">12</span>
+        <span class="ms-auto badge badge-violet text-[10px]">12</span>
       </a>
 
       <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 012 2v6a2 2 01-2H5a2 2 01-2-2v-6a2 2 012-2m14 0V9a2 2 00-2-2M5 11V9a2 2 012-2m0 0V5a2 2 012-2h6a2 2 012 2v2M7 7h10"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0V9a2 2 0 0 0-2-2M5 11V9a2 2 0 0 1 2-2m0 0V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2M7 7h10"/></svg>
         <span data-ar="الخدمات والأسعار" data-en="Services">الخدمات والأسعار</span>
       </a>
 
       <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
         <span data-ar="الجداول وأوقات العمل" data-en="Schedules & Availability">الجداول وأوقات العمل</span>
       </a>
 
       <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
         <span data-ar="العملاء" data-en="Customers">العملاء</span>
       </a>
 
       <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 00-2-2H7a2 2 00-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 011-1h2a1 1 011 1v5m-4 0h4"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5m-4 0h4"/></svg>
         <span data-ar="الموارد، الأجهزة والقاعات" data-en="Resources">الموارد، الأجهزة والقاعات</span>
       </a>
 
       <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0112 0v1zm0 0h6v-1a6 6 00-9-5.197M13 7a4 4 0 11-8 0 4 018 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 1 1 0 5.292M15 21H3v-1a6 6 0 0 1 12 0v1zm0 0h6v-1a6 6 0 0 0-9-5.197M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
         <span data-ar="أعضاء الفريق" data-en="Team Members">أعضاء الفريق</span>
       </a>
 
       <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0112 2.944a11.955 11.955 01-8.618 3.04A12.02 12.02 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.0 0 1 6A11.955 1 1 .955 0 0 1 12 2.944a11.955 1 1 .955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 1 0 .29 9 1 1 .622 5.176-1.332 9-6.03 9-1 1 .622 0-1.042-.133-2.052-.382-3.0 0 1 6z"/></svg>
         <span data-ar="الأدوار والصلاحيات" data-en="Roles & Permissions">الأدوار والصلاحيات</span>
       </a>
 
       <div class="pt-3 border-t my-2" style="border-color: var(--border-color)"></div>
 
       <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3z"/></svg>
         <span data-ar="المالية والإيصالات" data-en="Finance & Receipts">المالية والإيصالات</span>
-        <span class="ms-auto badge-amber text-[10px]">3</span>
+        <span class="ms-auto badge badge-amber text-[10px]">3</span>
       </a>
 
       <a href="notifications.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0118 14.158V11a6.002 6.002 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.0 0 0 2 6.0 0 0 2 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"/></svg>
         <span data-ar="قنوات الإشعارات" data-en="Notifications Channels">قنوات الإشعارات</span>
       </a>
 
       <a href="chat.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 0 1-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
         <span data-ar="الشات والرسائل الفورية" data-en="Live Chat">الشات والرسائل الفورية</span>
       </a>
 
@@ -116,7 +116,7 @@
       </a>
 
       <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors" style="color:var(--text-secondary)">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 1 1 -6 0 3 0 0 1 6 0z"/></svg>
         <span data-ar="إعدادات وتظبيط مساحة العمل" data-en="Settings">إعدادات وتظبيط مساحة العمل</span>
       </a>
     </nav>
@@ -124,14 +124,14 @@
     <!-- Sidebar Footer / Logout -->
     <div class="p-4 border-t" style="border-color: var(--border-color)">
       <a href="../shared/login.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 transition-colors text-xs font-bold">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 01-3H6a3 3 01-3-3V7a3 3 013-3h4a3 3 013 3v1"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 0 1 -3H6a3 3 0 0 1 -3-3V7a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1"/></svg>
         <span data-ar="تسجيل خروج" data-en="Sign Out">تسجيل خروج</span>
       </a>
     </div>
   </aside>
 
   <!-- ═══════════ MAIN CONTENT AREA ═══════════ -->
-  <div class="flex-1 flex-col min-w-0">
+  <div class="flex-1 flex flex-col min-w-0">
 
     <!-- Topbar -->
     <header class="sticky top-0 z-30 glass-strong border-b px-4 sm:px-8 py-3 flex items-center justify-between" style="border-color: var(--border-color)">
@@ -140,7 +140,7 @@
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
         <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl border text-xs" style="border-color:var(--border-color);background:var(--bg-secondary)">
-          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 0114 0z"/></svg>
+          <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 1 1 -14 0 7 0 0 1 14 0z"/></svg>
           <input type="text" placeholder="بحث سريع في المواعيد أو العملاء (Ctrl+K)..." class="bg-transparent border-0 focus:outline-none w-64">
         </div>
       </div>
@@ -148,15 +148,15 @@
       <div class="flex items-center gap-3">
         <!-- Live Public Link -->
         <a href="../customer/workspace.html" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 btn-secondary !rounded-xl text-xs py-1.5 px-3">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 00-2v10a2 2 002 2h10a2 2 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 0 0 -2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           <span data-ar="صفحة الحجز المباشرة" data-en="Public Page">صفحة الحجز المباشرة</span>
         </a>
 
         <!-- Lang & Theme -->
         <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
         <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)">
-          <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-          <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+          <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
         </button>
 
         <!-- User profile in header -->
@@ -174,7 +174,7 @@
     <main class="p-4 sm:p-8 space-y-8 flex-1">
 
       <!-- Header & Quick Actions -->
-      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 class="text-2xl font-extrabold" style="color:var(--text-primary)" data-ar="نظرة عامة على مساحة العمل" data-en="Workspace Overview">نظرة عامة على مساحة العمل</h1>
           <p class="text-xs" style="color:var(--text-secondary)" data-ar="منور يا بطل 👋 د. فهد! إليك ملخص أداء العيادة وحجوزات اليوم." data-en="Welcome Dr. Fahad! Here is your clinic performance summary today.">أهلاً بك د. فهد! إليك ملخص أداء العيادة وحجوزات اليوم.</p>
@@ -189,7 +189,7 @@
       </div>
 
       <!-- KPI Stats Grid -->
-      <div class="grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         <!-- Stat 1 -->
         <div class="card p-5 space-y-2">
           <div class="flex items-center justify-between">
@@ -276,7 +276,7 @@
                   </td>
                   <td class="text-xs">كشف واستشارة طب أسرة</td>
                   <td class="text-xs text-gray-500">د. فهد</td>
-                  <td><span class="badge-emerald text-[11px]">مؤكد</span></td>
+                  <td><span class="badge badge-emerald text-[11px]">مؤكد</span></td>
                   <td><a href="booking-detail.html" class="btn-ghost text-xs py-1 px-2 rounded-lg border" style="border-color:var(--border-color)">عرض</a></td>
                 </tr>
                 <tr>
@@ -287,7 +287,7 @@
                   </td>
                   <td class="text-xs">تنظيف وتلميع الأسنان</td>
                   <td class="text-xs text-gray-500">د. فهد</td>
-                  <td><span class="badge-emerald text-[11px]">مؤكد</span></td>
+                  <td><span class="badge badge-emerald text-[11px]">مؤكد</span></td>
                   <td><a href="booking-detail.html" class="btn-ghost text-xs py-1 px-2 rounded-lg border" style="border-color:var(--border-color)">عرض</a></td>
                 </tr>
                 <tr>
@@ -298,7 +298,7 @@
                   </td>
                   <td class="text-xs">استشارة عن بُعد</td>
                   <td class="text-xs text-gray-500">د. سارة</td>
-                  <td><span class="badge-amber text-[11px]">بانتظار الإيصال</span></td>
+                  <td><span class="badge badge-amber text-[11px]">بانتظار الإيصال</span></td>
                   <td><a href="booking-detail.html" class="btn-ghost text-xs py-1 px-2 rounded-lg border" style="border-color:var(--border-color)">تحقق</a></td>
                 </tr>
                 <tr>
@@ -327,7 +327,7 @@
                 <span>⚠️</span>
                 <span data-ar="إيصالات بانتظار المراجعة" data-en="Pending Receipts">إيصالات بانتظار المراجعة</span>
               </h3>
-              <span class="badge-amber text-xs">3 إيصالات</span>
+              <span class="badge badge-amber text-xs">3 إيصالات</span>
             </div>
             <p class="text-xs" style="color:var(--text-secondary)" data-ar="قام 3 عملاء برفع إيصالات تحويل بنكي مباشر للمواعيد تتطلب التحقق والموافقة." data-en="3 clients uploaded transfer receipts needing your verification.">قام 3 عملاء برفع إيصالات تحويل بنكي للمواعيد تتطلب التحقق والموافقة.</p>
             <a href="payments.html" class="btn-secondary w-full !rounded-xl text-xs py-2 block text-center">
@@ -344,14 +344,14 @@
                   <span>📅</span>
                   <span class="font-semibold">Google Calendar</span>
                 </div>
-                <span class="badge-emerald text-[10px]">متصل ✓</span>
+                <span class="badge badge-emerald text-[10px]">متصل ✓</span>
               </div>
               <div class="flex items-center justify-between p-2.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
                 <div class="flex items-center gap-2">
                   <span>✈️</span>
                   <span class="font-semibold">Telegram Bot</span>
                 </div>
-                <span class="badge-emerald text-[10px]">متصل ✓</span>
+                <span class="badge badge-emerald text-[10px]">متصل ✓</span>
               </div>
               <div class="flex items-center justify-between p-2.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
                 <div class="flex items-center gap-2">

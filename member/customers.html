@@ -32,26 +32,26 @@
 <body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex transition-colors duration-300">
 
   <!-- ═══════════ MEMBER SIDEBAR ═══════════ -->
-  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
+  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
     <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-color)">
       <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-lg shadow-md">🌿</div><div class="min-w-0"><div class="font-bold text-sm truncate" style="color:var(--text-primary)">عيادات رعاية الأسرة</div><div class="text-[10px] text-emerald-500 font-semibold">خطة احترافية</div></div></div>
     </div>
     <nav class="flex-1 overflow-y-auto p-4 space-y-1.5 text-xs font-semibold">
-      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2V6zM14 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2V6zM4 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2v-2zM14 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2v-2z"/></svg><span>لوحة التحكم</span></a>
-      <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg><span>المواعيد والحجوزات</span><span class="ms-auto badge-violet text-[10px]">12</span></a>
-      <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 012 2v6a2 2 01-2H5a2 2 01-2-2v-6a2 2 012-2m14 0V9a2 2 00-2-2M5 11V9a2 2 012-2m0 0V5a2 2 012-2h6a2 2 012 2v2M7 7h10"/></svg><span>الخدمات والأسعار</span></a>
-      <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg><span>الجداول وأوقات العمل</span></a>
-      <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg><span>العملاء</span></a>
-      <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 00-2-2H7a2 2 00-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 011-1h2a1 1 011 1v5m-4 0h4"/></svg><span>الموارد، الأجهزة والقاعات</span></a>
-      <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0112 0v1zm0 0h6v-1a6 6 00-9-5.197M13 7a4 4 0 11-8 0 4 018 0z"/></svg><span>أعضاء الفريق</span></a>
-      <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0112 2.944a11.955 11.955 01-8.618 3.04A12.02 12.02 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>الأدوار</span></a>
-      <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg><span>المالية</span></a>
-      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/></svg><span>الإعدادات</span></a>
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6zM14 6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2V6zM4 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2zM14 16a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-2z"/></svg><span>لوحة التحكم</span></a>
+      <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg><span>المواعيد والحجوزات</span><span class="ms-auto badge badge-violet text-[10px]">12</span></a>
+      <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2m14 0V9a2 2 0 0 0-2-2M5 11V9a2 2 0 0 1 2-2m0 0V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2M7 7h10"/></svg><span>الخدمات والأسعار</span></a>
+      <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg><span>الجداول وأوقات العمل</span></a>
+      <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 0 0-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 0 1 5.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 0 1 9.288 0M15 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg><span>العملاء</span></a>
+      <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5m-4 0h4"/></svg><span>الموارد، الأجهزة والقاعات</span></a>
+      <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 1 1 0 5.292M15 21H3v-1a6 6 0 0 1 12 0v1zm0 0h6v-1a6 6 0 0 0-9-5.197M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg><span>أعضاء الفريق</span></a>
+      <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.0 0 1 6A11.955 1 1 .955 0 0 1 12 2.944a11.955 1 1 .955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 1 0 .29 9 1 1 .622 5.176-1.332 9-6.03 9-1 1 .622 0-1.042-.133-2.052-.382-3.0 0 1 6z"/></svg><span>الأدوار</span></a>
+      <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3z"/></svg><span>المالية</span></a>
+      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 1 1 -6 0 3 0 0 1 6 0z"/></svg><span>الإعدادات</span></a>
     </nav>
   </aside>
 
   <!-- ═══════════ MAIN CONTENT ═══════════ -->
-  <div class="flex-1 flex-col min-w-0">
+  <div class="flex-1 flex flex-col min-w-0">
 
     <header class="sticky top-0 z-30 glass-strong border-b px-4 sm:px-8 py-3 flex items-center justify-between" style="border-color: var(--border-color)">
       <div class="flex items-center gap-3">
@@ -60,13 +60,13 @@
       </div>
       <div class="flex items-center gap-2">
         <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
-        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg></button>
       </div>
     </header>
 
     <main class="p-4 sm:p-8 space-y-6 flex-1">
 
-      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h1 class="text-2xl font-extrabold" style="color:var(--text-primary)" data-ar="دليل وقاعدة بيانات العملاء" data-en="Customers Directory">دليل وقاعدة بيانات العملاء</h1>
           <p class="text-xs" style="color:var(--text-secondary)" data-ar="عرض تفاصيل العملاء، سجل الزيارات السابقة، وإجمالي المدفوعات." data-en="View customer profiles, booking history, and spending stats.">عرض تفاصيل العملاء، سجل الزيارات السابقة، وإجمالي المدفوعات.</p>
@@ -74,7 +74,7 @@
       </div>
 
       <!-- Quick Metrics -->
-      <div class="grid-cols-2 sm:grid-cols-3 gap-4">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div class="card p-4">
           <div class="text-xs text-gray-400">إجمالي العملاء المسجلين</div>
           <div class="text-2xl font-extrabold text-brand-600">342</div>
@@ -91,7 +91,7 @@
 
       <!-- Customers Table -->
       <div class="card overflow-hidden">
-        <div class="p-4 border-b flex-col sm:flex-row sm:items-center justify-between gap-3" style="border-color:var(--border-color)">
+        <div class="p-4 border-b flex flex-col sm:flex-row sm:items-center justify-between gap-3" style="border-color:var(--border-color)">
           <input type="text" placeholder="بحث بالاسم، رقم الجوال، أو البريد..." class="input-field !py-2 !text-xs sm:w-80">
           <div class="flex items-center gap-2 text-xs text-gray-400">
             <span>عرض 1-10 من 342</span>
@@ -126,7 +126,7 @@
                 <td class="font-bold text-xs text-brand-600">3 مواعيد</td>
                 <td class="font-bold text-xs" style="color:var(--text-primary)">517.50 ر.س</td>
                 <td class="text-xs text-gray-400">10 سبتمبر 2026</td>
-                <td><span class="badge-emerald text-xs">نشط</span></td>
+                <td><span class="badge badge-emerald text-xs">نشط</span></td>
                 <td>
                   <button class="btn-ghost text-xs py-1 px-2.5 rounded-lg border text-brand-600 hover:bg-brand-50" style="border-color:var(--border-color)" onclick="document.getElementById('customerModal').classList.remove('hidden')">الملف الكامل</button>
                 </td>
@@ -146,7 +146,7 @@
                 <td class="font-bold text-xs text-brand-600">5 مواعيد</td>
                 <td class="font-bold text-xs" style="color:var(--text-primary)">1,120.00 ر.س</td>
                 <td class="text-xs text-gray-400">02 سبتمبر 2026</td>
-                <td><span class="badge-emerald text-xs">نشط</span></td>
+                <td><span class="badge badge-emerald text-xs">نشط</span></td>
                 <td>
                   <button class="btn-ghost text-xs py-1 px-2.5 rounded-lg border text-brand-600 hover:bg-brand-50" style="border-color:var(--border-color)">الملف الكامل</button>
                 </td>

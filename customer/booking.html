@@ -30,7 +30,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -49,8 +49,8 @@
         <div class="flex items-center gap-2">
           <button data-lang-toggle class="btn-ghost text-xs font-bold px-2.5 py-1 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
         </div>
       </div>
@@ -67,25 +67,25 @@
         <div id="stepProgress" class="absolute top-1/2 right-4 h-1 bg-[var(--primary)] -translate-y-1/2 z-0 transition-all duration-300" style="width: 25%"></div>
 
         <!-- Step 1 Dot -->
-        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(1)">
+        <div class="step-node relative z-10 flex flex-col items-center gap-1 cursor-pointer" onclick="goToStep(1)">
           <div id="dot1" class="w-8 h-8 rounded-full bg-[var(--primary)] text-white font-bold text-xs flex items-center justify-center shadow-lg ring-4 ring-[var(--primary-subtle)]">1</div>
           <span class="text-[11px] font-bold text-[var(--primary)]" data-ar="الخدمة" data-en="Service">الخدمة</span>
         </div>
 
         <!-- Step 2 Dot -->
-        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(2)">
+        <div class="step-node relative z-10 flex flex-col items-center gap-1 cursor-pointer" onclick="goToStep(2)">
           <div id="dot2" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">2</div>
           <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="المتخصص" data-en="Specialist">المتخصص</span>
         </div>
 
         <!-- Step 3 Dot -->
-        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(3)">
+        <div class="step-node relative z-10 flex flex-col items-center gap-1 cursor-pointer" onclick="goToStep(3)">
           <div id="dot3" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">3</div>
           <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="الموعد" data-en="Slot">الموعد</span>
         </div>
 
         <!-- Step 4 Dot -->
-        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(4)">
+        <div class="step-node relative z-10 flex flex-col items-center gap-1 cursor-pointer" onclick="goToStep(4)">
           <div id="dot4" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">4</div>
           <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="التأكيد والدفع" data-en="Confirm & Pay">التأكيد والدفع</span>
         </div>
@@ -105,7 +105,7 @@
               <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 1: اختر الخدمة الطبية المطلوبة" data-en="Step 1: Select Service">الخطوة 1: اختر الخدمة الطبية المطلوبة</h2>
               <p class="text-xs text-[var(--text-secondary)]">اختر نوع الكشف أو الاستشارة لعرض الأطباء المتاحين</p>
             </div>
-            <span class="badge-primary text-xs">1 من 4</span>
+            <span class="badge badge-primary text-xs">1 من 4</span>
           </div>
 
           <div class="space-y-3">
@@ -117,7 +117,7 @@
                   <div>
                     <div class="flex items-center gap-2">
                       <span class="font-bold text-sm text-[var(--text-primary)]">كشف واستشارة طب أسرة</span>
-                      <span class="badge-emerald text-[10px]">حضوري</span>
+                      <span class="badge badge-emerald text-[10px]">حضوري</span>
                     </div>
                     <p class="text-xs text-[var(--text-secondary)] mt-1">فحص سريري متكامل، قياس المؤشرات الحيوية، والوصفة الطبية المعتمدة.</p>
                     <span class="text-[11px] text-[var(--primary)] font-bold block mt-1">⏰ 30 دقيقة</span>
@@ -137,7 +137,7 @@
                   <div>
                     <div class="flex items-center gap-2">
                       <span class="font-bold text-sm text-[var(--text-primary)]">فحص وتنظيف أسنان شامل</span>
-                      <span class="badge-emerald text-[10px]">حضوري</span>
+                      <span class="badge badge-emerald text-[10px]">حضوري</span>
                     </div>
                     <p class="text-xs text-[var(--text-secondary)] mt-1">إزالة الجير وتلميع الأسنان وفحص اللثة بالأشعة السينية.</p>
                     <span class="text-[11px] text-[var(--text-tertiary)] font-bold block mt-1">⏰ 45 دقيقة</span>
@@ -184,7 +184,7 @@
               <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 2: حدد الطبيب / الأخصائي" data-en="Step 2: Pick Specialist">الخطوة 2: حدد الطبيب / الأخصائي</h2>
               <p class="text-xs text-[var(--text-secondary)]">اختر استشاري الحالة أو دع النظام يختار الموعد الأقرب</p>
             </div>
-            <span class="badge-primary text-xs">2 من 4</span>
+            <span class="badge badge-primary text-xs">2 من 4</span>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
@@ -250,13 +250,13 @@
               <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 3: حدد التاريخ والوقت المناسب" data-en="Step 3: Select Date & Time">الخطوة 3: حدد التاريخ والوقت المناسب</h2>
               <p class="text-xs text-[var(--text-secondary)]">أوقات العمل المتاحة وفق تقويم الطبيب المباشر</p>
             </div>
-            <span class="badge-primary text-xs">3 من 4</span>
+            <span class="badge badge-primary text-xs">3 من 4</span>
           </div>
 
           <!-- Horizontal Date Picker Strips -->
           <div class="space-y-2">
             <span class="text-xs font-bold text-[var(--text-primary)]">اختر اليوم (سبتمبر 2026):</span>
-            <div class="grid-cols-4 sm:grid-cols-6 gap-2">
+            <div class="grid grid-cols-4 sm:grid-cols-6 gap-2">
               <button type="button" class="p-2.5 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] text-center transition-all shadow-sm">
                 <span class="text-[10px] text-[var(--primary)] font-bold block">الخميس</span>
                 <span class="text-lg font-extrabold text-[var(--primary)] block">10</span>
@@ -302,7 +302,7 @@
               <span class="text-xs font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
                 <span>☀️ الفترات الصباحية:</span>
               </span>
-              <div class="grid-cols-3 sm:grid-cols-4 gap-2.5">
+              <div class="grid grid-cols-3 sm:grid-cols-4 gap-2.5">
                 <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-2 border-[var(--primary)] bg-[var(--primary)] text-white shadow-sm">
                   09:30 ص
                 </button>
@@ -323,7 +323,7 @@
               <span class="text-xs font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
                 <span>🌙 الفترات المسائية:</span>
               </span>
-              <div class="grid-cols-3 sm:grid-cols-4 gap-2.5">
+              <div class="grid grid-cols-3 sm:grid-cols-4 gap-2.5">
                 <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
                   04:30 م
                 </button>
@@ -357,7 +357,7 @@
               <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 4: بيانات المراجع وعايز تدفع إزاي؟ 💳" data-en="Step 4: Details & Payment">الخطوة 4: بيانات المراجع وطريقة الدفع</h2>
               <p class="text-xs text-[var(--text-secondary)]">أدخل بياناتك لتصلك التذكرة ورمز الدخول بالرسائل النصية</p>
             </div>
-            <span class="badge-emerald text-xs">الخطوة الأخيرة</span>
+            <span class="badge badge-emerald text-xs">الخطوة الأخيرة</span>
           </div>
 
           <!-- Customer Input fields -->
@@ -384,7 +384,7 @@
             <span class="text-xs font-bold text-[var(--text-primary)]">اختر طريقة السداد:</span>
             
             <div class="grid sm:grid-cols-3 gap-3">
-              <label class="p-3.5 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] cursor-pointer flex-col justify-between transition-all shadow-sm">
+              <label class="p-3.5 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] cursor-pointer flex flex-col justify-between transition-all shadow-sm">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-[var(--text-primary)]">مدى / Apple Pay</span>
                   <input type="radio" name="payMethod" checked class="w-3.5 h-3.5 text-[var(--primary)]">
@@ -392,7 +392,7 @@
                 <span class="text-[10px] text-emerald-600 font-bold mt-2">⚡ دفع فوري وتأكيد آلي</span>
               </label>
 
-              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex-col justify-between transition-all">
+              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex flex-col justify-between transition-all">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-[var(--text-primary)]">تحويل بنكي مباشر</span>
                   <input type="radio" name="payMethod" class="w-3.5 h-3.5 text-[var(--primary)]">
@@ -400,7 +400,7 @@
                 <span class="text-[10px] text-[var(--text-tertiary)] mt-2">رفع إيصال التحويل</span>
               </label>
 
-              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex-col justify-between transition-all">
+              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex flex-col justify-between transition-all">
                 <div class="flex items-center justify-between">
                   <span class="font-bold text-xs text-[var(--text-primary)]">الدفع في العيادة</span>
                   <input type="radio" name="payMethod" class="w-3.5 h-3.5 text-[var(--primary)]">

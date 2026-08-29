@@ -29,7 +29,7 @@
   <script src="../assets/js/theme.js"></script>
   <script src="../assets/js/lang.js"></script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex flex-col transition-colors duration-300">
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
@@ -50,8 +50,8 @@
         <div class="flex items-center gap-3">
           <button data-lang-toggle class="btn-ghost text-xs font-semibold px-3 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
           <button data-theme-toggle class="btn-ghost p-2 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)">
-            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.0 0 0 3 9.0 0 0 3 0 0 0 12 21a9.0 0 0 3 9.0 0 0 3 0 0 0 8.354-5.646z"/></svg>
           </button>
           <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
             <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
@@ -65,7 +65,7 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10 flex-1 w-full">
 
     <!-- Page Header & Action Bar -->
-    <div class="flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
       <div>
         <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:var(--text-primary)" data-ar="مواعيدي" data-en="My Appointments">مواعيـدي وحجوزاتي</h1>
         <p class="text-xs sm:text-sm mt-1" style="color:var(--text-secondary)" data-ar="تتبع جميع مواعيدك القادمة والسابقة مع إمكانية التعديل والإلغاء بسهولة." data-en="Track all your upcoming and past bookings with easy rescheduling.">تتبع جميع مواعيدك القادمة والسابقة مع إمكانية التعديل والإلغاء بسهولة.</p>
@@ -75,7 +75,7 @@
         <!-- View Mode Switcher (Calendar / List) -->
         <div class="flex items-center rounded-xl p-1 border bg-[var(--bg-secondary)]" style="border-color:var(--border-color)">
           <button id="viewBtnCalendar" onclick="switchViewMode('calendar')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--primary)] text-white shadow-sm">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2z"/></svg>
             <span data-ar="عرض التقويم" data-en="Calendar View">عرض التقويم</span>
           </button>
           <button id="viewBtnList" onclick="switchViewMode('list')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
@@ -97,17 +97,17 @@
     <div id="calendarViewContainer" class="space-y-6">
       
       <!-- Calendar Grid + Day Details Split -->
-      <div class="grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         
         <!-- Left: Full Month Calendar -->
         <div class="lg:col-span-8 card p-5 sm:p-6 shadow-sm">
           
           <!-- Month Header Controls -->
-          <div class="flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b" style="border-color:var(--border-color)">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b" style="border-color:var(--border-color)">
             <div class="flex items-center gap-3">
               <h2 class="text-lg sm:text-xl font-bold flex items-center gap-2" style="color:var(--text-primary)">
                 <span data-ar="سبتمبر 2026" data-en="September 2026">سبتمبر 2026</span>
-                <span class="badge-primary text-xs" data-ar="2 مواعيد قادمة" data-en="2 Upcoming">2 مواعيد قادمة</span>
+                <span class="badge badge-primary text-xs" data-ar="2 مواعيد قادمة" data-en="2 Upcoming">2 مواعيد قادمة</span>
               </h2>
             </div>
 
@@ -126,7 +126,7 @@
           </div>
 
           <!-- Week Days Header -->
-          <div class="grid-cols-7 gap-1 text-center font-bold text-xs pb-3 text-[var(--text-secondary)] border-b mb-2" style="border-color:var(--border-color)">
+          <div class="grid grid-cols-7 gap-1 text-center font-bold text-xs pb-3 text-[var(--text-secondary)] border-b mb-2" style="border-color:var(--border-color)">
             <span data-ar="الأحد" data-en="Sun">الأحد</span>
             <span data-ar="الإثنين" data-en="Mon">الإثنين</span>
             <span data-ar="الثلاثاء" data-en="Tue">الثلاثاء</span>
@@ -137,42 +137,42 @@
           </div>
 
           <!-- Calendar Days Grid (September 2026) -->
-          <div class="grid-cols-7 gap-1.5 sm:gap-2">
+          <div class="grid grid-cols-7 gap-1.5 sm:gap-2">
             <!-- Prev Month Days -->
             <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-transparent opacity-30 text-xs font-semibold">30</div>
             <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-transparent opacity-30 text-xs font-semibold">31</div>
 
             <!-- Sep 1 - 9 -->
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">1</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">2</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">3</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">4</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">5</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">6</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">7</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">8</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">9</span>
             </div>
 
             <!-- Sep 10 (APPOINTMENT 1 - CONFIRMED) -->
-            <div onclick="selectCalendarDate(10)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] transition-all cursor-pointer flex-col justify-between shadow-sm ring-2 ring-[var(--primary)]/20">
+            <div onclick="selectCalendarDate(10)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] transition-all cursor-pointer flex flex-col justify-between shadow-sm ring-2 ring-[var(--primary)]/20">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-extrabold text-[var(--primary)]">10</span>
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -183,18 +183,18 @@
             </div>
 
             <!-- Sep 11 - 13 -->
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">11</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">12</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">13</span>
             </div>
 
             <!-- Sep 14 (APPOINTMENT 2 - PENDING) -->
-            <div onclick="selectCalendarDate(14)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-amber-500/50 bg-amber-500/10 transition-all cursor-pointer flex-col justify-between hover:ring-2 hover:ring-amber-500">
+            <div onclick="selectCalendarDate(14)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-amber-500/50 bg-amber-500/10 transition-all cursor-pointer flex flex-col justify-between hover:ring-2 hover:ring-amber-500">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-extrabold text-amber-600">14</span>
                 <span class="w-2 h-2 rounded-full bg-amber-500"></span>
@@ -205,52 +205,52 @@
             </div>
 
             <!-- Sep 15 - 30 -->
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">15</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">16</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">17</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">18</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">19</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">20</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">21</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">22</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">23</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">24</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">25</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">26</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">27</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">28</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">29</span>
             </div>
-            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex flex-col justify-between">
               <span class="text-xs font-bold text-[var(--text-secondary)]">30</span>
             </div>
           </div>
@@ -280,7 +280,7 @@
                 <span class="text-[10px] uppercase font-bold text-[var(--text-tertiary)]" data-ar="تفاصيل اليوم المحدد" data-en="Selected Date">تفاصيل اليوم المحدد</span>
                 <h3 id="selectedDateTitle" class="text-base font-extrabold" style="color:var(--text-primary)">الخميس، 10 سبتمبر 2026</h3>
               </div>
-              <span id="selectedDateCount" class="badge-primary text-xs font-bold">1 موعد</span>
+              <span id="selectedDateCount" class="badge badge-primary text-xs font-bold">1 موعد</span>
             </div>
 
             <!-- Active Appointment Card on Selected Date -->
@@ -288,7 +288,7 @@
               
               <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
                 <div class="flex items-center justify-between gap-2">
-                  <span class="badge-emerald text-[11px]" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
+                  <span class="badge badge-emerald text-[11px]" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
                   <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94821</span>
                 </div>
 
@@ -312,7 +312,7 @@
                   </div>
                 </div>
 
-                <div class="grid-cols-2 gap-2 pt-2">
+                <div class="grid grid-cols-2 gap-2 pt-2">
                   <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">
                     <span data-ar="عرض التذكرة" data-en="View Ticket">عرض التذكرة</span>
                   </a>
@@ -353,17 +353,17 @@
       <div class="space-y-4">
 
         <!-- Appointment 1 (Confirmed Upcoming) -->
-        <div class="card p-6 flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[var(--primary)] transition-all">
-          <div class="flex-col sm:flex-row sm:items-center gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
+        <div class="card p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[var(--primary)] transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
               <span class="text-xs text-[var(--primary)]">سبتمبر</span>
               <span class="text-2xl leading-none font-extrabold">10</span>
             </div>
 
             <div>
               <div class="flex-wrap items-center gap-2 mb-1.5">
-                <span class="badge-emerald text-xs" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
-                <span class="badge-primary text-xs" data-ar="حضوري" data-en="In-Person">حضوري</span>
+                <span class="badge badge-emerald text-xs" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
+                <span class="badge badge-primary text-xs" data-ar="حضوري" data-en="In-Person">حضوري</span>
                 <span class="text-xs font-mono text-gray-400">#BK-94821</span>
               </div>
               <h2 class="text-lg font-bold" style="color:var(--text-primary)" data-ar="كشف واستشارة طب أسرة" data-en="Family Medicine Consultation">كشف واستشارة طب أسرة</h2>
@@ -388,17 +388,17 @@
         </div>
 
         <!-- Appointment 2 (Pending Verification) -->
-        <div class="card p-6 flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-amber-500 transition-all">
-          <div class="flex-col sm:flex-row sm:items-center gap-5">
-            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
+        <div class="card p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-amber-500 transition-all">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 flex flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
               <span class="text-xs text-amber-600">سبتمبر</span>
               <span class="text-2xl leading-none font-extrabold">14</span>
             </div>
 
             <div>
               <div class="flex-wrap items-center gap-2 mb-1.5">
-                <span class="badge-amber text-xs" data-ar="بانتظار تأكيد الإيصال" data-en="Pending Receipt Approval">بانتظار تأكيد الإيصال</span>
-                <span class="badge-secondary text-xs" data-ar="Google Meet" data-en="Google Meet">Google Meet</span>
+                <span class="badge badge-amber text-xs" data-ar="بانتظار تأكيد الإيصال" data-en="Pending Receipt Approval">بانتظار تأكيد الإيصال</span>
+                <span class="badge badge-secondary text-xs" data-ar="Google Meet" data-en="Google Meet">Google Meet</span>
                 <span class="text-xs font-mono text-gray-400">#BK-94804</span>
               </div>
               <h2 class="text-lg font-bold" style="color:var(--text-primary)" data-ar="استشارة قانونية وتجارية" data-en="Commercial Legal Consultation">استشارة قانونية وتجارية</h2>
@@ -465,7 +465,7 @@
         content.innerHTML = `
           <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
             <div class="flex items-center justify-between gap-2">
-              <span class="badge-emerald text-[11px]">مؤكد ✓</span>
+              <span class="badge badge-emerald text-[11px]">مؤكد ✓</span>
               <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94821</span>
             </div>
             <div>
@@ -477,7 +477,7 @@
               <div class="flex items-center gap-2 font-mono"><span>⏰</span><span>09:30 ص - 10:00 ص (30 دقيقة)</span></div>
               <div class="flex items-center gap-2"><span>📍</span><span>الرياض - حي الياسمين (العيادة 3)</span></div>
             </div>
-            <div class="grid-cols-2 gap-2 pt-2">
+            <div class="grid grid-cols-2 gap-2 pt-2">
               <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">عرض التذكرة</a>
               <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 text-center font-medium" style="border-color:var(--border-color)">الغي الميعاد</button>
             </div>
@@ -493,7 +493,7 @@
         content.innerHTML = `
           <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
             <div class="flex items-center justify-between gap-2">
-              <span class="badge-amber text-[11px]">بانتظار تأكيد الإيصال</span>
+              <span class="badge badge-amber text-[11px]">بانتظار تأكيد الإيصال</span>
               <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94804</span>
             </div>
             <div>
@@ -505,7 +505,7 @@
               <div class="flex items-center gap-2 font-mono"><span>⏰</span><span>04:00 م - 05:00 م (60 دقيقة)</span></div>
               <div class="flex items-center gap-2"><span>💻</span><span>Google Meet (عن بُعد)</span></div>
             </div>
-            <div class="grid-cols-2 gap-2 pt-2">
+            <div class="grid grid-cols-2 gap-2 pt-2">
               <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">عرض التذكرة</a>
               <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 text-center font-medium" style="border-color:var(--border-color)">الغي الميعاد</button>
             </div>
@@ -573,7 +573,7 @@
         </div>
         <div>
           <label class="input-label text-xs">الوقت المتاح</label>
-          <div class="grid-cols-3 gap-2">
+          <div class="grid grid-cols-3 gap-2">
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-2 border-[var(--primary)] bg-[var(--primary-subtle)] text-[var(--primary)]">10:00 ص</button>
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">11:30 ص</button>
             <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">04:30 م</button>
