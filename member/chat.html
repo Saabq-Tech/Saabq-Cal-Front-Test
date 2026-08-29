@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المحادثات المباشرة مع العملاء - سابق كال | Live Chat - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+            arabic: ['IBM Plex Sans Arabic', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] h-screen flex overflow-hidden transition-colors duration-300">
+
+  <!-- ═══════════ MEMBER SIDEBAR ═══════════ -->
+  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
+    <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-lg shadow-md">🌿</div><div class="min-w-0"><div class="font-bold text-sm truncate" style="color:var(--text-primary)">عيادات رعاية الأسرة</div><div class="text-[10px] text-emerald-500 font-semibold">خطة احترافية</div></div></div>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-4 space-y-1.5 text-xs font-semibold">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2V6zM14 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2V6zM4 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2v-2zM14 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2v-2z"/></svg><span>لوحة التحكم</span></a>
+      <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg><span>المواعيد والحجوزات</span><span class="ms-auto badge-violet text-[10px]">12</span></a>
+      <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 012 2v6a2 2 01-2H5a2 2 01-2-2v-6a2 2 012-2m14 0V9a2 2 00-2-2M5 11V9a2 2 012-2m0 0V5a2 2 012-2h6a2 2 012 2v2M7 7h10"/></svg><span>الخدمات والأسعار</span></a>
+      <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg><span>الجداول وأوقات العمل</span></a>
+      <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg><span>العملاء</span></a>
+      <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 00-2-2H7a2 2 00-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 011-1h2a1 1 011 1v5m-4 0h4"/></svg><span>الموارد، الأجهزة والقاعات</span></a>
+      <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0112 0v1zm0 0h6v-1a6 6 00-9-5.197M13 7a4 4 0 11-8 0 4 018 0z"/></svg><span>أعضاء الفريق</span></a>
+      <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0112 2.944a11.955 11.955 01-8.618 3.04A12.02 12.02 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>الأدوار والصلاحيات</span></a>
+      <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg><span>المالية</span></a>
+      <a href="subscription.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>الاشتراك والترقية</span></a>
+      <a href="notifications.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0118 14.158V11a6.002 6.002 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg><span>قنوات الإشعارات</span></a>
+      <a href="chat.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg><span>الشات والرسائل الفورية</span></a>
+      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/></svg><span>الإعدادات</span></a>
+    </nav>
+  </aside>
+
+  <!-- ═══════════ MAIN CHAT LAYOUT ═══════════ -->
+  <div class="flex-1 flex-col min-w-0 h-full">
+
+    <!-- Topbar -->
+    <header class="h-16 glass-strong border-b px-4 sm:px-6 flex items-center justify-between flex-shrink-0" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3">
+        <button data-sidebar-toggle class="lg:hidden p-2 rounded-xl hover:bg-black/5"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <span class="font-bold text-sm" style="color:var(--text-primary)">المحادثات المباشرة مع العملاء</span>
+        <span class="badge-emerald text-xs">متصل الآن 🟢</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+      </div>
+    </header>
+
+    <!-- Chat Split Screen (Conversations List + Active Chat Window) -->
+    <div class="flex-1 flex-col md:flex-row min-h-0 relative">
+
+      <!-- Conversations Sidebar -->
+      <div id="chatSidebar" class="w-full md:w-80 border-e flex-col flex-shrink-0" style="border-color:var(--border-color);background:var(--bg-card)">
+        <div class="p-3 border-b" style="border-color:var(--border-color)">
+          <input type="text" placeholder="بحث في المحادثات..." class="input-field !py-1.5 !text-xs">
+        </div>
+
+        <div class="flex-1 overflow-y-auto divide-y" style="border-color:var(--border-color)">
+          <!-- Conversation 1 (Active) -->
+          <div onclick="if(window.innerWidth < 768) { document.getElementById('chatSidebar').classList.add('hidden'); document.getElementById('activeChatWindow').classList.remove('hidden'); }" class="p-3.5 cursor-pointer bg-brand-50/50 dark:bg-brand-900/20 border-s-4 border-s-brand-600 flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center flex-shrink-0">أ</div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-center mb-0.5">
+                <span class="font-bold text-xs truncate" style="color:var(--text-primary)">أحمد علي محمد</span>
+                <span class="text-[10px] text-gray-400">10:15 ص</span>
+              </div>
+              <p class="text-xs text-gray-500 truncate">هل يمكن تأخير موعد كشف الأسنان 15 دقيقة؟</p>
+            </div>
+          </div>
+
+          <!-- Conversation 2 -->
+          <div onclick="if(window.innerWidth < 768) { document.getElementById('chatSidebar').classList.add('hidden'); document.getElementById('activeChatWindow').classList.remove('hidden'); }" class="p-3.5 cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-700 font-bold text-xs flex items-center justify-center flex-shrink-0">س</div>
+            <div class="flex-1 min-w-0">
+              <div class="flex justify-between items-center mb-0.5">
+                <span class="font-bold text-xs truncate" style="color:var(--text-primary)">سارة خالد القحطاني</span>
+                <span class="text-[10px] text-gray-400">أمس</span>
+              </div>
+              <p class="text-xs text-gray-400 truncate">شكراً جزيلاً دكتورة سارة، الاستشارة كانت ممتازة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Chat Window -->
+      <div id="activeChatWindow" class="flex-1 flex-col min-w-0 bg-[var(--bg-primary)]">
+
+        <!-- Chat Header -->
+        <div class="p-3.5 border-b flex items-center justify-between" style="border-color:var(--border-color);background:var(--bg-card)">
+          <div class="flex items-center gap-3">
+            <button onclick="document.getElementById('chatSidebar').classList.remove('hidden'); document.getElementById('activeChatWindow').classList.add('hidden')" class="md:hidden p-1.5 rounded-lg border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]">
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+            </button>
+            <div class="w-9 h-9 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
+            <div>
+              <div class="font-bold text-xs" style="color:var(--text-primary)">أحمد علي محمد</div>
+              <div class="text-[10px] text-emerald-500 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> <span>متصل الآن</span></div>
+            </div>
+          </div>
+          <a href="booking-detail.html" class="btn-secondary !rounded-xl text-xs py-1 px-3">عرض الموعد #BK-94821</a>
+        </div>
+
+        <!-- Chat Messages Thread -->
+        <div class="flex-1 overflow-y-auto p-4 space-y-4">
+          <!-- Customer Bubble -->
+          <div class="flex items-start gap-2.5 max-w-md">
+            <div class="w-7 h-7 rounded-full gradient-brand text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0">أ</div>
+            <div class="p-3 rounded-2xl rounded-tr-none text-xs space-y-1" style="background:var(--bg-card);border:1px solid var(--border-color)">
+              <p style="color:var(--text-primary)">السلام عليكم ورحمة الله، عندي موعد اليوم الساعة 09:30 ص، هل ممكن أتأخر 15 دقيقة فقط بسبب الزحام؟</p>
+              <div class="text-[9px] text-gray-400 text-end">10:14 ص</div>
+            </div>
+          </div>
+
+          <!-- Staff / Doctor Bubble (Outgoing) -->
+          <div class="flex items-start gap-2.5 max-w-md ms-auto flex-row-reverse">
+            <div class="w-7 h-7 rounded-full bg-brand-600 text-white text-[10px] font-bold flex items-center justify-center flex-shrink-0">د.ف</div>
+            <div class="p-3 rounded-2xl rounded-tl-none text-xs space-y-1 bg-brand-600 text-white shadow-sm">
+              <p>وعليكم السلام أستاذ أحمد، أهلاً بك. نعم بكل سرور تم إعلام الطبيب وسننتظرك حتى الساعة 09:45 ص بإذن الله.</p>
+              <div class="text-[9px] text-white/70 text-end">10:16 ص ✓✓</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <div class="p-3 border-t flex items-center gap-2" style="border-color:var(--border-color);background:var(--bg-card)">
+          <button class="p-2 rounded-xl hover:bg-black/5 text-gray-400"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/></svg></button>
+          <input type="text" placeholder="اكتب رسالتك هنا..." class="input-field !py-2 !text-xs flex-1">
+          <button class="btn-primary !rounded-xl !p-2.5"><svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg></button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

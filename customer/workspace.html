@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عيادات رعاية الأسرة - سابق كال | Family Care Clinics - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-8">
+          <a href="explore.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-xl font-black gradient-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-1.5 p-1 bg-[var(--bg-secondary)] rounded-2xl border-[var(--border-color)]">
+            <a href="explore.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="استكشف" data-en="Explore">استكشف</a>
+            <a href="appointments.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="مواعيدي" data-en="My Appointments">مواعيدي</a>
+            <a href="payments.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="المدفوعات" data-en="Payments">المدفوعات</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
+            <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ WORKSPACE HERO COVER & IDENTITY ═══════════ -->
+  <div class="h-60 sm:h-72 relative overflow-hidden bg-gradient-to-r from-teal-900 via-teal-800 to-sky-950 text-white">
+    <div class="absolute orb orb-primary w-96 h-96 -top-20 -right-20 opacity-30"></div>
+    <div class="absolute orb orb-secondary w-80 h-80 bottom-0 left-10 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-4 h-full flex items-end pb-8 relative z-10">
+      <div class="flex items-center gap-2 text-white/80 text-xs">
+        <a href="explore.html" class="hover:underline" data-ar="الاستكشاف" data-en="Explore">الاستكشاف</a>
+        <span>/</span>
+        <span data-ar="عيادات واستشارات طبية" data-en="Medical & Clinics">عيادات واستشارات طبية</span>
+        <span>/</span>
+        <span class="text-white font-bold" data-ar="عيادات رعاية الأسرة" data-en="Family Care Clinics">عيادات رعاية الأسرة</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workspace Identity Bar -->
+  <div class="border-b" style="background: var(--bg-card); border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex-col lg:flex-row lg:items-end justify-between gap-6 -mt-16 sm:-mt-20 pb-6 relative z-20">
+        
+        <!-- Logo & Title -->
+        <div class="flex-col sm:flex-row items-start sm:items-end gap-5">
+          <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white shadow-2xl p-3 border-4 flex items-center justify-center text-4xl sm:text-5xl font-extrabold text-teal-700 flex-shrink-0" style="border-color: var(--bg-card)">
+            🌿
+          </div>
+          <div>
+            <div class="flex-wrap items-center gap-2.5 mb-1.5">
+              <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:var(--text-primary)" data-ar="عيادات رعاية الأسرة" data-en="Family Care Clinics">عيادات رعاية الأسرة</h1>
+              <span class="badge-emerald text-xs font-bold" data-ar="منشأة موثقة ✓" data-en="Verified ✓">منشأة موثقة ✓</span>
+              <span class="badge-primary text-xs" data-ar="تأكيد فوري ⚡" data-en="Instant Confirmation ⚡">تأكيد فوري ⚡</span>
+            </div>
+            
+            <div class="flex-wrap items-center gap-3 text-xs sm:text-sm text-[var(--text-secondary)]">
+              <div class="flex items-center gap-1 text-amber-500 font-extrabold">
+                <span>★ 4.9</span>
+                <span class="text-[var(--text-tertiary)] font-normal">(128 تقييم حقيقي)</span>
+              </div>
+              <span>•</span>
+              <div class="flex items-center gap-1">
+                <span>📍</span>
+                <span data-ar="الرياض، حي الياسمين - طريق أنس بن مالك" data-en="Riyadh, Alyasmin Dist.">الرياض، حي الياسمين - طريق أنس بن مالك</span>
+              </div>
+              <span>•</span>
+              <div class="flex items-center gap-1.5 text-emerald-600 font-bold">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span data-ar="مفتوح الآن حتى 10:00 م" data-en="Open Now until 10:00 PM">مفتوح الآن حتى 10:00 م</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Booking Call to Action -->
+        <div class="flex items-center gap-3">
+          <a href="booking.html" class="btn-primary !py-3.5 !px-8 !rounded-2xl text-sm font-bold shadow-xl flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+            <span data-ar="حجز موعد الآن ←" data-en="Book an Appointment →">حجز موعد الآن ←</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ MAIN CONTENT BODY ═══════════ -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-1 w-full space-y-10">
+
+    <!-- Grid: Services Catalog + Sidebar -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Left 8 Cols: Available Services & Specialists -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- About Section -->
+        <div class="card p-6 space-y-3 shadow-sm">
+          <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="عن المركز الطبي" data-en="About Us">عن المركز الطبي</h2>
+          <p class="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed" data-ar="مجمع عيادات رعاية الأسرة يقدم أعلى معايير الرعاية الصحية الشاملة لجميع أفراد العائلة، مع كادر استشاري معتمد من الهيئة السعودية للتخصصات الصحية وأحدث أجهزة التشخيص والمختبر." data-en="Family Care Clinics provides top-tier healthcare for the entire family with certified consultants and modern diagnostic labs.">
+            مجمع عيادات رعاية الأسرة يقدم أعلى معايير الرعاية الصحية الشاملة لجميع أفراد العائلة، مع كادر استشاري معتمد من الهيئة السعودية للتخصصات الصحية وأحدث أجهزة التشخيص والمختبر.
+          </p>
+        </div>
+
+        <!-- ── AVAILABLE SERVICES LIST (Consumer Booking Cards) ── -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="الخدمات والمواعيد المتاحة للحجز (3)" data-en="Available Booking Services (3)">الخدمات والمواعيد المتاحة للحجز (3)</h2>
+              <p class="text-xs text-[var(--text-secondary)]" data-ar="اختر الخدمة المناسبة وحدد الموعد المباشر مع الاستشاري" data-en="Select a service to choose your preferred slot">اختر الخدمة المناسبة وحدد الموعد المباشر مع الاستشاري</p>
+            </div>
+            <span class="badge-primary text-xs font-bold">تأكيد إلكتروني فوري</span>
+          </div>
+
+          <div class="space-y-3">
+
+            <!-- Service 1 -->
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
+                  🩺
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-bold text-sm:text-base text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">كشف واستشارة طب أسرة</h3>
+                    <span class="badge-emerald text-[10px]">حضوري</span>
+                  </div>
+                  <p class="text-xs text-[var(--text-secondary)]">فحص سريري متكامل، قياس المؤشرات الحيوية، وكتابة الوصفة الطبية المعتمدة.</p>
+                  <div class="flex items-center gap-4 text-xs font-medium text-[var(--text-tertiary)] pt-1">
+                    <span class="flex items-center gap-1">⏰ 30 دقيقة</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">👨‍⚕️ د. فهد العتيبي</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+                <div class="text-start sm:text-end">
+                  <span class="text-base font-extrabold text-[var(--primary)]">150 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة 15%</span>
+                </div>
+                <a href="booking.html" class="btn-primary !py-2 !px-5 !rounded-xl text-xs font-bold shadow-md">
+                  <span>احجز الآن ←</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
+                  🦷
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-bold text-sm:text-base text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">فحص وتنظيف أسنان شامل</h3>
+                    <span class="badge-emerald text-[10px]">حضوري</span>
+                  </div>
+                  <p class="text-xs text-[var(--text-secondary)]">إزالة الجير والتكلسات، فحص اللثة بالأشعة السينية، وتلميع الأسنان.</p>
+                  <div class="flex items-center gap-4 text-xs font-medium text-[var(--text-tertiary)] pt-1">
+                    <span class="flex items-center gap-1">⏰ 45 دقيقة</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">👩‍⚕️ د. سارة الدوسري</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+                <div class="text-start sm:text-end">
+                  <span class="text-base font-extrabold text-[var(--primary)]">200 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة 15%</span>
+                </div>
+                <a href="booking.html" class="btn-primary !py-2 !px-5 !rounded-xl text-xs font-bold shadow-md">
+                  <span>احجز الآن ←</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-5 shadow-sm group">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-sm font-bold">
+                  💻
+                </div>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-bold text-sm:text-base text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">استشارة طبية عن بُعد (Telehealth)</h3>
+                    <span class="badge-blue text-[10px]">Google Meet</span>
+                  </div>
+                  <p class="text-xs text-[var(--text-secondary)]">استشارة مرئية مباشرة عبر الفيديو لمراجعة التحاليل ومتابعة الخطة العلاجية.</p>
+                  <div class="flex items-center gap-4 text-xs font-medium text-[var(--text-tertiary)] pt-1">
+                    <span class="flex items-center gap-1">⏰ 20 دقيقة</span>
+                    <span>•</span>
+                    <span class="flex items-center gap-1">👨‍⚕️ د. فهد العتيبي</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex sm:flex-col items-center sm:items-end justify-between gap-3 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+                <div class="text-start sm:text-end">
+                  <span class="text-base font-extrabold text-[var(--primary)]">100 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة 15%</span>
+                </div>
+                <a href="booking.html" class="btn-primary !py-2 !px-5 !rounded-xl text-xs font-bold shadow-md">
+                  <span>احجز الآن ←</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Clinic Photo Gallery Slider -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🖼️</span>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="جولة في مرافق العيادة" data-en="Clinic Facilities Tour">جولة في مرافق العيادة</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="slideCarousel('galleryTrack', 'prev')" class="slider-btn !w-8 !h-8 text-xs" title="السابق">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+              </button>
+              <button onclick="slideCarousel('galleryTrack', 'next')" class="slider-btn !w-8 !h-8 text-xs" title="التالي">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <div id="galleryTrack" class="slider-track">
+              <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-teal-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                  <span class="text-2xl mb-1">🛋️</span>
+                  <span class="font-bold text-xs">صالة الاستقبال والانتظار VIP</span>
+                </div>
+              </div>
+              <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-blue-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                  <span class="text-2xl mb-1">🩺</span>
+                  <span class="font-bold text-xs">غرفة الفحص والاستشارات (1)</span>
+                </div>
+              </div>
+              <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-purple-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                  <span class="text-2xl mb-1">🦷</span>
+                  <span class="font-bold text-xs">وحدة علاج الأسنان والتعقيم المتطور</span>
+                </div>
+              </div>
+              <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+                <div class="h-44 rounded-2xl bg-gradient-to-br from-emerald-800 to-slate-900 p-4 text-white flex-col justify-end shadow-md relative overflow-hidden">
+                  <span class="text-2xl mb-1">🧪</span>
+                  <span class="font-bold text-xs">مختبر التحاليل الطبية الفورية</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialists Team Section -->
+        <div class="space-y-4">
+          <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الفريق الطبي والأخصائيين" data-en="Medical Specialists">الفريق الطبي والأخصائيين</h2>
+          <div class="grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="card p-4 flex items-center gap-3.5 shadow-sm">
+              <div class="w-14 h-14 rounded-2xl gradient-brand text-white text-xl font-bold flex items-center justify-center shadow-md">
+                👨‍⚕️
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-[var(--text-primary)]">د. فهد العتيبي</h4>
+                <p class="text-xs text-[var(--primary)] font-semibold">استشاري طب أسرة ومجتمع</p>
+                <div class="flex items-center gap-2 text-[10px] text-[var(--text-tertiary)] mt-1">
+                  <span>★ 4.9 (84 مريض)</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-bold">متاح غداً 09:30 ص</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-4 flex items-center gap-3.5 shadow-sm">
+              <div class="w-14 h-14 rounded-2xl bg-teal-600 text-white text-xl font-bold flex items-center justify-center shadow-md">
+                👩‍⚕️
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-[var(--text-primary)]">د. سارة الدوسري</h4>
+                <p class="text-xs text-[var(--primary)] font-semibold">أخصائية طب وجراحة الفم والأسنان</p>
+                <div class="flex items-center gap-2 text-[10px] text-[var(--text-tertiary)] mt-1">
+                  <span>★ 5.0 (44 مريض)</span>
+                  <span>•</span>
+                  <span class="text-emerald-600 font-bold">متاح اليوم 04:00 م</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Verified Reviews Slider -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">⭐</span>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="تقييمات المراجعين الحقيقية" data-en="Patient Reviews">تقييمات المراجعين الحقيقية (★ 4.9)</h2>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="slideCarousel('reviewsTrack', 'prev')" class="slider-btn !w-8 !h-8 text-xs" title="السابق">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+              </button>
+              <button onclick="slideCarousel('reviewsTrack', 'next')" class="slider-btn !w-8 !h-8 text-xs" title="التالي">
+                <svg class="w-3.5 h-3.5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <div id="reviewsTrack" class="slider-track">
+              
+              <div class="slider-slider-slide-sm-2">
+                <div class="card p-4 space-y-2 h-full flex-col justify-between shadow-sm">
+                  <div>
+                    <div class="flex text-amber-400 text-xs mb-1">★★★★★</div>
+                    <p class="text-xs text-[var(--text-secondary)]">تجربة ممتازة جداً، الدخول بدون انتظار عبر مسح رمز الـ QR مباشرة، والدكتور فهد قمة في الذوق والاحترافية.</p>
+                  </div>
+                  <div class="text-[10px] text-[var(--text-tertiary)] pt-2 border-t border-[var(--border-color)]">
+                    أحمد العلي • زيارة موثقة في سبتمبر 2026
+                  </div>
+                </div>
+              </div>
+
+              <div class="slider-slider-slide-sm-2">
+                <div class="card p-4 space-y-2 h-full flex-col justify-between shadow-sm">
+                  <div>
+                    <div class="flex text-amber-400 text-xs mb-1">★★★★★</div>
+                    <p class="text-xs text-[var(--text-secondary)]">جلسة تنظيف الأسنان مع د. سارة كانت مريحة وغير مؤلمة إطلاقاً. العيادة نظيفة جداً وراقية.</p>
+                  </div>
+                  <div class="text-[10px] text-[var(--text-tertiary)] pt-2 border-t border-[var(--border-color)]">
+                    ريم القحطاني • زيارة موثقة في أغسطس 2026
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right 4 Cols: Location, Hours, Contact Card -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Location & Working Hours Card -->
+        <div class="card p-5 space-y-4 shadow-sm border-t-4 border-t-[var(--primary)]">
+          <h3 class="font-bold text-sm text-[var(--text-primary)]" data-ar="الموقع وساعات العمل" data-en="Location & Hours">الموقع وساعات العمل</h3>
+          
+          <div class="p-3 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] space-y-2 text-xs">
+            <div class="flex items-start gap-2">
+              <span class="text-base">📍</span>
+              <div>
+                <span class="font-bold text-[var(--text-primary)] block">الرياض - حي الياسمين</span>
+                <span class="text-[var(--text-secondary)]">تقاطع طريق أنس بن مالك مع الملك فهد، مبنى الرعاية، الطابق 2</span>
+              </div>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn-secondary w-full !py-2 !rounded-xl text-xs justify-center font-bold mt-2">
+              <span>فتح في خرائط Google 🗺️</span>
+            </a>
+          </div>
+
+          <!-- Hours Table -->
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center justify-between pb-1.5 border-border-[var(--border-color)]">
+              <span class="text-[var(--text-secondary)]">الأحد - الخميس</span>
+              <span class="font-bold text-[var(--text-primary)]">09:00 ص - 10:00 م</span>
+            </div>
+            <div class="flex items-center justify-between pb-1.5 border-border-[var(--border-color)]">
+              <span class="text-[var(--text-secondary)]">السبت</span>
+              <span class="font-bold text-[var(--text-primary)]">01:00 م - 09:00 م</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-[var(--text-secondary)]">الجمعة</span>
+              <span class="text-rose-500 font-bold">مغلق (إجازة أسبوعية)</span>
+            </div>
+          </div>
+
+          <!-- Contact buttons -->
+          <div class="pt-2 border-t border-[var(--border-color)] flex gap-2">
+            <button class="btn-ghost flex-1 border rounded-xl !py-2 text-xs font-bold text-[var(--primary)]" style="border-color:var(--border-color)">
+              <span>📞 اتصال</span>
+            </button>
+            <button class="btn-ghost flex-1 border rounded-xl !py-2 text-xs font-bold text-emerald-600" style="border-color:var(--border-color)">
+              <span>💬 واتساب</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="mt-auto py-8 border-t" style="background: var(--bg-secondary); border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs" style="color:var(--text-tertiary)">
+      <p data-ar="© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة." data-en="© 2026 Saabq — Scheduling & Appointments Platform. All rights reserved.">© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التحقق بخطوتين - سابق كال | 2FA - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:['selector','[data-theme="dark"]'],theme:{extend:{colors:{brand:{50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837'},primary:{DEFAULT:'#0a9099',hover:'#11646a',light:'#169393',subtle:'#e6f7f8'},secondary:{DEFAULT:'#166992',hover:'#0e4c6b'},amber:{400:'#FCD34D',500:'#F59E0B',600:'#D97706'}},fontFamily:{sans:['Inter','IBM Plex Sans Arabic','sans-serif']}}}}</script>
+  <script src="../assets/js/theme.js"></script><script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex items-center justify-center p-6">
+  <div class="absolute top-4 left-4 right-4 flex items-center justify-between"><a href="../public/index.html" class="flex items-center gap-2"><img src="../assets/images/logo.png" alt="Saabq Cal" class="h-8 w-auto object-contain">
+        <span class="font-black text-lg gradient-text" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span></a><div class="flex items-center gap-2"><button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button><button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button></div></div>
+
+  <div class="w-full max-w-md animate-fade-in-up">
+    <div class="card-static p-8 lg:p-10 text-center">
+      <div class="w-16 h-16 rounded-2xl bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 002-2v-6a2 2 00-2-2H6a2 2 00-2v6a2 2 002 2zm10-10V7a4 4 00-8 0v4h8z"/></svg>
+      </div>
+      <h1 class="text-2xl font-extrabold mb-2" style="color:var(--text-primary)" data-ar="التحقق بخطوتين" data-en="Two-Factor Authentication">التحقق بخطوتين</h1>
+      <p class="text-sm mb-8" style="color:var(--text-secondary)" data-ar="أدخل رمز التحقق من تطبيق المصادقة" data-en="Enter the verification code from your authenticator app">أدخل رمز التحقق من تطبيق المصادقة</p>
+
+      <!-- OTP Input -->
+      <div class="flex justify-center gap-3 mb-8 otp-group" dir="ltr">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+        <input type="text" maxlength="1" class="otp-input" inputmode="numeric">
+      </div>
+
+      <button class="btn-primary w-full !py-3 !rounded-xl mb-4"><span data-ar="تأكيد" data-en="Verify">تأكيد</span></button>
+
+      <div class="flex items-center gap-4 my-6"><div class="flex-1 h-px" style="background:var(--border-color)"></div><span class="text-xs" style="color:var(--text-tertiary)" data-ar="أو" data-en="or">أو</span><div class="flex-1 h-px" style="background:var(--border-color)"></div></div>
+
+      <button class="btn-secondary w-full !rounded-xl mb-4"><span data-ar="استخدام رمز الاسترداد" data-en="Use Recovery Code">استخدام رمز الاسترداد</span></button>
+
+      <a href="login.html" class="text-sm font-medium text-brand-600 hover:text-brand-700 inline-flex items-center gap-2">
+        <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7h18"/></svg>
+        <span data-ar="العودة لسجل دخولك" data-en="Back to Sign In">العودة لتسجيل الدخول</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // OTP auto-focus
+    document.querySelectorAll('.otp-input').forEach((input, idx, arr) => {
+      input.addEventListener('input', function() {
+        if (this.value.length === 1 && idx < arr.length - 1) arr[idx + 1].focus();
+      });
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Backspace' && !this.value && idx > 0) arr[idx - 1].focus();
+      });
+    });
+  </script>
+</body>
+</html>

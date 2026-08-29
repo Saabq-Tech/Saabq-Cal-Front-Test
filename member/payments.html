@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المالية والتحقق من الإيصالات - سابق كال | Finance - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+            arabic: ['IBM Plex Sans Arabic', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex transition-colors duration-300">
+
+  <!-- ═══════════ MEMBER SIDEBAR ═══════════ -->
+  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
+    <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-lg shadow-md">🌿</div><div class="min-w-0"><div class="font-bold text-sm truncate" style="color:var(--text-primary)">عيادات رعاية الأسرة</div><div class="text-[10px] text-emerald-500 font-semibold">خطة احترافية</div></div></div>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-4 space-y-1.5 text-xs font-semibold">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2V6zM14 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2V6zM4 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2v-2zM14 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2v-2z"/></svg><span>لوحة التحكم</span></a>
+      <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg><span>المواعيد والحجوزات</span><span class="ms-auto badge-violet text-[10px]">12</span></a>
+      <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 012 2v6a2 2 01-2H5a2 2 01-2-2v-6a2 2 012-2m14 0V9a2 2 00-2-2M5 11V9a2 2 012-2m0 0V5a2 2 012-2h6a2 2 012 2v2M7 7h10"/></svg><span>الخدمات والأسعار</span></a>
+      <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg><span>الجداول وأوقات العمل</span></a>
+      <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg><span>العملاء</span></a>
+      <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 00-2-2H7a2 2 00-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 011-1h2a1 1 011 1v5m-4 0h4"/></svg><span>الموارد، الأجهزة والقاعات</span></a>
+      <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0112 0v1zm0 0h6v-1a6 6 00-9-5.197M13 7a4 4 0 11-8 0 4 018 0z"/></svg><span>أعضاء الفريق</span></a>
+      <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0112 2.944a11.955 11.955 01-8.618 3.04A12.02 12.02 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>الأدوار والصلاحيات</span></a>
+      <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg><span>المالية والإيصالات</span><span class="ms-auto badge-amber text-[10px]">3</span></a>
+      <a href="subscription.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg><span>الاشتراك والترقية</span></a>
+      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/></svg><span>الإعدادات</span></a>
+    </nav>
+  </aside>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <div class="flex-1 flex-col min-w-0">
+
+    <header class="sticky top-0 z-30 glass-strong border-b px-4 sm:px-8 py-3 flex items-center justify-between" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3">
+        <button data-sidebar-toggle class="lg:hidden p-2 rounded-xl hover:bg-black/5"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <span class="font-bold text-sm" style="color:var(--text-primary)">المالية والتحقق من الإيصالات</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+      </div>
+    </header>
+
+    <main class="p-4 sm:p-8 space-y-6 flex-1">
+
+      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-extrabold" style="color:var(--text-primary)" data-ar="المحفظة المالية وطابور الإيصالات" data-en="Finance & Receipts Queue">المحفظة المالية وطابور الإيصالات</h1>
+          <p class="text-xs" style="color:var(--text-secondary)" data-ar="مراجعة واعتماد إيصالات التحويل البنكي ومتابعة الإيرادات المحصلة." data-en="Verify and approve uploaded bank receipts and track revenue.">مراجعة واعتماد إيصالات التحويل البنكي ومتابعة الإيرادات المحصلة.</p>
+        </div>
+      </div>
+
+      <!-- Financial Metrics -->
+      <div class="grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="card p-6 border-s-4 border-s-brand-600">
+          <div class="text-xs text-gray-400 mb-1">إجمالي الإيرادات المؤكدة</div>
+          <div class="text-3xl font-extrabold text-brand-600">24,850.00 <span class="text-xs font-normal">ر.س</span></div>
+          <div class="text-[11px] text-emerald-500 font-semibold mt-1">✓ 134 عملية مؤكدة</div>
+        </div>
+
+        <div class="card p-6 border-s-4 border-s-amber-500">
+          <div class="text-xs text-gray-400 mb-1">طابور الإيصالات المعلقة</div>
+          <div class="text-3xl font-extrabold text-amber-500">3 <span class="text-xs font-normal">إيصالات</span></div>
+          <div class="text-[11px] text-amber-600 font-semibold mt-1">بقيمة 517.50 ر.س بانتظار المراجعة</div>
+        </div>
+
+        <div class="card p-6 border-s-4 border-s-blue-500">
+          <div class="text-xs text-gray-400 mb-1">متوسط قيمة العملية</div>
+          <div class="text-3xl font-extrabold text-blue-600">185.40 <span class="text-xs font-normal">ر.س</span></div>
+          <div class="text-[11px] text-gray-400 mt-1">لكل موعد مكتمل</div>
+        </div>
+      </div>
+
+      <!-- Pending Verification Queue Table -->
+      <div class="card overflow-hidden">
+        <div class="p-5 border-b flex items-center justify-between" style="border-color:var(--border-color)">
+          <div>
+            <h2 class="font-bold text-base" style="color:var(--text-primary)">طابور الإيصالات بانتظار التحقق والموافقة</h2>
+            <p class="text-xs text-gray-400">راجع صورة الإيصال المرفقة واضغط موافقة لتأكيد الحجز تلقائياً.</p>
+          </div>
+          <span class="badge-amber text-xs font-bold">3 إيصالات معلقة</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>رقم الحجز</th>
+                <th>العميل</th>
+                <th>الخدمة</th>
+                <th>المبلغ</th>
+                <th>الإيصال المرفق</th>
+                <th>وقت الرفع</th>
+                <th>القرار</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-mono text-xs font-semibold text-brand-600">#BK-94804</td>
+                <td>
+                  <div class="font-bold text-xs">فيصل الشمري</div>
+                  <div class="text-[10px] text-gray-400">0541122334</div>
+                </td>
+                <td class="text-xs">استشارة طبية عن بُعد</td>
+                <td class="font-bold text-xs text-brand-600">115.00 ر.س</td>
+                <td>
+                  <button onclick="openModal('receiptModal')" class="btn-ghost text-xs py-1 px-2 rounded-lg border flex items-center gap-1 text-brand-600">
+                    <span>📄</span> <span>معاينة الإيصال</span>
+                  </button>
+                </td>
+                <td class="text-xs text-gray-400">قبل 25 دقيقة</td>
+                <td>
+                  <div class="flex items-center gap-1.5">
+                    <button onclick="alert('تم اعتماد التحويل البنكي وتأكيد الحجز بنجاح ✓')" class="btn-primary !rounded-xl text-xs py-1 px-3 !bg-emerald-600 hover:!bg-emerald-700">اعتماد ✓</button>
+                    <button onclick="openModal('rejectModal')" class="btn-ghost text-xs text-rose-600 border-rose-500/30 hover:bg-rose-50 p-1 px-2.5 rounded-xl font-bold">رفض ✕</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ═══════════ RECEIPT PREVIEW LIGHTBOX MODAL ═══════════ -->
+  <div id="receiptModal" class="modal-backdrop hidden">
+    <div class="modal-card modal-card-lg p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div>
+          <h3 class="font-bold text-base text-[var(--text-primary)]">إيصال التحويل البنكي #BK-94804</h3>
+          <span class="text-xs text-[var(--text-secondary)]">العميل: فيصل الشمري • المبلغ: 115.00 ر.س</span>
+        </div>
+        <button onclick="closeModal('receiptModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+
+      <!-- Receipt Preview Sheet -->
+      <div class="p-4 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] text-center space-y-3">
+        <div class="h-64 rounded-xl bg-white dark:bg-slate-900 border flex-col items-center justify-center p-6 space-y-2">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold">
+            ✓
+          </div>
+          <span class="font-bold text-sm text-slate-800 dark:text-slate-100">تحويل بنكي صادر من مصرف الراجحي</span>
+          <span class="text-xs text-slate-500 font-mono">المرجع: RAJ-849201994</span>
+          <span class="text-lg font-black text-emerald-600 font-mono">115.00 ر.س</span>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('receiptModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إغلاق</button>
+        <button type="button" onclick="closeModal('receiptModal'); openModal('rejectModal')" class="btn-ghost !rounded-xl text-xs py-2 px-4 border-rose-500/30 text-rose-600 font-bold hover:bg-rose-50">رفض الإيصال</button>
+        <button type="button" onclick="closeModal('receiptModal'); alert('تم اعتماد التحويل وتأكيد الحجز ✓')" class="btn-primary !rounded-xl text-xs py-2 px-6 !bg-emerald-600 hover:!bg-emerald-700 font-bold">اعتماد وتأكيد الموعد ✓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ REJECT RECEIPT MODAL ═══════════ -->
+  <div id="rejectModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <h3 class="font-bold text-base text-rose-600 flex items-center gap-2">
+          <span>⚠️</span>
+          <span>رفض إيصال التحويل البنكي</span>
+        </h3>
+        <button onclick="closeModal('rejectModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+      <p class="text-xs text-[var(--text-secondary)]">اختر سبب رفض الإيصال لإرسال إشعار فوري للعميل مع رابط لإعادة الرفع:</p>
+      <div>
+        <label class="input-label text-xs">سبب الرفض *</label>
+        <select class="input-field !text-xs cursor-pointer">
+          <option>المبلغ المحول غير مطابق لقيمة الحجز</option>
+          <option>صورة الإيصال غير واضحة أو غير مكتملة</option>
+          <option>الرقم المرجعي أو الحساب المحول إليه غير صحيح</option>
+          <option>إيصال مكرر أو منتهي الصلاحية</option>
+        </select>
+      </div>
+      <div>
+        <label class="input-label text-xs">ملاحظة إضافية للعميل (اختياري)</label>
+        <textarea rows="2" class="input-field !text-xs" placeholder="اكتب توضيحاً للعميل..."></textarea>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('rejectModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إلغاء</button>
+        <button type="button" onclick="closeModal('rejectModal'); alert('تم رفض الإيصال وإشعار العميل بنجاح')" class="btn-ghost !rounded-xl text-xs py-2 px-5 bg-rose-600 hover:bg-rose-700 text-white font-bold">تأكيد الرفض والإشعار</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

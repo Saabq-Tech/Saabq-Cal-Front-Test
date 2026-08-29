@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سابق كال — Saabq Cal | بوابة استعراض واجهات النظام</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- Header Banner -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+          <div>
+            <span class="text-xl font-black gradient-text">سابق كال — Saabq Cal</span>
+            <span class="block text-[10px] text-[var(--text-tertiary)] font-bold">بوابة استعراض جميع صفحات النظام (34 صفحة)</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-2 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Search & Fast Stats -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-1 w-full space-y-10">
+
+    <div class="text-center max-w-2xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border bg-[var(--primary-subtle)] text-[var(--primary)] text-xs font-bold shadow-sm">
+        <span>🚀 جاهزية كاملة 100%</span>
+        <span>•</span>
+        <span>34 صفحة تفاعلية</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-black" style="color:var(--text-primary)" data-ar="بوابة استعراض واجهات سابق" data-en="Saabq Frontend Pages Hub">بوابة استعراض واجهات سابق</h1>
+      <p class="text-xs sm:text-sm text-[var(--text-secondary)]" data-ar="استعرض وانتقل إلى جميع صفحات العملاء، لوحة تحكم الأعضاء، المصادقة، والصفحات العامة بنقرة واحدة." data-en="Quick access to all Customer, Member Dashboard, Auth, and Public pages.">استعرض وانتقل إلى جميع صفحات العملاء، لوحة تحكم الأعضاء، المصادقة، والصفحات العامة بنقرة واحدة.</p>
+    </div>
+
+    <!-- ═══════════ SECTION 1: MEMBER DASHBOARD (14 PAGES) ═══════════ -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b" style="border-color:var(--border-color)">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-[var(--primary-subtle)] text-[var(--primary)] flex items-center justify-center text-sm font-bold">🏢</div>
+          <div>
+            <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="لوحة تحكم مساحة العمل والأعضاء (14 صفحة)" data-en="Workspace Member Dashboard (14 Pages)">لوحة تحكم مساحة العمل والأعضاء (14 صفحة)</h2>
+            <p class="text-[11px] text-[var(--text-secondary)]" data-ar="إدارة المواعيد، الجداول، الخدمات، العملاء، الصلاحيات، الإعدادات، والمحادثات" data-en="Manage bookings, schedules, services, CRM, roles, settings & live chat">إدارة المواعيد، الجداول، الخدمات، العملاء، الصلاحيات، الإعدادات، والمحادثات</p>
+          </div>
+        </div>
+        <span class="badge-primary text-xs">Member Portal</span>
+      </div>
+
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        
+        <a href="member/dashboard.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">📊</span>
+              <span class="badge-emerald text-[10px]">الرئيسية</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">لوحة التحكم (Dashboard)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">المؤشرات الحية، جدول اليوم، والإحصائيات</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/dashboard.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/bookings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">📅</span>
+              <span class="badge-primary text-[10px]">المواعيد</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">إدارة الحجوزات (Bookings)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">فلترة المواعيد، جدول المواعيد، والتصدير</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/bookings.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/booking-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">📋</span>
+              <span class="badge-secondary text-[10px]">تفاصيل</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">تفاصيل الحجز (Booking Dossier)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">ملف العميل، فحص الإيصال، وملاحظات الفريق</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/booking-detail.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/services.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🏷️</span>
+              <span class="badge-primary text-[10px]">الخدمات</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الخدمات والأسعار (Services)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">كتالوج الخدمات، المدد، والأسعار ومودال الإضافة</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/services.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/schedules.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">⏰</span>
+              <span class="badge-amber text-[10px]">الجداول</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">أوقات العمل (Schedules)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">بناء فترات العمل الأسبوعية والإجازات والاستثناءات</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/schedules.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/customers.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">👥</span>
+              <span class="badge-primary text-[10px]">العملاء</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">دليل العملاء (Customers CRM)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة العملاء، إجمالي الزيارات، والمصروفات</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/customers.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/resources.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🏥</span>
+              <span class="badge-secondary text-[10px]">الموارد</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">العيادات والغرف (Resources)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">إدارة غرف الكشف والمعدات المشتركة</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/resources.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/members.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">👨‍⚕️</span>
+              <span class="badge-primary text-[10px]">الفريق</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">أعضاء الفريق (Members)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة الأطباء والموظفين والأدوار ودعوة عضو</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/members.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/roles.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🛡️</span>
+              <span class="badge-emerald text-[10px]">الصلاحيات</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الأدوار والصلاحيات (Roles)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">مصفوفة الصلاحيات الـ 25+ لمساحة العمل</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/roles.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/settings.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">⚙️</span>
+              <span class="badge-primary text-[10px]">8 تبويبات</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">إعدادات المنشأة (Settings)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">الهوية، الأسئلة المخصصة، الفواتير والقوالب</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/settings.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/subscription.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">💳</span>
+              <span class="badge-secondary text-[10px]">الاشتراك</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الاشتراك والفوترة (Subscription)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">عدادات الاستخدام، الترقية، وتاريخ الفواتير</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/subscription.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">💰</span>
+              <span class="badge-amber text-[10px]">المالية</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">المدفوعات والإيصالات (Finance)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">قائمة مراجعة وتأكيد الإيصالات البنكية</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/payments.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/notifications.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🔔</span>
+              <span class="badge-primary text-[10px]">التكامل</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">التكامل والتنبيهات (Integrations)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">تقويم جوجل، تليجرام، والرسائل النصية SMS</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/notifications.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="member/chat.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">💬</span>
+              <span class="badge-emerald text-[10px]">المحادثات</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">المحادثات المباشرة (Live Chat)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">مركز الدعم والمراسلة الفورية مع العملاء</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>member/chat.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 2: CUSTOMER PORTAL (7 PAGES) ═══════════ -->
+    <div class="space-y-4 pt-6">
+      <div class="flex items-center justify-between pb-3 border-b" style="border-color:var(--border-color)">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-sm font-bold">👤</div>
+          <div>
+            <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="بوابة وتجربة العميل (7 صفحات)" data-en="Customer Portal (7 Pages)">بوابة وتجربة العميل (7 صفحات)</h2>
+            <p class="text-[11px] text-[var(--text-secondary)]" data-ar="استكشاف العيادات، حجز المواعيد، التقويم الشهري، التذاكر، والمدفوعات" data-en="Explore clinics, multi-step booking, calendar view, tickets & payments">استكشاف العيادات، حجز المواعيد، التقويم الشهري، التذاكر، والمدفوعات</p>
+          </div>
+        </div>
+        <span class="badge-emerald text-xs">Customer Portal</span>
+      </div>
+
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        
+        <a href="customer/explore.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🔍</span>
+              <span class="badge-emerald text-[10px]">استكشف</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">استكشاف المراكز والخدمات</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">دليل المنشآت والعيادات مع فلاتر المدن والتقييمات</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/explore.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/workspace.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🏥</span>
+              <span class="badge-primary text-[10px]">الملف التعريفي</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">صفحة المنشأة العامة</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">غلاف المنشأة، قائمة الخدمات، والفريق الطبي</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/workspace.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/booking.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">📝</span>
+              <span class="badge-primary text-[10px]">حجز فوري</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">معالج حجز الموعد المتكامل</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">اختيار المختص، التقويم والأوقات، ورفع الإيصال</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/booking.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/appointments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">📅</span>
+              <span class="badge-emerald text-[10px]">تقويم + قائمة</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">مواعيدي</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">عرض التقويم الافتراضي وبطاقات المواعيد السابقة</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/appointments.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/appointment-detail.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">🎫</span>
+              <span class="badge-secondary text-[10px]">رمز QR</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">تذكرة الموعد (Ticket)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">تذكرة الدخول، الباركود، وإلغاء/تعديل الموعد</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/appointment-detail.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/payments.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">💳</span>
+              <span class="badge-amber text-[10px]">الفواتير</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الحسابات والفواتير</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">سجل المعاملات الضريبية وتحميل الفواتير PDF</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/payments.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="customer/profile.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-lg">⚙️</span>
+              <span class="badge-primary text-[10px]">الأمان</span>
+            </div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)] transition-colors">الملف الشخصي والأمان</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">التحقق بخطوتين، مفاتيح المرور، والأجهزة النشطة</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>customer/profile.html</span>
+            <span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 3: AUTH & ONBOARDING (6 PAGES) ═══════════ -->
+    <div class="space-y-4 pt-6">
+      <div class="flex items-center justify-between pb-3 border-b" style="border-color:var(--border-color)">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center text-sm font-bold">🔐</div>
+          <div>
+            <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="بوابة المصادقة والتسجيل (6 صفحات)" data-en="Authentication & Onboarding (6 Pages)">بوابة المصادقة والتسجيل (6 صفحات)</h2>
+            <p class="text-[11px] text-[var(--text-secondary)]" data-ar="سجل دخولك، معالج المنشأة، استرجاع الباسورد، و 2FA" data-en="Sign in, 3-step workspace registration wizard, password reset & 2FA">تسجيل الدخول، معالج المنشأة، استعادة كلمة المرور، و 2FA</p>
+          </div>
+        </div>
+        <span class="badge-amber text-xs">Auth Portal</span>
+      </div>
+
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <a href="shared/login.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">تسجيل الدخول (Login)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">Google One-Tap وPasskeys ومفاتيح المرور</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/login.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="shared/register.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">إنشاء حساب ومعالج المنشأة</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">معالج تسجيل مساحة العمل من 3 خطوات</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/register.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="shared/two-factor.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">التحقق بخطوتين (2FA)</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">إدخال رمز المصادقة واستخدام رموز الاسترداد</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/two-factor.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="shared/forgot-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">نسيت كلمة المرور</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">طلب رابط الاستعادة بالبريد الإلكتروني</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/forgot-password.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="shared/reset-password.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">إعادة تعيين كلمة المرور</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">تعيين كلمة المرور الجديدة وتأكيدها</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/reset-password.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+
+        <a href="shared/verify-email.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">تأكيد البريد الإلكتروني</h3>
+            <p class="text-[11px] text-[var(--text-secondary)] mt-1">شاشة التحقق وإعادة إرسال رابط التفعيل</p>
+          </div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between">
+            <span>shared/verify-email.html</span><span class="font-sans font-bold">فتح ←</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══════════ SECTION 4: PUBLIC MARKETING (7 PAGES) ═══════════ -->
+    <div class="space-y-4 pt-6">
+      <div class="flex items-center justify-between pb-3 border-b" style="border-color:var(--border-color)">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center text-sm font-bold">🌐</div>
+          <div>
+            <h2 class="text-lg font-bold text-[var(--text-primary)]" data-ar="الموقع التعريفي العام (7 صفحات)" data-en="Public Marketing Portal (7 Pages)">الموقع التعريفي العام (7 صفحات)</h2>
+            <p class="text-[11px] text-[var(--text-secondary)]" data-ar="الرئيسية، الأسعار، المميزات، مين إحنا وحكايتنا، الأسئلة، والشروط" data-en="Landing, pricing, features, about, FAQ & terms">الرئيسية، الأسعار، المميزات، من نحن، الأسئلة، والشروط</p>
+          </div>
+        </div>
+        <span class="badge-secondary text-xs">Public Site</span>
+      </div>
+
+      <div class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <a href="public/index.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الرئيسية (Landing Page)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">واجهة المنصة مع بطاقة العرض الحية</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/index.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/pricing.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الأسعار والخطط (Pricing)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">مقارنة الخطط ومحول الشهري/السنوي</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/pricing.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/features.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">المميزات (Features)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">استعراض إمكانيات الجدولة والتكامل</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/features.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/about.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">من نحن (About)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">قصة سابق، الرؤية، والقيم الأساسية</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/about.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/faq.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الأسئلة الشائعة (FAQ)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">أكورديون تفاعلي مصنف حسب المواضيع</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/faq.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/terms.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">الشروط والأحكام (Terms)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">الاتفاقية القانونية وقواعد الخدمة</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/terms.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+        <a href="public/privacy.html" class="card p-4 hover:border-[var(--primary)] transition-all flex-col justify-between group">
+          <div><h3 class="font-bold text-sm text-[var(--text-primary)] group-hover:text-[var(--primary)]">سياسة الخصوصية (Privacy)</h3><p class="text-[11px] text-[var(--text-secondary)] mt-1">سياسات أمان وتشفير بيانات المستخدمين</p></div>
+          <div class="mt-4 pt-2 border-t border-[var(--border-color)] text-[10px] font-mono text-[var(--primary)] flex items-center justify-between"><span>public/privacy.html</span><span class="font-sans font-bold">فتح ←</span></div>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="mt-auto py-8 border-t" style="background: var(--bg-secondary); border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs" style="color:var(--text-tertiary)">
+      <p>© 2026 سابق (Saabq-Cal) — منصة إدارة المواعيد والجدولة الذكية.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

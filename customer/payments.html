@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المدفوعات والفواتير - سابق كال | Customer Invoices - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-8">
+          <a href="explore.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-xl font-black gradient-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-1.5 p-1 bg-[var(--bg-secondary)] rounded-2xl border-[var(--border-color)]">
+            <a href="explore.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="استكشف" data-en="Explore">استكشف</a>
+            <a href="appointments.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="مواعيدي" data-en="My Appointments">مواعيدي</a>
+            <a href="payments.html" class="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[var(--primary)] shadow-sm" data-ar="المدفوعات" data-en="Payments">المدفوعات</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
+            <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10 flex-1 w-full space-y-8">
+
+    <!-- Page Header & Metrics Summary -->
+    <div class="space-y-4">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)]" data-ar="الحسابات والفواتير الإلكترونية" data-en="Payments & E-Invoices">المدفوعات والفواتير الإلكترونية</h1>
+        <p class="text-xs sm:text-sm text-[var(--text-secondary)] mt-1" data-ar="سجل بجميع معاملاتك المالية، إيصالات التحويل البنكي، وتنزيل الفواتير الإلكترونية المعتمدة." data-en="View your payment history, upload transfer receipts, and download digital e-invoices.">سجل بجميع معاملاتك المالية، إيصالات التحويل البنكي، وتنزيل الفواتير الإلكترونية المعتمدة.</p>
+      </div>
+
+      <!-- Consumer Metrics Pills -->
+      <div class="grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <div class="card p-5 shadow-sm border-s-4 border-s-[var(--primary)] space-y-1">
+          <span class="text-xs text-[var(--text-tertiary)] font-bold block" data-ar="إجمالي المدفوعات الناجحة" data-en="Total Paid">إجمالي المدفوعات الناجحة</span>
+          <div class="text-2xl font-black text-[var(--primary)] font-mono">1,450.00 <span class="text-xs font-sans font-normal text-[var(--text-secondary)]">ر.س</span></div>
+          <span class="text-[10px] text-emerald-600 font-bold block">✓ 8 حجوزات مسددة بالكامل</span>
+        </div>
+
+        <div class="card p-5 shadow-sm border-s-4 border-s-amber-500 space-y-1">
+          <span class="text-xs text-[var(--text-tertiary)] font-bold block" data-ar="بانتظار تأكيد الإيصال" data-en="Pending Verification">بانتظار تأكيد الإيصال</span>
+          <div class="text-2xl font-black text-amber-600 font-mono">300.00 <span class="text-xs font-sans font-normal text-[var(--text-secondary)]">ر.س</span></div>
+          <span class="text-[10px] text-amber-600 font-bold block">⏳ تحويل بنكي تحت المراجعة</span>
+        </div>
+
+        <div class="card p-5 shadow-sm border-s-4 border-s-teal-600 space-y-1">
+          <span class="text-xs text-[var(--text-tertiary)] font-bold block" data-ar="فواتير إلكترونية جاهزة" data-en="E-Invoices Ready">فواتير إلكترونية جاهزة</span>
+          <div class="text-2xl font-black text-[var(--text-primary)] font-mono">8 <span class="text-xs font-sans font-normal text-[var(--text-secondary)]">فواتير PDF</span></div>
+          <span class="text-[10px] text-[var(--text-tertiary)] block">فواتير وإيصالات إلكترونية رسمية</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── TRANSACTIONS LIST (CONSUMER CARDS) ── -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-base sm:text-lg font-bold text-[var(--text-primary)]" data-ar="سجل الحجوزات والعمليات الأخيرة" data-en="Recent Transactions">سجل الحجوزات والعمليات الأخيرة</h2>
+        <span class="badge-primary text-xs">شوف كله</span>
+      </div>
+
+      <div class="space-y-3">
+
+        <!-- Transaction 1 (Paid & Confirmed) -->
+        <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+              💳
+            </div>
+            <div>
+              <div class="flex-wrap items-center gap-2 mb-1">
+                <span class="badge-emerald text-[10px] font-bold">مدفوع ومؤكد ✓</span>
+                <span class="badge-primary text-[10px]">مدى (Mada)</span>
+                <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-94821</span>
+              </div>
+              <h3 class="font-bold text-sm text-[var(--text-primary)]">كشف واستشارة طب أسرة • عيادات رعاية الأسرة</h3>
+              <p class="text-xs text-[var(--text-secondary)]">الخميس، 10 سبتمبر 2026 • 09:30 ص • د. فهد العتيبي</p>
+            </div>
+          </div>
+
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+            <div class="text-start sm:text-end">
+              <span class="text-base font-extrabold text-[var(--text-primary)] font-mono">150.00 ر.س</span>
+              <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة 15%</span>
+            </div>
+            <button onclick="openModal('invoiceModal')" class="btn-ghost !py-1.5 !px-3 !rounded-xl border text-xs font-bold text-[var(--primary)] flex items-center gap-1.5" style="border-color:var(--border-color)">
+              <span>📄 تنزيل الفاتورة PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Transaction 2 (Pending Bank Transfer) -->
+        <div class="card p-5 border-amber-500/40 bg-amber-500/5 hover:border-amber-500 transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+              ⏳
+            </div>
+            <div>
+              <div class="flex-wrap items-center gap-2 mb-1">
+                <span class="badge-amber text-[10px] font-bold">بانتظار التحقق من الإيصال</span>
+                <span class="badge-secondary text-[10px]">تحويل بنكي الراجحي</span>
+                <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-94804</span>
+              </div>
+              <h3 class="font-bold text-sm text-[var(--text-primary)]">استشارة قانونية وتجارية • مكتب النخبة للمحاماة</h3>
+              <p class="text-xs text-[var(--text-secondary)]">الإثنين، 14 سبتمبر 2026 • 04:00 م • أ. خالد الشمري</p>
+            </div>
+          </div>
+
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+            <div class="text-start sm:text-end">
+              <span class="text-base font-extrabold text-amber-600 font-mono">300.00 ر.س</span>
+              <span class="text-[10px] text-amber-600 block font-semibold">قيد التدقيق</span>
+            </div>
+            <button onclick="openModal('uploadReceiptModal')" class="btn-primary !py-1.5 !px-3 !rounded-xl text-xs font-bold shadow-sm">
+              <span>إعادة رفع الإيصال 📎</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Transaction 3 (Previous Completed) -->
+        <div class="card p-5 hover:border-[var(--primary)] transition-all flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
+          <div class="flex items-start sm:items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl font-bold flex-shrink-0">
+              💳
+            </div>
+            <div>
+              <div class="flex-wrap items-center gap-2 mb-1">
+                <span class="badge-emerald text-[10px] font-bold">مكتمل ومدفوع ✓</span>
+                <span class="badge-primary text-[10px]">Apple Pay</span>
+                <span class="text-xs font-mono text-[var(--text-tertiary)]">#INV-2026-88310</span>
+              </div>
+              <h3 class="font-bold text-sm text-[var(--text-primary)]">جلسة هيدرافيشل ملكية • مركز جلو للعناية والتجميل</h3>
+              <p class="text-xs text-[var(--text-secondary)]">20 أغسطس 2026 • 05:30 م</p>
+            </div>
+          </div>
+
+          <div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-3 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+            <div class="text-start sm:text-end">
+              <span class="text-base font-extrabold text-[var(--text-primary)] font-mono">250.00 ر.س</span>
+              <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة</span>
+            </div>
+            <button onclick="openModal('invoiceModal')" class="btn-ghost !py-1.5 !px-3 !rounded-xl border text-xs font-bold text-[var(--primary)] flex items-center gap-1.5" style="border-color:var(--border-color)">
+              <span>📄 تنزيل الفاتورة PDF</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════ UPLOAD RECEIPT MODAL ═══════════ -->
+  <div id="uploadReceiptModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <h3 class="font-bold text-base text-[var(--text-primary)] flex items-center gap-2">
+          <span>📎</span>
+          <span>رفع إيصال التحويل البنكي</span>
+        </h3>
+        <button onclick="closeModal('uploadReceiptModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+      <p class="text-xs text-[var(--text-secondary)]">ارفع صورة أو ملف PDF لإيصال التحويل البنكي للحجز <strong class="text-[var(--text-primary)]">#BK-94804</strong> (300.00 ر.س):</p>
+      
+      <!-- Drag and drop zone -->
+      <div class="p-6 rounded-2xl border-2 border-dashed border-[var(--primary)] bg-[var(--primary-subtle)] text-center cursor-pointer space-y-2 hover:bg-[var(--primary-subtle)]/70 transition-all">
+        <div class="w-10 h-10 rounded-full bg-[var(--primary)] text-white text-lg flex items-center justify-center mx-auto shadow-sm">
+          ⬆️
+        </div>
+        <div class="text-xs font-bold text-[var(--text-primary)]">اسحب الإيصال هنا أو انقر للتصفح</div>
+        <div class="text-[10px] text-[var(--text-tertiary)]">PNG, JPG, PDF بحد أقصى 5MB</div>
+      </div>
+
+      <div class="space-y-3">
+        <div>
+          <label class="input-label text-xs">اسم البنك المحول منه</label>
+          <select class="input-field !text-xs">
+            <option>مصرف الراجحي</option>
+            <option>البنك الأهلي السعودي (SNB)</option>
+            <option>بنك الرياض</option>
+            <option>بنك الإنماء</option>
+          </select>
+        </div>
+        <div>
+          <label class="input-label text-xs">الرقم المرجعي للتحويل (اختياري)</label>
+          <input type="text" placeholder="مثال: TXN-8392109" class="input-field !text-xs font-mono">
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('uploadReceiptModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إلغاء</button>
+        <button type="button" onclick="closeModal('uploadReceiptModal'); alert('تم رفع الإيصال بنجاح، سيتم مراجعته فوراً')" class="btn-primary !rounded-xl text-xs py-2 px-5 font-bold shadow-md">إرسال الإيصال</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ INVOICE PDF PREVIEW MODAL ═══════════ -->
+  <div id="invoiceModal" class="modal-backdrop hidden">
+    <div class="modal-card modal-card-lg p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2">
+          <span class="text-lg">🧾</span>
+          <div>
+            <h3 class="font-bold text-sm text-[var(--text-primary)]">فاتورة ضريبية مبسطة (ZATCA e-Invoice)</h3>
+            <span class="text-[10px] font-mono text-[var(--text-tertiary)]">#INV-2026-94821</span>
+          </div>
+        </div>
+        <button onclick="closeModal('invoiceModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+
+      <!-- Invoice Sheet Mockup -->
+      <div class="p-5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-secondary)] space-y-4 text-xs">
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="font-black text-sm text-[var(--text-primary)] block">عيادات رعاية الأسرة</span>
+            <span class="text-[10px] text-[var(--text-tertiary)]">الرقم الضريبي: 300192849100003</span>
+            <span class="text-[10px] text-[var(--text-tertiary)] block">الرياض - حي الياسمين</span>
+          </div>
+          <!-- Mini QR Code -->
+          <div class="w-16 h-16 bg-white p-1 rounded-lg shadow-sm border flex items-center justify-center">
+            <svg class="w-full h-full text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h8v8H2zm2 2v4h4V4zm8-2h8v8h-8zm2 2v4h4V4zM2 14h8v8H2zm2 2v4h4v-4zm14-2h4v4h-4zm-6 0h4v2h-4zm2 4h4v4h-4zm4 2h2v2h-2zm-6 0h2v2h-2z"/></svg>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-[var(--border-color)] space-y-1.5">
+          <div class="flex justify-between font-bold text-[var(--text-primary)]">
+            <span>الخدمة: كشف واستشارة طب أسرة</span>
+            <span>130.43 ر.س</span>
+          </div>
+          <div class="flex justify-between text-[var(--text-secondary)]">
+            <span>ضريبة القيمة المضافة (15%):</span>
+            <span>19.57 ر.س</span>
+          </div>
+          <div class="flex justify-between pt-2 border-t border-[var(--border-color)] font-extrabold text-sm text-[var(--primary)]">
+            <span>المجموع الكلي:</span>
+            <span>150.00 ر.س</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between pt-3 border-t border-[var(--border-color)]">
+        <span class="text-[10px] text-emerald-600 font-bold">✓ مدفوعة بالكامل عبر مدى</span>
+        <div class="flex gap-2">
+          <button onclick="window.print()" class="btn-secondary !rounded-xl text-xs py-2 px-3">طباعة 🖨️</button>
+          <button onclick="alert('جاري تنزيل الفاتورة بصيغة PDF...')" class="btn-primary !rounded-xl text-xs py-2 px-4 font-bold">تنزيل PDF 📥</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

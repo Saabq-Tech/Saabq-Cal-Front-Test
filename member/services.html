@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الخدمات والأسعار - سابق كال | Services - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+            arabic: ['IBM Plex Sans Arabic', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex transition-colors duration-300">
+
+  <!-- ═══════════ MEMBER SIDEBAR ═══════════ -->
+  <aside class="sidebar fixed lg:static inset-y-0 start-0 z-50 w-64 glass-strong border-e flex-col transition-all duration-300 -translate-x-full lg:translate-x-0 rtl:translate-x-full lg:rtl:translate-x-0" style="border-color: var(--border-color); background: var(--bg-card)">
+    <div class="p-5 border-b flex items-center justify-between" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl gradient-brand flex items-center justify-center text-white font-bold text-lg shadow-md">🌿</div><div class="min-w-0"><div class="font-bold text-sm truncate" style="color:var(--text-primary)">عيادات رعاية الأسرة</div><div class="text-[10px] text-emerald-500 font-semibold">خطة احترافية</div></div></div>
+    </div>
+    <nav class="flex-1 overflow-y-auto p-4 space-y-1.5 text-xs font-semibold">
+      <a href="dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2V6zM14 6a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2V6zM4 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2H6a2 2 01-2-2v-2zM14 16a2 2 012-2h2a2 2 012 2v2a2 2 01-2h-2a2 2 01-2-2v-2z"/></svg><span>لوحة التحكم</span></a>
+      <a href="bookings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg><span>المواعيد والحجوزات</span><span class="ms-auto badge-violet text-[10px]">12</span></a>
+      <a href="services.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-600 text-white shadow-sm"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 012 2v6a2 2 01-2H5a2 2 01-2-2v-6a2 2 012-2m14 0V9a2 2 00-2-2M5 11V9a2 2 012-2m0 0V5a2 2 012-2h6a2 2 012 2v2M7 7h10"/></svg><span>الخدمات والأسعار</span></a>
+      <a href="schedules.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg><span>الجداول وأوقات العمل</span></a>
+      <a href="customers.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg><span>العملاء</span></a>
+      <a href="resources.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 00-2-2H7a2 2 00-2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 011-1h2a1 1 011 1v5m-4 0h4"/></svg><span>الموارد، الأجهزة والقاعات</span></a>
+      <a href="members.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0112 0v1zm0 0h6v-1a6 6 00-9-5.197M13 7a4 4 0 11-8 0 4 018 0z"/></svg><span>أعضاء الفريق</span></a>
+      <a href="roles.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0112 2.944a11.955 11.955 01-8.618 3.04A12.02 12.02 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg><span>الأدوار</span></a>
+      <a href="payments.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg><span>المالية</span></a>
+      <a href="settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-brand-50 transition-colors" style="color:var(--text-secondary)"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/></svg><span>الإعدادات</span></a>
+    </nav>
+  </aside>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <div class="flex-1 flex-col min-w-0">
+
+    <header class="sticky top-0 z-30 glass-strong border-b px-4 sm:px-8 py-3 flex items-center justify-between" style="border-color: var(--border-color)">
+      <div class="flex items-center gap-3">
+        <button data-sidebar-toggle class="lg:hidden p-2 rounded-xl hover:bg-black/5"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <span class="font-bold text-sm" style="color:var(--text-primary)" data-ar="الخدمات والأسعار" data-en="Services & Pricing">الخدمات والأسعار</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+      </div>
+    </header>
+
+    <main class="p-4 sm:p-8 space-y-6 flex-1">
+
+      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 class="text-2xl font-extrabold" style="color:var(--text-primary)" data-ar="الخدمات والأسعار" data-en="Services & Pricing">الخدمات والأسعار</h1>
+          <p class="text-xs" style="color:var(--text-secondary)" data-ar="إضافة وتعديل الخدمات المعروضة للحجز مع تحديد الأسعار والمدد والمتخصصين." data-en="Manage services for booking with prices, durations, and specialists.">إضافة وتعديل الخدمات المعروضة للحجز مع تحديد الأسعار والمدد والمتخصصين.</p>
+        </div>
+        <button class="btn-primary !rounded-xl text-xs py-2 px-4 flex items-center gap-1.5" onclick="document.getElementById('serviceModal').classList.remove('hidden')">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          <span data-ar="ضيف خدمة جديدة" data-en="Add New Service">ضيف خدمة جديدة</span>
+        </button>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Service Card 1 -->
+        <div class="card p-6 flex-col justify-between space-y-4 hover:border-brand-500 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-12 h-12 rounded-2xl bg-brand-50 dark:bg-brand-900/30 text-brand-600 flex items-center justify-center text-xl">🩺</div>
+              <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--text-primary)">كشف واستشارة طب أسرة</h3>
+            <p class="text-xs line-clamp-2 mb-3" style="color:var(--text-secondary)">فحص شامل وتقييم الحالة الصحية العامة مع وصف الخطة العلاجية والتحاليل.</p>
+
+            <div class="space-y-1.5 text-xs text-gray-500 pt-2 border-t" style="border-color:var(--border-color)">
+              <div class="flex justify-between"><span>المدة:</span><span class="font-semibold text-gray-700 dark:text-gray-300">30 دقيقة</span></div>
+              <div class="flex justify-between"><span>النوع:</span><span class="badge-emerald text-[10px]">حضوري</span></div>
+              <div class="flex justify-between"><span>المتخصصين:</span><span class="font-semibold text-gray-700 dark:text-gray-300">د. فهد، د. سارة</span></div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t flex items-center justify-between" style="border-color:var(--border-color)">
+            <div class="font-extrabold text-brand-600 text-lg">150.00 <span class="text-xs font-normal">ر.س</span></div>
+            <div class="flex items-center gap-1">
+              <button class="btn-ghost text-xs py-1 px-2.5 rounded-lg border" style="border-color:var(--border-color)">تعديل</button>
+              <button class="p-1 rounded-lg text-rose-500 hover:bg-rose-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0116.138 21H7.862a2 2 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 00-1-1h-4a1 1 00-1v3M4 7h16"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="card p-6 flex-col justify-between space-y-4 hover:border-brand-500 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 flex items-center justify-center text-xl">🦷</div>
+              <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--text-primary)">تنظيف وتلميع الأسنان</h3>
+            <p class="text-xs line-clamp-2 mb-3" style="color:var(--text-secondary)">جلسة تنظيف احترافية بالموجات فوق الصوتية لإزالة الرواسب الجيرية وتلميع الأسنان.</p>
+
+            <div class="space-y-1.5 text-xs text-gray-500 pt-2 border-t" style="border-color:var(--border-color)">
+              <div class="flex justify-between"><span>المدة:</span><span class="font-semibold text-gray-700 dark:text-gray-300">45 دقيقة</span></div>
+              <div class="flex justify-between"><span>النوع:</span><span class="badge-emerald text-[10px]">حضوري</span></div>
+              <div class="flex justify-between"><span>المتخصصين:</span><span class="font-semibold text-gray-700 dark:text-gray-300">د. فهد العتيبي</span></div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t flex items-center justify-between" style="border-color:var(--border-color)">
+            <div class="font-extrabold text-brand-600 text-lg">250.00 <span class="text-xs font-normal">ر.س</span></div>
+            <div class="flex items-center gap-1">
+              <button class="btn-ghost text-xs py-1 px-2.5 rounded-lg border" style="border-color:var(--border-color)">تعديل</button>
+              <button class="p-1 rounded-lg text-rose-500 hover:bg-rose-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0116.138 21H7.862a2 2 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 00-1-1h-4a1 1 00-1v3M4 7h16"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="card p-6 flex-col justify-between space-y-4 hover:border-brand-500 transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center text-xl">💻</div>
+              <label class="toggle"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--text-primary)">استشارة طبية عن بُعد</h3>
+            <p class="text-xs line-clamp-2 mb-3" style="color:var(--text-secondary)">استشارة مرئية مباشرة عبر Google Meet لمناقشة النتائج ومتابعة الخطة العلاجية.</p>
+
+            <div class="space-y-1.5 text-xs text-gray-500 pt-2 border-t" style="border-color:var(--border-color)">
+              <div class="flex justify-between"><span>المدة:</span><span class="font-semibold text-gray-700 dark:text-gray-300">20 دقيقة</span></div>
+              <div class="flex justify-between"><span>النوع:</span><span class="badge-blue text-[10px]">Google Meet</span></div>
+              <div class="flex justify-between"><span>المتخصصين:</span><span class="font-semibold text-gray-700 dark:text-gray-300">د. سارة الشهري</span></div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t flex items-center justify-between" style="border-color:var(--border-color)">
+            <div class="font-extrabold text-brand-600 text-lg">100.00 <span class="text-xs font-normal">ر.س</span></div>
+            <div class="flex items-center gap-1">
+              <button class="btn-ghost text-xs py-1 px-2.5 rounded-lg border" style="border-color:var(--border-color)">تعديل</button>
+              <button class="p-1 rounded-lg text-rose-500 hover:bg-rose-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0116.138 21H7.862a2 2 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 00-1-1h-4a1 1 00-1v3M4 7h16"/></svg></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- ═══════════ CREATE / EDIT SERVICE MODAL ═══════════ -->
+  <div id="serviceModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm hidden animate-fade-in">
+    <div class="card p-6 max-w-xl w-full space-y-4 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b pb-3" style="border-color:var(--border-color)">
+        <h2 class="font-bold text-base" style="color:var(--text-primary)">ضيف خدمة جديدة</h2>
+        <button onclick="document.getElementById('serviceModal').classList.add('hidden')" class="p-1 rounded-lg hover:bg-black/5">✕</button>
+      </div>
+
+      <form class="space-y-4">
+        <!-- Bilingual Names -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="input-label">اسم الخدمة (عربي) *</label>
+            <input type="text" class="input-field" placeholder="مثال: فحص شامل">
+          </div>
+          <div>
+            <label class="input-label">Service Name (English)</label>
+            <input type="text" class="input-field" placeholder="e.g. Full Checkup" dir="ltr">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div>
+            <label class="input-label">السعر (ر.س) *</label>
+            <input type="number" class="input-field" placeholder="150.00">
+          </div>
+          <div>
+            <label class="input-label">المدة (بالدقائق) *</label>
+            <select class="input-field cursor-pointer">
+              <option>15 دقيقة</option>
+              <option selected>30 دقيقة</option>
+              <option>45 دقيقة</option>
+              <option>60 دقيقة</option>
+            </select>
+          </div>
+          <div>
+            <label class="input-label">نوع الحضور *</label>
+            <select class="input-field cursor-pointer">
+              <option>حضوري بالمركز</option>
+              <option>Google Meet (عن بُعد)</option>
+              <option>مكالمة هاتفية</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="input-label">الوصف التفصيلي (عربي)</label>
+          <textarea rows="2" class="input-field" placeholder="اكتب وصفاً جذاباً ومفصلاً للخدمة..."></textarea>
+        </div>
+
+        <div>
+          <label class="input-label">تعيين أعضاء الفريق المؤهلين لتقديم الخدمة</label>
+          <div class="grid sm:grid-cols-2 gap-2 text-xs">
+            <label class="flex items-center gap-2 p-2 rounded-xl border cursor-pointer" style="border-color:var(--border-color)"><input type="checkbox" checked class="text-brand-600"><span>د. فهد العتيبي (استشاري)</span></label>
+            <label class="flex items-center gap-2 p-2 rounded-xl border cursor-pointer" style="border-color:var(--border-color)"><input type="checkbox" checked class="text-brand-600"><span>د. سارة الشهري (أخصائية)</span></label>
+          </div>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-3 border-t" style="border-color:var(--border-color)">
+          <button type="button" class="btn-secondary !rounded-xl text-xs py-2 px-4" onclick="document.getElementById('serviceModal').classList.add('hidden')">إلغاء</button>
+          <button type="submit" class="btn-primary !rounded-xl text-xs py-2 px-6">حفظ الخدمة</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

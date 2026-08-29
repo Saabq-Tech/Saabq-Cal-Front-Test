@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سابق كال — Saabq Cal | المنصة السحابية لإدارة المواعيد والحجوزات</title>
+  <meta name="description" content="سابق كال - منصة متكاملة لإدارة المواعيد والحجوزات للعيادات والمراكز والمستشارين. احجز بسهولة وأدر أعمالك باحترافية.">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="public-navbar fixed top-0 inset-x-0 z-50 transition-all duration-300" style="background: transparent;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+          <span class="text-xl font-black text-white nav-logo-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="nav-link-hero px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+          <a href="features.html" class="nav-link-hero px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all" data-ar="المميزات" data-en="Features">المميزات</a>
+          <a href="pricing.html" class="nav-link-hero px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
+          <a href="about.html" class="nav-link-hero px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all" data-ar="مين إحنا وحكايتنا" data-en="About">مين إحنا وحكايتنا</a>
+          <a href="faq.html" class="nav-link-hero px-4 py-2 rounded-lg text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-all" data-ar="أسئلة بتتسأل كتير 💬" data-en="FAQ">أسئلة بتتسأل كتير 💬</a>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex items-center gap-2">
+          <!-- Language Toggle -->
+          <button data-lang-toggle class="btn-ghost nav-btn-ghost text-white/80 hover:text-white text-sm font-semibold px-3 py-1.5 rounded-lg border-white/20 hover:border-white/40">
+            <span class="lang-label">EN</span>
+          </button>
+          <!-- Theme Toggle -->
+          <button data-theme-toggle class="btn-ghost nav-btn-ghost text-white/80 hover:text-white p-2 rounded-lg border-white/20 hover:border-white/40">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <!-- CTA -->
+          <a href="../shared/login.html" class="hidden sm:inline-flex btn-primary btn-sm nav-btn-signin !bg-white/20 !backdrop-blur !border !border-white/30 hover:!bg-white/30">
+            <span data-ar="سجل دخولك" data-en="Sign In">سجل دخولك</span>
+          </a>
+          <!-- Mobile menu -->
+          <button class="lg:hidden text-white p-2" id="mobileMenuBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden absolute inset-x-0 top-full glass-strong rounded-b-2xl mx-4 p-4 space-y-1">
+      <a href="index.html" class="block px-4 py-3 rounded-lg text-sm font-medium hover:bg-brand-600/10" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+      <a href="features.html" class="block px-4 py-3 rounded-lg text-sm font-medium hover:bg-brand-600/10" data-ar="المميزات" data-en="Features">المميزات</a>
+      <a href="pricing.html" class="block px-4 py-3 rounded-lg text-sm font-medium hover:bg-brand-600/10" data-ar="الأسعار" data-en="Pricing">الأسعار</a>
+      <a href="about.html" class="block px-4 py-3 rounded-lg text-sm font-medium hover:bg-brand-600/10" data-ar="مين إحنا وحكايتنا" data-en="About">مين إحنا وحكايتنا</a>
+      <a href="faq.html" class="block px-4 py-3 rounded-lg text-sm font-medium hover:bg-brand-600/10" data-ar="أسئلة بتتسأل كتير 💬" data-en="FAQ">أسئلة بتتسأل كتير 💬</a>
+      <a href="../shared/login.html" class="block btn-primary text-center mt-2"><span data-ar="سجل دخولك" data-en="Sign In">سجل دخولك</span></a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO SECTION ═══════════ -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden gradient-hero">
+    <!-- Decorative Orbs -->
+    <div class="absolute orb orb-violet w-96 h-96 -top-48 -right-48 opacity-40"></div>
+    <div class="absolute orb orb-amber w-72 h-72 bottom-20 left-10 opacity-30"></div>
+    <div class="absolute orb orb-indigo w-80 h-80 top-1/3 right-1/4 opacity-20"></div>
+
+    <!-- Floating Dots Pattern -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute w-2 h-2 bg-white rounded-full animate-float" style="top:15%;left:20%"></div>
+      <div class="absolute w-1.5 h-1.5 bg-white rounded-full animate-float" style="top:35%;left:70%;animation-delay:1s"></div>
+      <div class="absolute w-2 h-2 bg-amber-400 rounded-full animate-float" style="top:60%;left:30%;animation-delay:2s"></div>
+      <div class="absolute w-1 h-1 bg-white rounded-full animate-float" style="top:75%;left:80%;animation-delay:0.5s"></div>
+      <div class="absolute w-2.5 h-2.5 bg-white rounded-full animate-float" style="top:25%;left:85%;animation-delay:1.5s"></div>
+    </div>
+
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-16 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+        
+        <!-- Hero Text (7 Cols on LG) -->
+        <div class="lg:col-span-7 text-center lg:text-start animate-fade-in-up space-y-6">
+          <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="text-xs sm:text-sm text-white/90 font-bold" data-ar="المنصة السحابية الأولى لإدارة المواعيد بالمملكة 🇸🇦" data-en="The #1 Cloud Scheduling Platform in KSA 🇸🇦">المنصة السحابية الأولى لإدارة المواعيد بالمملكة 🇸🇦</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+            <span data-ar="أدر مواعيدك وجداولك" data-en="Manage Your Schedules">أدر مواعيدك وجداولك</span>
+            <br>
+            <span class="text-amber-300 drop-shadow-sm" data-ar="بذكاء، سرعة، واحترافية" data-en="Smartly, Fast & Seamlessly">بذكاء، سرعة، واحترافية</span>
+          </h1>
+
+          <p class="text-sm sm:text-base lg:text-lg text-white/80 max-w-xl mx-auto lg:mx-0 leading-relaxed" data-ar="منصة سابق كال بتمكّنك من استقبال حجوزات العملاء، تنظيم الجداول الزمنية، إصدار الفواتير الإلكترونية، وتأكيد المواعيد فوراً عبر WhatsApp وTelegram بكل سهولة ومن مكان واحد." data-en="Saabq Cal empowers you to receive bookings, organize availability, issue digital invoices, and automate instant WhatsApp confirmations in one unified hub.">منصة سابق كال بتمكّنك من استقبال حجوزات العملاء، تنظيم الجداول الزمنية، إصدار الفواتير الإلكترونية، وتأكيد المواعيد فوراً عبر WhatsApp وTelegram بكل سهولة ومن مكان واحد.</p>
+
+          <div class="flex flex-col sm:flex-row gap-3.5 justify-center lg:justify-start pt-2">
+            <a href="../shared/register.html" class="btn-primary !bg-white !text-teal-900 hover:!bg-teal-50 text-sm font-black px-7 py-3.5 !rounded-2xl shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2">
+              <span data-ar="جرّب ببلاش دلوقتي 🚀" data-en="Start Free Trial Now 🚀">جرّب ببلاش دلوقتي 🚀</span>
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7-7m7 7H3"/></svg>
+            </a>
+            <a href="features.html" class="btn-secondary !bg-white/10 !border-white/20 !text-white hover:!bg-white/20 text-sm font-bold px-6 py-3.5 !rounded-2xl backdrop-blur-md flex items-center justify-center">
+              <span data-ar="استكشف كافة المميزات" data-en="Explore Features">استكشف كافة المميزات</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges & Numbers -->
+          <div class="flex items-center gap-6 pt-4 justify-center lg:justify-start">
+            <div class="text-start">
+              <div class="text-xl sm:text-2xl font-black text-white font-mono" data-count-to="500" data-count-suffix="+">0+</div>
+              <div class="text-[11px] text-white/70 font-semibold" data-ar="منشأة وعيادة نشطة" data-en="Active Clinics">منشأة وعيادة نشطة</div>
+            </div>
+            <div class="w-px h-8 bg-white/20"></div>
+            <div class="text-start">
+              <div class="text-xl sm:text-2xl font-black text-white font-mono" data-count-to="25000" data-count-suffix="+">0+</div>
+              <div class="text-[11px] text-white/70 font-semibold" data-ar="حجز مؤكد شهرياً" data-en="Bookings / mo">حجز مؤكد شهرياً</div>
+            </div>
+            <div class="w-px h-8 bg-white/20"></div>
+            <div class="text-start">
+              <div class="text-xl sm:text-2xl font-black text-amber-300 font-mono">4.9 ★</div>
+              <div class="text-[11px] text-white/70 font-semibold" data-ar="تقييم مقدمي الخدمات" data-en="User Rating">تقييم مقدمي الخدمات</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Interactive Live Booking Widget (5 Cols on LG) -->
+        <div class="lg:col-span-5 relative animate-fade-in-up delay-200 max-w-sm sm:max-w-md mx-auto w-full">
+          
+          <!-- Floating Notification 1 (Top Start) -->
+          <div class="absolute -top-4 start-2 sm:-start-3 z-20 bg-slate-900/95 border border-emerald-500/50 rounded-2xl p-2.5 px-3.5 shadow-2xl backdrop-blur-xl flex items-center gap-2.5 animate-float" style="animation-delay: 0.5s">
+            <div class="w-7 h-7 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-xs font-bold">✓</div>
+            <div>
+              <div class="text-white text-[11px] font-bold">تأكيد فوري عبر WhatsApp 💬</div>
+              <div class="text-emerald-400 text-[9px] font-medium font-mono">#BK-94821 • مؤكد</div>
+            </div>
+          </div>
+
+          <!-- Main Interactive Booking Pass Card -->
+          <div class="relative z-10 rounded-3xl p-5 bg-slate-900/90 backdrop-blur-2xl border border-white/20 shadow-2xl space-y-4 text-white">
+            
+            <!-- Window Bar -->
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+              </div>
+              <span class="text-[10px] font-mono text-white/60 bg-white/5 px-2 py-0.5 rounded-md">saabq.com/care-clinic</span>
+            </div>
+
+            <!-- Specialist Header -->
+            <div class="flex items-center justify-between bg-white/5 p-3 rounded-2xl border border-white/10">
+              <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-teal-600 flex items-center justify-center text-lg font-bold shadow-md">👨‍⚕️</div>
+                <div>
+                  <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                    <span>د. فهد العتيبي</span>
+                    <span class="badge badge-emerald !text-[9px] !py-0 !px-1.5">موثق ✓</span>
+                  </div>
+                  <div class="text-[10px] text-teal-300">استشاري طب أسرة • عيادات رعاية الأسرة</div>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="text-xs font-mono font-black text-amber-300 block">4.9 ★</span>
+                <span class="text-[9px] text-white/60">84 مراجع</span>
+              </div>
+            </div>
+
+            <!-- Interactive Date Selector Pills (Grid of 4) -->
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between text-[11px] font-bold text-white/90">
+                <span>اختر اليوم المناسب:</span>
+                <span class="text-teal-300 text-[10px]">سبتمبر 2026</span>
+              </div>
+              <div class="grid grid-cols-4 gap-1.5 text-center">
+                <div class="p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 text-[10px] cursor-pointer hover:bg-white/10 transition-all">
+                  <span class="block font-bold">الأربعاء</span>
+                  <span class="font-mono text-xs">09</span>
+                </div>
+                <div class="p-2 rounded-xl bg-teal-600 text-white border-2 border-teal-300 shadow-md text-[10px] font-bold cursor-pointer scale-105">
+                  <span class="block">الخميس</span>
+                  <span class="font-mono text-xs">10</span>
+                </div>
+                <div class="p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 text-[10px] cursor-pointer hover:bg-white/10 transition-all">
+                  <span class="block font-bold">السبت</span>
+                  <span class="font-mono text-xs">12</span>
+                </div>
+                <div class="p-2 rounded-xl bg-white/5 border border-white/10 text-white/70 text-[10px] cursor-pointer hover:bg-white/10 transition-all">
+                  <span class="block font-bold">الأحد</span>
+                  <span class="font-mono text-xs">13</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Time Slot Grid (Grid of 3) -->
+            <div class="space-y-1.5">
+              <div class="text-[11px] font-bold text-white/90">الأوقات المتاحة:</div>
+              <div class="grid grid-cols-3 gap-1.5 text-center">
+                <div class="p-1.5 rounded-xl bg-white/5 border border-white/10 text-white/80 text-[10px] font-mono">09:00 ص</div>
+                <div class="p-1.5 rounded-xl bg-teal-500/30 text-teal-200 border border-teal-400 text-[10px] font-mono font-bold ring-2 ring-teal-400/50">09:30 ص ✓</div>
+                <div class="p-1.5 rounded-xl bg-white/5 border border-white/10 text-white/80 text-[10px] font-mono">10:15 ص</div>
+              </div>
+            </div>
+
+            <!-- Summary & Fast Booking Action -->
+            <div class="pt-2 border-t border-white/10 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <span class="text-white/70">كشف واستشارة طبية</span>
+                <span class="font-mono font-bold text-teal-300">200 ر.س</span>
+              </div>
+              <button class="w-full py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:brightness-110 transition-all">
+                <span>تأكيد الحجز الفوري ⚡</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Floating Notification 2 (Bottom End) -->
+          <div class="absolute -bottom-3 end-2 sm:-end-3 z-20 bg-slate-900/95 border border-amber-500/50 rounded-2xl p-2 px-3 shadow-2xl backdrop-blur-xl flex items-center gap-2 animate-float" style="animation-delay: 1.8s">
+            <span class="text-sm">💳</span>
+            <div class="text-start">
+              <div class="text-white text-[10px] font-bold">تم الدفع عبر Apple Pay</div>
+              <div class="text-amber-300 text-[9px] font-mono">فاتورة إلكترونية معتمدة ✓</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Wave Divider -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full"><path d="M0 120L60 105C120 90 240 60 360 52.5C480 45 600 60 720 67.5C840 75 960 75 1080 67.5C1200 60 1320 45 1380 37.5L1440 30V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 60 120H0Z" fill="var(--bg-primary)"/></svg>
+    </div>
+  </section>
+
+  <!-- ═══════════ PARTNERS & INTEGRATIONS INFINITE MARQUEE ═══════════ -->
+  <section class="py-9 border-b overflow-hidden bg-[var(--bg-card)]" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 mb-4 text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-[var(--text-tertiary)]" data-ar="موثوق ومتكامل مع كبرى المنصات وبوابات الدفع العالمية والمحلية" data-en="Trusted & Integrated with Leading Platforms">موثوق ومتكامل مع كبرى المنصات وبوابات الدفع العالمية والمحلية</span>
+    </div>
+    <div class="marquee-container relative w-full">
+      <!-- Group 1 -->
+      <div class="marquee-group text-xs font-bold text-[var(--text-secondary)]">
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>📅</span> Google Calendar</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💻</span> Google Meet</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💳</span> مدى (Mada)</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>🍏</span> Apple Pay</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💬</span> WhatsApp Business</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>✈️</span> Telegram API</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💳</span> Stripe Payments</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>⚡</span> Webhooks API</span>
+      </div>
+      <!-- Group 2 (Duplicate for Seamless Infinite Loop) -->
+      <div class="marquee-group text-xs font-bold text-[var(--text-secondary)]" aria-hidden="true">
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>📅</span> Google Calendar</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💻</span> Google Meet</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💳</span> مدى (Mada)</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>🍏</span> Apple Pay</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💬</span> WhatsApp Business</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>✈️</span> Telegram API</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>💳</span> Stripe Payments</span>
+        <span class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] whitespace-nowrap shadow-sm"><span>⚡</span> Webhooks API</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FEATURES HIGHLIGHTS ═══════════ -->
+  <section class="py-20 lg:py-28 bg-[var(--bg-primary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="badge-violet text-sm mb-4" data-ar="ليه تختار سابق كال؟ 🤔" data-en="Why Saabq?">ليه تختار سابق كال؟ 🤔</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color: var(--text-primary)">
+          <span data-ar="كل ما تحتاجه في" data-en="Everything You Need in">كل ما تحتاجه في</span>
+          <span class="gradient-text" data-ar=" منصة واحدة" data-en=" One Platform"> منصة واحدة</span>
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-secondary)" data-ar="صُممت سابق لتلبي احتياجات مقدمي الخدمات العرب بتجربة سلسة وأدوات احترافية" data-en="Saabq is designed to meet the needs of Arabic service providers with a seamless experience and professional tools">صُممت سابق لتلبي احتياجات مقدمي الخدمات العرب بتجربة سلسة وأدوات احترافية</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Feature 1 -->
+        <div class="card p-6 reveal" data-reveal-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="إدارة الحجوزات" data-en="Booking Management">إدارة الحجوزات</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="استقبل الحجوزات أونلاين، تحكم بالمواعيد المتاحة، وأتح لعملائك الحجز الذاتي بسلاسة على مدار الساعة." data-en="Receive online bookings, manage available slots, and let your clients self-book seamlessly 24/7.">استقبل الحجوزات أونلاين، تحكم بالمواعيد المتاحة، وأتح لعملائك الحجز الذاتي بسلاسة على مدار الساعة.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card p-6 reveal" data-reveal-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 0118 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="جداول ذكية" data-en="Smart Schedules">جداول ذكية</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="أنشئ جداول عمل مرنة مع قواعد توفر أسبوعية واستثناءات للعطل والإجازات. انسخ الأوقات بين الأيام بنقرة." data-en="Create flexible schedules with weekly availability rules and holiday overrides. Copy time slots between days with one click.">أنشئ جداول عمل مرنة مع قواعد توفر أسبوعية واستثناءات للعطل والإجازات. انسخ الأوقات بين الأيام بنقرة.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card p-6 reveal" data-reveal-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 019.288 0M15 7a3 3 0 11-6 0 3 016 0z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="إدارة الفريق" data-en="Team Management">إدارة الفريق</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="أضف أعضاء فريقك، حدد الأدوار والصلاحيات لكل عضو، وتابع أداء كل شخص من لوحة تحكم واحدة." data-en="Add team members, define roles and permissions for each, and track performance from a single dashboard.">أضف أعضاء فريقك، حدد الأدوار والصلاحيات لكل عضو، وتابع أداء كل شخص من لوحة تحكم واحدة.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card p-6 reveal" data-reveal-delay="400">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 003-3V8a3 3 00-3-3H6a3 3 00-3v8a3 3 003 3z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="المدفوعات والمالية" data-en="Payments & Finance">المدفوعات والمالية</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="تتبع المدفوعات، تحقق من إيصالات الدفع، وأدر محفظة مساحة العمل مع تقارير مالية مفصلة." data-en="Track payments, verify receipts, and manage your workspace wallet with detailed financial reports.">تتبع المدفوعات، تحقق من إيصالات الدفع، وأدر محفظة مساحة العمل مع تقارير مالية مفصلة.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="card p-6 reveal" data-reveal-delay="500">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0118 14.158V11a6.002 6.002 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="إشعارات ذكية" data-en="Smart Notifications">إشعارات ذكية</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="إشعارات فورية عبر البريد والتطبيق وتيليجرام. خصص قوالب الإشعارات لتناسب علامتك التجارية." data-en="Instant notifications via email, app, and Telegram. Customize notification templates to match your brand.">إشعارات فورية عبر البريد والتطبيق وتيليجرام. خصص قوالب الإشعارات لتناسب علامتك التجارية.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="card p-6 reveal" data-reveal-delay="600">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 dark:bg-brand-900/30 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 00-5.656 0l-4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 005.656 0l4-4a4 4 00-5.656-5.656l-1.1.1"/></svg>
+          </div>
+          <h3 class="text-lg font-bold mb-2" style="color: var(--text-primary)" data-ar="تكاملات قوية" data-en="Powerful Integrations">تكاملات قوية</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="اربط مساحة عملك مع Google Calendar و Google Meet وتيليجرام والإيميل و Webhooks." data-en="Connect your workspace with Google Calendar, Google Meet, Telegram, Email, and Webhooks.">اربط مساحة عملك مع Google Calendar و Google Meet وتيليجرام والبريد الإلكتروني و Webhooks.</p>
+        </div>
+      </div>
+
+      <!-- ── INTERACTIVE WORKFLOWS & LIVE PREVIEW SLIDER ── -->
+      <div class="mt-20 pt-16 border-t border-[var(--border-color)] space-y-8">
+        <div class="flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="badge-emerald text-xs font-bold mb-2" data-ar="جولة تفاعلية" data-en="Interactive Tour">جولة تفاعلية</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)]" data-ar="رحلة إدارة الحجز الذكي خطوة بخطوة" data-en="The Smart Booking Workflow Step-by-Step">رحلة إدارة الحجز الذكي خطوة بخطوة</h3>
+            <p class="text-xs sm:text-sm text-[var(--text-secondary)]">اكتشف كيف تضمن منصة سابق انسيابية العمل وتوفير وقتك وجهد فريقك</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="slideCarousel('workflowsTrack', 'prev')" class="slider-btn" title="السابق">
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+            </button>
+            <button onclick="slideCarousel('workflowsTrack', 'next')" class="slider-btn" title="التالي">
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <div id="workflowsTrack" class="slider-track">
+            
+            <!-- Workflow Slide 1 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-6 h-full flex-col justify-between border-t-4 border-t-[var(--primary)] shadow-sm">
+                <div class="space-y-3">
+                  <div class="w-12 h-12 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex items-center justify-center text-2xl font-bold">🌐</div>
+                  <h4 class="font-extrabold text-base text-[var(--text-primary)]">1. صفحة حجز تحمل هويتك</h4>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">رابط حجز سريع وخاص باسم منشأتك، متوافق مع كافة الأجهزة وبدون الحاجة لتحميل تطبيقات معقدة.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-[var(--border-color)] flex items-center justify-between text-[11px] font-bold text-[var(--primary)]">
+                  <span>تجربة حجز بـ 3 نقرات</span>
+                  <span>⚡ 100% فوري</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workflow Slide 2 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-6 h-full flex-col justify-between border-t-4 border-t-amber-500 shadow-sm">
+                <div class="space-y-3">
+                  <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-2xl font-bold">🗓️</div>
+                  <h4 class="font-extrabold text-base text-[var(--text-primary)]">2. تقويم وجدول ذكي للأطباء</h4>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">مزامنة حية مع Google Calendar لمنع التعارضات المزدوجة، مع تحكم دقيق بفترات الاستراحة والإجازات.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-[var(--border-color)] flex items-center justify-between text-[11px] font-bold text-amber-600">
+                  <span>تزامن لحظي دائم</span>
+                  <span>Google Meet 💻</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workflow Slide 3 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-6 h-full flex-col justify-between border-t-4 border-t-emerald-500 shadow-sm">
+                <div class="space-y-3">
+                  <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-2xl font-bold">💬</div>
+                  <h4 class="font-extrabold text-base text-[var(--text-primary)]">3. تذكيرات WhatsApp وتيليجرام</h4>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">رسائل تأكيد وتذكير آلية ترسل قبل الموعد بـ 24 ساعة وساعتين، تقلل الغياب والتخلف بنسبة 85%.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-[var(--border-color)] flex items-center justify-between text-[11px] font-bold text-emerald-600">
+                  <span>تخفيض الغياب بنسبة 85%</span>
+                  <span>WhatsApp ⚡</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Workflow Slide 4 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-6 h-full flex-col justify-between border-t-4 border-t-purple-500 shadow-sm">
+                <div class="space-y-3">
+                  <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-2xl font-bold">🧾</div>
+                  <h4 class="font-extrabold text-base text-[var(--text-primary)]">4. فواتير إلكترونية ودفع رقمي</h4>
+                  <p class="text-xs text-[var(--text-secondary)] leading-relaxed">إصدار فواتير رقمية وإيصالات دفع فورية تلقائياً، مع دعم مدى، Apple Pay، والتحويل البنكي والبطاقات.</p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-[var(--border-color)] flex items-center justify-between text-[11px] font-bold text-purple-600">
+                  <span>فواتير رقمية فورية</span>
+                  <span>Mada / Apple Pay 💳</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── VERIFIED WORKSPACES & CENTERS SHOWCASE SLIDER ── -->
+      <div class="mt-16 space-y-8">
+        <div class="flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <span class="badge-amber text-xs font-bold mb-2" data-ar="مراكز مميزة" data-en="Featured Centers">مراكز مميزة</span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[var(--text-primary)]" data-ar="مراكز وعيادات تثق في منصة سابق" data-en="Top Verified Clinics & Centers Using Saabq">مراكز وعيادات تثق في منصة سابق</h3>
+            <p class="text-xs sm:text-sm text-[var(--text-secondary)]">استكشف بعض المنشآت الرائدة التي تدير مواعيدها عبر منصتنا</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button onclick="slideCarousel('workspacesTrack', 'prev')" class="slider-btn" title="السابق">
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+            </button>
+            <button onclick="slideCarousel('workspacesTrack', 'next')" class="slider-btn" title="التالي">
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <div id="workspacesTrack" class="slider-track">
+            
+            <!-- Clinic 1 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-5 space-y-4 hover:border-[var(--primary)] transition-all shadow-sm flex-col justify-between h-full">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="w-12 h-12 rounded-2xl bg-teal-600/15 text-teal-600 flex items-center justify-center text-2xl font-bold">🌿</div>
+                    <span class="badge-emerald text-[10px]">موثق ✓</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm text-[var(--text-primary)]">عيادات رعاية الأسرة</h4>
+                    <p class="text-xs text-[var(--text-secondary)] mt-0.5">طب أسرة، باطنية، وأسنان • الرياض</p>
+                  </div>
+                  <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
+                    <span class="text-amber-500 font-bold">★ 4.9 (840+)</span>
+                    <span>•</span>
+                    <span class="text-emerald-600 font-semibold">متاح اليوم ⚡</span>
+                  </div>
+                </div>
+                <a href="../customer/workspace.html" class="btn-secondary w-full !py-2 !rounded-xl text-xs font-bold justify-center mt-2">
+                  <span>عرض الخدمات والحجز ←</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Clinic 2 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-5 space-y-4 hover:border-[var(--primary)] transition-all shadow-sm flex-col justify-between h-full">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-600/15 text-pink-600 flex items-center justify-center text-2xl font-bold">💇</div>
+                    <span class="badge-emerald text-[10px]">موثق ✓</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm text-[var(--text-primary)]">مركز جلو للعناية والجمال</h4>
+                    <p class="text-xs text-[var(--text-secondary)] mt-0.5">عناية بالبشرة، شعر، وسبا ملكي • جدة</p>
+                  </div>
+                  <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
+                    <span class="text-amber-500 font-bold">★ 5.0 (1,120+)</span>
+                    <span>•</span>
+                    <span class="text-emerald-600 font-semibold">متاح غداً</span>
+                  </div>
+                </div>
+                <a href="../customer/workspace.html" class="btn-secondary w-full !py-2 !rounded-xl text-xs font-bold justify-center mt-2">
+                  <span>عرض الخدمات والحجز ←</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Clinic 3 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-5 space-y-4 hover:border-[var(--primary)] transition-all shadow-sm flex-col justify-between h-full">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-600/15 text-blue-600 flex items-center justify-center text-2xl font-bold">⚖️</div>
+                    <span class="badge-emerald text-[10px]">موثق ✓</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm text-[var(--text-primary)]">مكتب النخبة للاستشارات القانونية</h4>
+                    <p class="text-xs text-[var(--text-secondary)] mt-0.5">استشارات أعمال، عقود وشركات • الرياض</p>
+                  </div>
+                  <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
+                    <span class="text-amber-500 font-bold">★ 4.9 (420+)</span>
+                    <span>•</span>
+                    <span class="text-blue-600 font-semibold">استشارة أونلاين 💻</span>
+                  </div>
+                </div>
+                <a href="../customer/workspace.html" class="btn-secondary w-full !py-2 !rounded-xl text-xs font-bold justify-center mt-2">
+                  <span>عرض الخدمات والحجز ←</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Clinic 4 -->
+            <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+              <div class="card p-5 space-y-4 hover:border-[var(--primary)] transition-all shadow-sm flex-col justify-between h-full">
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-600/15 text-purple-600 flex items-center justify-center text-2xl font-bold">🦷</div>
+                    <span class="badge-emerald text-[10px]">موثق ✓</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-sm text-[var(--text-primary)]">مجمع الابتسامة لطب الأسنان</h4>
+                    <p class="text-xs text-[var(--text-secondary)] mt-0.5">تقويم، زراعة، وتبييض متطور • الخبر</p>
+                  </div>
+                  <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
+                    <span class="text-amber-500 font-bold">★ 4.8 (630+)</span>
+                    <span>•</span>
+                    <span class="text-emerald-600 font-semibold">متاح اليوم ⚡</span>
+                  </div>
+                </div>
+                <a href="../customer/workspace.html" class="btn-secondary w-full !py-2 !rounded-xl text-xs font-bold justify-center mt-2">
+                  <span>عرض الخدمات والحجز ←</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ HOW IT WORKS ═══════════ -->
+  <section class="py-20 lg:py-28" style="background: var(--bg-secondary)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="badge-amber text-sm mb-4" data-ar="كيف يعمل؟" data-en="How It Works?">كيف يعمل؟</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color: var(--text-primary)">
+          <span data-ar="ثلاث خطوات فقط" data-en="Just Three Steps">ثلاث خطوات فقط</span>
+          <span class="gradient-text" data-ar=" لتبدأ" data-en=" to Get Started"> لتبدأ</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div class="text-center reveal" data-reveal-delay="100">
+          <div class="w-20 h-20 rounded-2xl gradient-brand flex items-center justify-center mx-auto mb-6 shadow-lg animate-pulse-glow">
+            <span class="text-3xl font-extrabold text-white">1</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary)" data-ar="أنشئ مساحة عملك" data-en="Create Your Workspace">أنشئ مساحة عملك</h3>
+          <p style="color: var(--text-secondary)" data-ar="سجل حسابك وأضف تفاصيل عملك وخدماتك في دقائق معدودة" data-en="Register your account and add your business details and services in minutes">سجل حسابك وأضف تفاصيل عملك وخدماتك في دقائق معدودة</p>
+        </div>
+
+        <div class="text-center reveal" data-reveal-delay="200">
+          <div class="w-20 h-20 rounded-2xl gradient-amber flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-3xl font-extrabold text-white">2</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary)" data-ar="حدد جدولك ومواعيدك" data-en="Set Your Schedule">حدد جدولك ومواعيدك</h3>
+          <p style="color: var(--text-secondary)" data-ar="اضبط أوقات العمل وفترات الاستراحة والأيام المتاحة لكل خدمة" data-en="Configure working hours, breaks, and available days for each service">اضبط أوقات العمل وفترات الاستراحة والأيام المتاحة لكل خدمة</p>
+        </div>
+
+        <div class="text-center reveal" data-reveal-delay="300">
+          <div class="w-20 h-20 rounded-2xl bg-emerald-500 flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <span class="text-3xl font-extrabold text-white">3</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3" style="color: var(--text-primary)" data-ar="شارك رابطك واستقبل الحجوزات" data-en="Share Your Link & Receive Bookings">شارك رابطك واستقبل الحجوزات</h3>
+          <p style="color: var(--text-secondary)" data-ar="شارك رابط صفحة الحجز مع عملائك واستقبل الحجوزات تلقائياً" data-en="Share your booking page link with clients and receive bookings automatically">شارك رابط صفحة الحجز مع عملائك واستقبل الحجوزات تلقائياً</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRICING PREVIEW ═══════════ -->
+  <section class="py-20 lg:py-28 bg-[var(--bg-primary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="badge-violet text-sm mb-4" data-ar="الأسعار" data-en="Pricing">الأسعار</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color: var(--text-primary)">
+          <span data-ar="خطط مرنة" data-en="Flexible Plans">خطط مرنة</span>
+          <span class="gradient-text" data-ar=" تناسب الجميع" data-en=" for Everyone"> تناسب الجميع</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <!-- Basic Plan -->
+        <div class="pricing-card reveal" data-reveal-delay="100">
+          <div class="text-center">
+            <h3 class="text-lg font-bold mb-1" style="color: var(--text-primary)" data-ar="الأساسية" data-en="Basic">الأساسية</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary)" data-ar="للأفراد والبداية" data-en="For individuals">للأفراد والبداية</p>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold" style="color: var(--text-primary)" data-ar="مجاناً" data-en="Free">مجاناً</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="عضو واحد" data-en="1 Member">عضو واحد</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="3 خدمات" data-en="3 Services">3 خدمات</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="50 حجز شهرياً" data-en="50 Bookings/mo">50 حجز شهرياً</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-tertiary)">
+              <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              <span data-ar="بدون تكاملات" data-en="No Integrations">بدون تكاملات</span>
+            </li>
+          </ul>
+          <button class="btn-secondary w-full"><span data-ar="ابدأ ببلاش دلوقتي" data-en="Start Free">ابدأ ببلاش دلوقتي</span></button>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="pricing-card featured reveal relative !overflow-visible" data-reveal-delay="200">
+          <div class="absolute -top-4 inset-x-0 flex justify-center z-30">
+            <span class="featured-badge">
+              <span class="text-sm">✨</span>
+              <span data-ar="الأكثر طلباً واختياراً ⭐" data-en="Most Popular & Loved ⭐">الأكثر طلباً واختياراً ⭐</span>
+            </span>
+          </div>
+          <div class="text-center pt-4">
+            <h3 class="text-lg font-bold mb-1" style="color: var(--text-primary)" data-ar="الاحترافية" data-en="Professional">الاحترافية</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary)" data-ar="للفرق والشركات" data-en="For teams & businesses">للفرق والشركات</p>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold gradient-text">99</span>
+              <span class="text-lg" style="color: var(--text-secondary)" data-ar=" ر.س/شهر" data-en=" SAR/mo"> ر.س/شهر</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="10 أعضاء" data-en="10 Members">10 أعضاء</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="خدمات غير محدودة" data-en="Unlimited Services">خدمات غير محدودة</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="حجوزات غير محدودة" data-en="Unlimited Bookings">حجوزات غير محدودة</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="جميع التكاملات" data-en="All Integrations">جميع التكاملات</span>
+            </li>
+          </ul>
+          <button class="btn-primary w-full"><span data-ar="اشترك الآن" data-en="Subscribe Now">اشترك الآن</span></button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card reveal" data-reveal-delay="300">
+          <div class="text-center">
+            <h3 class="text-lg font-bold mb-1" style="color: var(--text-primary)" data-ar="المؤسسات" data-en="Enterprise">المؤسسات</h3>
+            <p class="text-sm mb-4" style="color: var(--text-secondary)" data-ar="للمؤسسات الكبيرة" data-en="For large organizations">للمؤسسات الكبيرة</p>
+            <div class="mb-6">
+              <span class="text-4xl font-extrabold" style="color: var(--text-primary)" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+            </div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="أعضاء غير محدودين" data-en="Unlimited Members">أعضاء غير محدودين</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="كل شيء في الاحترافية" data-en="Everything in Pro">كل شيء في الاحترافية</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="دعم فني مخصص" data-en="Dedicated Support">دعم فني مخصص</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm" style="color: var(--text-secondary)">
+              <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span data-ar="تخصيصات كاملة" data-en="Full Customization">تخصيصات كاملة</span>
+            </li>
+          </ul>
+          <button class="btn-secondary w-full"><span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIALS SLIDER ═══════════ -->
+  <section class="py-20 lg:py-28" style="background: var(--bg-secondary)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="badge-emerald text-sm mb-3" data-ar="آراء وقصص النجاح" data-en="Success Stories">آراء وقصص النجاح</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold" style="color: var(--text-primary)">
+            <span data-ar="ماذا يقول" data-en="What Our">ماذا يقول</span>
+            <span class="gradient-text" data-ar=" عملاؤنا المميزون" data-en=" Top Clients Say"> عملاؤنا المميزون</span>
+          </h2>
+        </div>
+
+        <!-- Slider Arrow Controls -->
+        <div class="flex items-center gap-2">
+          <button onclick="slideCarousel('testimonialsTrack', 'prev')" class="slider-btn" title="السابق">
+            <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+          </button>
+          <button onclick="slideCarousel('testimonialsTrack', 'next')" class="slider-btn" title="التالي">
+            <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider Track -->
+      <div class="slider-container">
+        <div id="testimonialsTrack" class="slider-track">
+          
+          <!-- Slide 1 -->
+          <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+            <div class="card p-6 h-full flex-col justify-between hover:border-[var(--primary)] transition-all shadow-sm">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span>
+                </div>
+                <p class="text-xs sm:text-sm leading-relaxed mb-6" style="color: var(--text-secondary)" data-ar="سابق غيّرت طريقة إدارتي لعيادتي بالكامل. المرضى يحجزون بأنفسهم والإشعارات وتأكيدات التحويل البنكي تصلني فوراً!" data-en="Saabq completely changed how I manage my clinic. Patients book themselves and bank receipts arrive instantly!">سابق غيّرت طريقة إدارتي لعيادتي بالكامل. المرضى يحجزون بأنفسهم والإشعارات وتأكيدات التحويل البنكي تصلني فوراً!</p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t" style="border-color: var(--border-color)">
+                <div class="w-11 h-11 rounded-2xl gradient-brand text-white font-bold text-sm flex items-center justify-center shadow-md">د.ف</div>
+                <div>
+                  <div class="font-bold text-sm" style="color: var(--text-primary)">د. فهد العتيبي</div>
+                  <div class="text-[11px]" style="color: var(--text-tertiary)">استشاري أسرة — عيادات رعاية الأسرة</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+            <div class="card p-6 h-full flex-col justify-between hover:border-[var(--primary)] transition-all shadow-sm">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span>
+                </div>
+                <p class="text-xs sm:text-sm leading-relaxed mb-6" style="color: var(--text-secondary)" data-ar="أفضل نظام حجوزات جربته على الإطلاق. الواجهة العربية ممتازة وتكامل تليجرام وجوجل كالاندر اختصر علينا فريق استقبال كامل." data-en="The best booking system ever. Arabic interface is gorgeous, and Telegram/Google Calendar sync saved us a whole receptionist team!">أفضل نظام حجوزات جربته على الإطلاق. الواجهة العربية ممتازة وتكامل تليجرام وجوجل كالاندر اختصر علينا فريق استقبال كامل.</p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t" style="border-color: var(--border-color)">
+                <div class="w-11 h-11 rounded-2xl bg-pink-100 dark:bg-pink-900/30 text-pink-600 font-bold text-sm flex items-center justify-center shadow-md">ن.ق</div>
+                <div>
+                  <div class="font-bold text-sm" style="color: var(--text-primary)">نورة القحطاني</div>
+                  <div class="text-[11px]" style="color: var(--text-tertiary)">صالون جلو للعناية والتجميل — جدة</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+            <div class="card p-6 h-full flex-col justify-between hover:border-[var(--primary)] transition-all shadow-sm">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span>
+                </div>
+                <p class="text-xs sm:text-sm leading-relaxed mb-6" style="color: var(--text-secondary)" data-ar="كمستشار قانوني وتجاري، أحتاج نظام يدير الاستشارات عن بُعد عبر Google Meet بسلاسة. سابق وفرت عليّ ساعات من التنسيق اليدوي." data-en="As a legal advisor, I need seamless Google Meet telehealth. Saabq saved me hours of manual scheduling weekly.">كمستشار قانوني وتجاري، أحتاج نظام يدير الاستشارات عن بُعد عبر Google Meet بسلاسة. سابق وفرت عليّ ساعات من التنسيق اليدوي.</p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t" style="border-color: var(--border-color)">
+                <div class="w-11 h-11 rounded-2xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 font-bold text-sm flex items-center justify-center shadow-md">خ.ش</div>
+                <div>
+                  <div class="font-bold text-sm" style="color: var(--text-primary)">أ. خالد الشمري</div>
+                  <div class="text-[11px]" style="color: var(--text-tertiary)">مكتب النخبة للاستشارات — الرياض</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slider-slider-slide-sm-2 slider-slide-lg-3">
+            <div class="card p-6 h-full flex-col justify-between hover:border-[var(--primary)] transition-all shadow-sm">
+              <div>
+                <div class="flex gap-1 mb-4">
+                  <span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span><span class="text-amber-400">★</span>
+                </div>
+                <p class="text-xs sm:text-sm leading-relaxed mb-6" style="color: var(--text-secondary)" data-ar="خدمة العملاء والسرعة ممتازة، وربط الفواتير المعتمدة ZATCA سهل على محاسبينا إصدار الإقرارات الضريبية فورياً." data-en="Customer support is brilliant and ZATCA compliance made our tax compliance effortless.">خدمة العملاء والسرعة ممتازة، وربط الفواتير المعتمدة ZATCA سهل على محاسبينا إصدار الإقرارات الضريبية فورياً.</p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t" style="border-color: var(--border-color)">
+                <div class="w-11 h-11 rounded-2xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 font-bold text-sm flex items-center justify-center shadow-md">م.ع</div>
+                <div>
+                  <div class="font-bold text-sm" style="color: var(--text-primary)">م. عبدالله الحربي</div>
+                  <div class="text-[11px]" style="color: var(--text-tertiary)">مستشار تقني — الدمام</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA SECTION ═══════════ -->
+  <section class="py-20 lg:py-28 bg-[var(--bg-primary)]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <div class="gradient-brand rounded-3xl p-12 lg:p-16 relative overflow-hidden">
+        <div class="absolute orb orb-amber w-64 h-64 -top-32 -right-32 opacity-30"></div>
+        <div class="absolute orb orb-violet w-48 h-48 -bottom-24 -left-24 opacity-40"></div>
+
+        <div class="relative z-10">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4" data-ar="جاهز لتحويل طريقة عملك؟" data-en="Ready to Transform Your Business?">جاهز لتحويل طريقة عملك؟</h2>
+          <p class="text-lg text-white/70 mb-8 max-w-xl mx-auto" data-ar="انضم لمئات مقدمي الخدمات الذين يعتمدون على سابق لإدارة مواعيدهم باحترافية" data-en="Join hundreds of service providers who rely on Saabq to manage their appointments professionally">انضم لمئات مقدمي الخدمات الذين يعتمدون على سابق لإدارة مواعيدهم باحترافية</p>
+          <div class="flex-col sm:flex-row gap-4 justify-center">
+            <a href="../shared/register.html" class="btn-amber text-base px-8 py-3.5 !rounded-xl">
+              <span data-ar="جرّببلاش من غير أي مصاريف" data-en="Start Your Free Trial">جرّببلاش من غير أي مصاريف</span>
+            </a>
+            <a href="pricing.html" class="btn-secondary !border-white/30 !text-white hover:!bg-white/10 text-base px-8 py-3.5 !rounded-xl">
+              <span data-ar="تصفح الأسعار" data-en="View Pricing">تصفح الأسعار</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer style="background: var(--bg-secondary); border-top: 1px solid var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-xl font-black gradient-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+          </a>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary)" data-ar="منصة متكاملة لإدارة المواعيد والحجوزات صُممت خصيصاً للسوق العربي." data-en="A complete scheduling and booking platform built specifically for the Arabic market.">منصة متكاملة لإدارة المواعيد والحجوزات صُممت خصيصاً للسوق العربي.</p>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-bold mb-4" style="color: var(--text-primary)" data-ar="المنصة" data-en="Platform">المنصة</h4>
+          <ul class="space-y-2.5">
+            <li><a href="features.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="المميزات" data-en="Features">المميزات</a></li>
+            <li><a href="pricing.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="الأسعار" data-en="Pricing">الأسعار</a></li>
+            <li><a href="faq.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="أسئلة بتتسأل كتير 💬" data-en="FAQ">أسئلة بتتسأل كتير 💬</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4" style="color: var(--text-primary)" data-ar="الشركة" data-en="Company">الشركة</h4>
+          <ul class="space-y-2.5">
+            <li><a href="about.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="مين إحنا وحكايتنا" data-en="About">مين إحنا وحكايتنا</a></li>
+            <li><a href="terms.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="الشروط والأحكام" data-en="Terms">الشروط والأحكام</a></li>
+            <li><a href="privacy.html" class="text-sm hover:text-brand-600 transition-colors" style="color: var(--text-secondary)" data-ar="سياسة الخصوصية" data-en="Privacy">سياسة الخصوصية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4" style="color: var(--text-primary)" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
+          <ul class="space-y-2.5">
+            <li class="text-sm" style="color: var(--text-secondary)">support@saabq.com</li>
+            <li class="text-sm" style="color: var(--text-secondary)" data-ar="المملكة العربية السعودية" data-en="Saudi Arabia">المملكة العربية السعودية</li>
+          </ul>
+          <!-- Social -->
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all hover:bg-brand-600/10" style="background: var(--bg-tertiary)">
+              <svg class="w-4 h-4" style="color: var(--text-secondary)" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all hover:bg-brand-600/10" style="background: var(--bg-tertiary)">
+              <svg class="w-4 h-4" style="color: var(--text-secondary)" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4-4s4 1.791 4c0 2.21-1.791 4-4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8" style="border-top: 1px solid var(--border-color)">
+        <div class="flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm" style="color: var(--text-tertiary)" data-ar="© 2026 سابق كال. جميع الحقوق محفوظة." data-en="© 2026 Saabq. All rights reserved.">© 2026 سابق كال. جميع الحقوق محفوظة.</p>
+          <div class="flex items-center gap-4">
+            <a href="terms.html" class="text-xs hover:text-brand-600 transition-colors" style="color: var(--text-tertiary)" data-ar="الشروط" data-en="Terms">الشروط</a>
+            <a href="privacy.html" class="text-xs hover:text-brand-600 transition-colors" style="color: var(--text-tertiary)" data-ar="الخصوصية" data-en="Privacy">الخصوصية</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navbar scroll styling -->
+  <style>
+    .public-navbar.scrolled {
+      background: var(--bg-glass-strong) !important;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-md);
+    }
+    .public-navbar.scrolled a:not(.btn-primary) {
+      color: var(--text-primary) !important;
+    }
+    .public-navbar.scrolled .gradient-text {
+      -webkit-text-fill-color: var(--saabq-violet) !important;
+    }
+    .public-navbar.scrolled [data-theme-toggle],
+    .public-navbar.scrolled [data-lang-toggle] {
+      color: var(--text-secondary) !important;
+      border-color: var(--border-color) !important;
+    }
+  </style>
+
+  <script src="../assets/js/animations.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

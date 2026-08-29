@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مواعيـدي - سابق كال | My Appointments - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+            arabic: ['IBM Plex Sans Arabic', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-8">
+          <a href="explore.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-xl font-black gradient-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-1">
+            <a href="explore.html" class="px-4 py-2 rounded-xl text-sm font-medium hover:bg-brand-50 dark:hover:bg-brand-900/10 transition-colors" style="color:var(--text-secondary)" data-ar="استكشف" data-en="Explore">استكشف</a>
+            <a href="appointments.html" class="px-4 py-2 rounded-xl text-sm font-semibold text-brand-600 bg-brand-50 dark:bg-brand-900/20" data-ar="مواعيدي" data-en="My Appointments">مواعيدي</a>
+            <a href="payments.html" class="px-4 py-2 rounded-xl text-sm font-medium hover:bg-brand-50 dark:hover:bg-brand-900/10 transition-colors" style="color:var(--text-secondary)" data-ar="المدفوعات" data-en="Payments">المدفوعات</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button data-lang-toggle class="btn-ghost text-xs font-semibold px-3 py-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-2 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border" style="border-color:var(--border-color);background:var(--bg-secondary)">
+            <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10 flex-1 w-full">
+
+    <!-- Page Header & Action Bar -->
+    <div class="flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+      <div>
+        <h1 class="text-2xl sm:text-3xl font-extrabold" style="color:var(--text-primary)" data-ar="مواعيدي" data-en="My Appointments">مواعيـدي وحجوزاتي</h1>
+        <p class="text-xs sm:text-sm mt-1" style="color:var(--text-secondary)" data-ar="تتبع جميع مواعيدك القادمة والسابقة مع إمكانية التعديل والإلغاء بسهولة." data-en="Track all your upcoming and past bookings with easy rescheduling.">تتبع جميع مواعيدك القادمة والسابقة مع إمكانية التعديل والإلغاء بسهولة.</p>
+      </div>
+
+      <div class="flex items-center gap-3 self-start md:self-auto">
+        <!-- View Mode Switcher (Calendar / List) -->
+        <div class="flex items-center rounded-xl p-1 border bg-[var(--bg-secondary)]" style="border-color:var(--border-color)">
+          <button id="viewBtnCalendar" onclick="switchViewMode('calendar')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--primary)] text-white shadow-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+            <span data-ar="عرض التقويم" data-en="Calendar View">عرض التقويم</span>
+          </button>
+          <button id="viewBtnList" onclick="switchViewMode('list')" class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-secondary)] hover:text-[var(--text-primary)]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <span data-ar="عرض القائمة" data-en="List View">عرض القائمة</span>
+          </button>
+        </div>
+
+        <a href="explore.html" class="btn-primary !rounded-xl text-xs sm:text-sm py-2.5 px-4 flex items-center gap-2 shadow-md">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          <span data-ar="احجز ميعاد جديد" data-en="New Booking">احجز ميعاد جديد</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!-- VIEW 1: INTERACTIVE CALENDAR VIEW (DEFAULT)                   -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <div id="calendarViewContainer" class="space-y-6">
+      
+      <!-- Calendar Grid + Day Details Split -->
+      <div class="grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        
+        <!-- Left: Full Month Calendar -->
+        <div class="lg:col-span-8 card p-5 sm:p-6 shadow-sm">
+          
+          <!-- Month Header Controls -->
+          <div class="flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b" style="border-color:var(--border-color)">
+            <div class="flex items-center gap-3">
+              <h2 class="text-lg sm:text-xl font-bold flex items-center gap-2" style="color:var(--text-primary)">
+                <span data-ar="سبتمبر 2026" data-en="September 2026">سبتمبر 2026</span>
+                <span class="badge-primary text-xs" data-ar="2 مواعيد قادمة" data-en="2 Upcoming">2 مواعيد قادمة</span>
+              </h2>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button class="btn-ghost text-xs px-3 py-1.5 rounded-lg border font-semibold" style="border-color:var(--border-color);color:var(--text-secondary)" data-ar="اليوم" data-en="Today">اليوم</button>
+              <div class="flex items-center border rounded-lg overflow-hidden" style="border-color:var(--border-color)">
+                <button class="p-2 hover:bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition-colors" title="الشهر السابق">
+                  <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7-7"/></svg>
+                </button>
+                <div class="w-px h-6 bg-[var(--border-color)]"></div>
+                <button class="p-2 hover:bg-[var(--bg-secondary)] text-[var(--text-secondary)] transition-colors" title="الشهر التالي">
+                  <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week Days Header -->
+          <div class="grid-cols-7 gap-1 text-center font-bold text-xs pb-3 text-[var(--text-secondary)] border-b mb-2" style="border-color:var(--border-color)">
+            <span data-ar="الأحد" data-en="Sun">الأحد</span>
+            <span data-ar="الإثنين" data-en="Mon">الإثنين</span>
+            <span data-ar="الثلاثاء" data-en="Tue">الثلاثاء</span>
+            <span data-ar="الأربعاء" data-en="Wed">الأربعاء</span>
+            <span data-ar="الخميس" data-en="Thu">الخميس</span>
+            <span data-ar="الجمعة" data-en="Fri">الجمعة</span>
+            <span data-ar="السبت" data-en="Sat">السبت</span>
+          </div>
+
+          <!-- Calendar Days Grid (September 2026) -->
+          <div class="grid-cols-7 gap-1.5 sm:gap-2">
+            <!-- Prev Month Days -->
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-transparent opacity-30 text-xs font-semibold">30</div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-transparent opacity-30 text-xs font-semibold">31</div>
+
+            <!-- Sep 1 - 9 -->
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">1</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">2</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">3</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">4</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">5</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">6</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">7</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">8</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">9</span>
+            </div>
+
+            <!-- Sep 10 (APPOINTMENT 1 - CONFIRMED) -->
+            <div onclick="selectCalendarDate(10)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] transition-all cursor-pointer flex-col justify-between shadow-sm ring-2 ring-[var(--primary)]/20">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold text-[var(--primary)]">10</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              </div>
+              <div class="p-1 rounded-lg bg-[var(--primary)] text-white text-[10px] font-bold truncate leading-tight shadow-sm" title="09:30 ص - كشف واستشارة طب أسرة">
+                <span>09:30 ص • طب أسرة</span>
+              </div>
+            </div>
+
+            <!-- Sep 11 - 13 -->
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">11</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">12</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">13</span>
+            </div>
+
+            <!-- Sep 14 (APPOINTMENT 2 - PENDING) -->
+            <div onclick="selectCalendarDate(14)" class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-amber-500/50 bg-amber-500/10 transition-all cursor-pointer flex-col justify-between hover:ring-2 hover:ring-amber-500">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-extrabold text-amber-600">14</span>
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              </div>
+              <div class="p-1 rounded-lg bg-amber-500 text-white text-[10px] font-bold truncate leading-tight shadow-sm" title="04:00 م - استشارة قانونية وتجارية">
+                <span>04:00 م • استشارة</span>
+              </div>
+            </div>
+
+            <!-- Sep 15 - 30 -->
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">15</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">16</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">17</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">18</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">19</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">20</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">21</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">22</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">23</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">24</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">25</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">26</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">27</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">28</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">29</span>
+            </div>
+            <div class="min-h-[70px] sm:min-h-[90px] p-1.5 rounded-xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] transition-all cursor-pointer flex-col justify-between">
+              <span class="text-xs font-bold text-[var(--text-secondary)]">30</span>
+            </div>
+          </div>
+
+          <!-- Calendar Color Legend -->
+          <div class="flex-wrap items-center gap-4 mt-6 pt-4 border-text-xs text-[var(--text-secondary)]" style="border-color:var(--border-color)">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[var(--primary)]"></span>
+              <span data-ar="موعد مؤكد" data-en="Confirmed">موعد مؤكد</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+              <span data-ar="بانتظار التأكيد" data-en="Pending Confirmation">بانتظار التأكيد</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <span data-ar="مكتمل" data-en="Completed">مكتمل</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Selected Day Schedule Dossier -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="card p-5 shadow-sm border-t-4 border-t-[var(--primary)]">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b" style="border-color:var(--border-color)">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-[var(--text-tertiary)]" data-ar="تفاصيل اليوم المحدد" data-en="Selected Date">تفاصيل اليوم المحدد</span>
+                <h3 id="selectedDateTitle" class="text-base font-extrabold" style="color:var(--text-primary)">الخميس، 10 سبتمبر 2026</h3>
+              </div>
+              <span id="selectedDateCount" class="badge-primary text-xs font-bold">1 موعد</span>
+            </div>
+
+            <!-- Active Appointment Card on Selected Date -->
+            <div id="selectedDateContent" class="space-y-4">
+              
+              <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
+                <div class="flex items-center justify-between gap-2">
+                  <span class="badge-emerald text-[11px]" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
+                  <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94821</span>
+                </div>
+
+                <div>
+                  <h4 class="font-bold text-sm text-[var(--text-primary)]" data-ar="كشف واستشارة طب أسرة" data-en="Family Medicine Consultation">كشف واستشارة طب أسرة</h4>
+                  <p class="text-xs text-[var(--primary)] font-semibold mt-0.5" data-ar="🌿 عيادات رعاية الأسرة" data-en="🌿 Family Care Clinics">🌿 عيادات رعاية الأسرة</p>
+                </div>
+
+                <div class="space-y-1.5 text-xs text-[var(--text-secondary)] pt-1 border-t border-[var(--border-color)]">
+                  <div class="flex items-center gap-2">
+                    <span>👨‍⚕️</span>
+                    <span class="font-medium" data-ar="د. فهد العتيبي (استشاري)" data-en="Dr. Fahad Al-Otaibi">د. فهد العتيبي (استشاري)</span>
+                  </div>
+                  <div class="flex items-center gap-2 font-mono">
+                    <span>⏰</span>
+                    <span>09:30 ص - 10:00 ص (30 دقيقة)</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span>📍</span>
+                    <span data-ar="الرياض - حي الياسمين (العيادة 3)" data-en="Riyadh - Alyasmin Branch (Clinic 3)">الرياض - حي الياسمين (العيادة 3)</span>
+                  </div>
+                </div>
+
+                <div class="grid-cols-2 gap-2 pt-2">
+                  <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">
+                    <span data-ar="عرض التذكرة" data-en="View Ticket">عرض التذكرة</span>
+                  </a>
+                  <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 text-center font-medium" style="border-color:var(--border-color)">
+                    <span data-ar="الغي الميعاد" data-en="Cancel">الغي الميعاد</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quick Tip Card -->
+              <div class="p-3.5 rounded-xl border bg-brand-50/50 dark:bg-brand-900/10 border-brand-500/20 text-xs flex items-start gap-2.5">
+                <span class="text-base">💡</span>
+                <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed" data-ar="يرجى الحضور قبل الموعد بـ 10 دقائق لتأكيد الدخول عبر مسح رمز الاستجابة السريعة (QR Code)." data-en="Please arrive 10 minutes prior to scan your entry QR code.">يرجى الحضور قبل الموعد بـ 10 دقائق لتأكيد الدخول عبر مسح رمز الاستجابة السريعة (QR Code).</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <!-- VIEW 2: LIST VIEW (CARDS)                                     -->
+    <!-- ══════════════════════════════════════════════════════════════ -->
+    <div id="listViewContainer" class="space-y-6 hidden">
+      
+      <!-- Status Tabs -->
+      <div class="flex items-center gap-2 border-b pb-4 overflow-x-auto no-scrollbar" style="border-color:var(--border-color)">
+        <button class="px-5 py-2.5 rounded-xl text-sm font-bold bg-[var(--primary)] text-white shadow-sm" data-ar="المواعيد اللي جاية (2)" data-en="Upcoming (2)">المواعيد القادمة (2)</button>
+        <button class="px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-brand-50 dark:hover:bg-brand-900/10 transition-colors" style="color:var(--text-secondary)" data-ar="المكتملة (8)" data-en="Completed (8)">المكتملة (8)</button>
+        <button class="px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-brand-50 dark:hover:bg-brand-900/10 transition-colors" style="color:var(--text-secondary)" data-ar="الملغية (1)" data-en="Cancelled (1)">الملغية (1)</button>
+      </div>
+
+      <!-- Appointments Cards List -->
+      <div class="space-y-4">
+
+        <!-- Appointment 1 (Confirmed Upcoming) -->
+        <div class="card p-6 flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-[var(--primary)] transition-all">
+          <div class="flex-col sm:flex-row sm:items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-[var(--primary-subtle)] text-[var(--primary)] flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
+              <span class="text-xs text-[var(--primary)]">سبتمبر</span>
+              <span class="text-2xl leading-none font-extrabold">10</span>
+            </div>
+
+            <div>
+              <div class="flex-wrap items-center gap-2 mb-1.5">
+                <span class="badge-emerald text-xs" data-ar="مؤكد ✓" data-en="Confirmed ✓">مؤكد ✓</span>
+                <span class="badge-primary text-xs" data-ar="حضوري" data-en="In-Person">حضوري</span>
+                <span class="text-xs font-mono text-gray-400">#BK-94821</span>
+              </div>
+              <h2 class="text-lg font-bold" style="color:var(--text-primary)" data-ar="كشف واستشارة طب أسرة" data-en="Family Medicine Consultation">كشف واستشارة طب أسرة</h2>
+              <div class="flex-wrap items-center gap-3 text-xs mt-1" style="color:var(--text-secondary)">
+                <span class="font-semibold text-[var(--primary)]">🌿 عيادات رعاية الأسرة</span>
+                <span>•</span>
+                <span>👨‍⚕️ د. فهد العتيبي</span>
+                <span>•</span>
+                <span>⏰ 09:30 ص - 10:00 ص</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 lg:pt-0 border-t lg:border-0" style="border-color:var(--border-color)">
+            <a href="appointment-detail.html" class="btn-secondary !rounded-xl text-xs py-2 px-4">
+              <span data-ar="شوف التفاصيل" data-en="View Details">شوف التفاصيل</span>
+            </a>
+            <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20" style="border-color:var(--border-color)">
+              <span data-ar="الغي الميعاد" data-en="Cancel">الغي الميعاد</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Appointment 2 (Pending Verification) -->
+        <div class="card p-6 flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-amber-500 transition-all">
+          <div class="flex-col sm:flex-row sm:items-center gap-5">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 dark:bg-amber-900/30 text-amber-600 flex-col items-center justify-center font-bold flex-shrink-0 border" style="border-color:var(--border-color)">
+              <span class="text-xs text-amber-600">سبتمبر</span>
+              <span class="text-2xl leading-none font-extrabold">14</span>
+            </div>
+
+            <div>
+              <div class="flex-wrap items-center gap-2 mb-1.5">
+                <span class="badge-amber text-xs" data-ar="بانتظار تأكيد الإيصال" data-en="Pending Receipt Approval">بانتظار تأكيد الإيصال</span>
+                <span class="badge-secondary text-xs" data-ar="Google Meet" data-en="Google Meet">Google Meet</span>
+                <span class="text-xs font-mono text-gray-400">#BK-94804</span>
+              </div>
+              <h2 class="text-lg font-bold" style="color:var(--text-primary)" data-ar="استشارة قانونية وتجارية" data-en="Commercial Legal Consultation">استشارة قانونية وتجارية</h2>
+              <div class="flex-wrap items-center gap-3 text-xs mt-1" style="color:var(--text-secondary)">
+                <span class="font-semibold text-amber-600">⚖️ مكتب النخبة للمحاماة</span>
+                <span>•</span>
+                <span>👨‍💼 أ. خالد الشمري</span>
+                <span>•</span>
+                <span>⏰ 04:00 م - 05:00 م</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 lg:pt-0 border-t lg:border-0" style="border-color:var(--border-color)">
+            <a href="appointment-detail.html" class="btn-secondary !rounded-xl text-xs py-2 px-4">
+              <span data-ar="شوف التفاصيل" data-en="View Details">شوف التفاصيل</span>
+            </a>
+            <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20" style="border-color:var(--border-color)">
+              <span data-ar="الغي الميعاد" data-en="Cancel">الغي الميعاد</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="mt-auto py-8 border-t" style="background: var(--bg-secondary); border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs" style="color:var(--text-tertiary)">
+      <p data-ar="© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة." data-en="© 2026 Saabq — Scheduling & Appointments Platform. All rights reserved.">© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- View Switcher & Interactive Calendar Script -->
+  <script>
+    function switchViewMode(mode) {
+      const isCal = mode === 'calendar';
+      document.getElementById('calendarViewContainer').classList.toggle('hidden', !isCal);
+      document.getElementById('listViewContainer').classList.toggle('hidden', isCal);
+
+      const btnCal = document.getElementById('viewBtnCalendar');
+      const btnList = document.getElementById('viewBtnList');
+
+      if (isCal) {
+        btnCal.className = 'flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--primary)] text-white shadow-sm';
+        btnList.className = 'flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-secondary)] hover:text-[var(--text-primary)]';
+      } else {
+        btnList.className = 'flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all bg-[var(--primary)] text-white shadow-sm';
+        btnCal.className = 'flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold transition-all text-[var(--text-secondary)] hover:text-[var(--text-primary)]';
+      }
+    }
+
+    function selectCalendarDate(day) {
+      const title = document.getElementById('selectedDateTitle');
+      const count = document.getElementById('selectedDateCount');
+      const content = document.getElementById('selectedDateContent');
+
+      if (day === 10) {
+        title.textContent = 'الخميس، 10 سبتمبر 2026';
+        count.textContent = '1 موعد';
+        content.innerHTML = `
+          <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
+            <div class="flex items-center justify-between gap-2">
+              <span class="badge-emerald text-[11px]">مؤكد ✓</span>
+              <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94821</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-[var(--text-primary)]">كشف واستشارة طب أسرة</h4>
+              <p class="text-xs text-[var(--primary)] font-semibold mt-0.5">🌿 عيادات رعاية الأسرة</p>
+            </div>
+            <div class="space-y-1.5 text-xs text-[var(--text-secondary)] pt-1 border-t border-[var(--border-color)]">
+              <div class="flex items-center gap-2"><span>👨‍⚕️</span><span class="font-medium">د. فهد العتيبي (استشاري)</span></div>
+              <div class="flex items-center gap-2 font-mono"><span>⏰</span><span>09:30 ص - 10:00 ص (30 دقيقة)</span></div>
+              <div class="flex items-center gap-2"><span>📍</span><span>الرياض - حي الياسمين (العيادة 3)</span></div>
+            </div>
+            <div class="grid-cols-2 gap-2 pt-2">
+              <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">عرض التذكرة</a>
+              <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 text-center font-medium" style="border-color:var(--border-color)">الغي الميعاد</button>
+            </div>
+          </div>
+          <div class="p-3.5 rounded-xl border bg-brand-50/50 dark:bg-brand-900/10 border-brand-500/20 text-xs flex items-start gap-2.5">
+            <span class="text-base">💡</span>
+            <p class="text-[11px] text-[var(--text-secondary)] leading-relaxed">يرجى الحضور قبل الموعد بـ 10 دقائق لتأكيد الدخول عبر مسح رمز الاستجابة السريعة (QR Code).</p>
+          </div>
+        `;
+      } else if (day === 14) {
+        title.textContent = 'الإثنين، 14 سبتمبر 2026';
+        count.textContent = '1 موعد';
+        content.innerHTML = `
+          <div class="p-4 rounded-2xl border bg-[var(--bg-secondary)] space-y-3" style="border-color:var(--border-color)">
+            <div class="flex items-center justify-between gap-2">
+              <span class="badge-amber text-[11px]">بانتظار تأكيد الإيصال</span>
+              <span class="text-xs font-mono text-[var(--text-tertiary)]">#BK-94804</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-[var(--text-primary)]">استشارة قانونية وتجارية</h4>
+              <p class="text-xs text-amber-600 font-semibold mt-0.5">⚖️ مكتب النخبة للمحاماة</p>
+            </div>
+            <div class="space-y-1.5 text-xs text-[var(--text-secondary)] pt-1 border-t border-[var(--border-color)]">
+              <div class="flex items-center gap-2"><span>👨‍💼</span><span class="font-medium">أ. خالد الشمري</span></div>
+              <div class="flex items-center gap-2 font-mono"><span>⏰</span><span>04:00 م - 05:00 م (60 دقيقة)</span></div>
+              <div class="flex items-center gap-2"><span>💻</span><span>Google Meet (عن بُعد)</span></div>
+            </div>
+            <div class="grid-cols-2 gap-2 pt-2">
+              <a href="appointment-detail.html" class="btn-primary !rounded-xl text-xs py-2 text-center justify-center font-bold">عرض التذكرة</a>
+              <button class="btn-ghost text-xs py-2 px-3 rounded-xl border text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-900/20 text-center font-medium" style="border-color:var(--border-color)">الغي الميعاد</button>
+            </div>
+          </div>
+        `;
+      } else {
+        title.textContent = `${day} سبتمبر 2026`;
+        count.textContent = 'لا توجد مواعيد';
+        content.innerHTML = `
+          <div class="p-8 text-center rounded-2xl border-dashed text-xs text-[var(--text-secondary)]" style="border-color:var(--border-color)">
+            <div class="w-12 h-12 rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center mx-auto mb-3 text-lg">📅</div>
+            <p class="font-bold text-sm text-[var(--text-primary)]">لا توجد مواعيد مسجلة في هذا اليوم</p>
+            <p class="text-[11px] text-[var(--text-tertiary)] mt-1">يمكنك حجز موعد جديد في أي وقت</p>
+            <a href="explore.html" class="btn-secondary !rounded-xl text-xs py-2 px-4 inline-flex mt-4">حجز موعد</a>
+          </div>
+        `;
+      }
+    }
+  </script>
+
+  <!-- ═══════════ CANCEL APPOINTMENT MODAL ═══════════ -->
+  <div id="cancelModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <h3 class="font-bold text-base text-rose-600 flex items-center gap-2">
+          <span>⚠️</span>
+          <span>الغي الميعاد</span>
+        </h3>
+        <button onclick="closeModal('cancelModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+      <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+        هل أنت متأكد من رغبتك في إلغاء الموعد <strong class="text-[var(--text-primary)]">#BK-94821</strong>؟ سيتم استرجاع المبلغ بالكامل إلى وسيلة الدفع خلال 2-3 أيام عمل.
+      </p>
+      <div>
+        <label class="input-label text-xs">سبب الإلغاء (اختياري)</label>
+        <select class="input-field !text-xs">
+          <option>تغيير في جدول المواعيد الشخصي</option>
+          <option>حجز موعد في وقت آخر</option>
+          <option>ظرف طارئ</option>
+          <option>أخرى</option>
+        </select>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('cancelModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">تراجع</button>
+        <button type="button" onclick="closeModal('cancelModal'); alert('تم إلغاء الموعد بنجاح')" class="btn-ghost !rounded-xl text-xs py-2 px-5 bg-rose-500 hover:bg-rose-600 text-white font-bold">تأكيد الإلغاء</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ RESCHEDULE APPOINTMENT MODAL ═══════════ -->
+  <div id="rescheduleModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <h3 class="font-bold text-base text-[var(--text-primary)] flex items-center gap-2">
+          <span>🔄</span>
+          <span>تعديل موعد الحجز</span>
+        </h3>
+        <button onclick="closeModal('rescheduleModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+      <p class="text-xs text-[var(--text-secondary)]">اختر التاريخ والوقت الجديد لموعدك مع د. فهد العتيبي:</p>
+      <div class="space-y-3">
+        <div>
+          <label class="input-label text-xs">التاريخ الجديد</label>
+          <input type="date" value="2026-09-12" class="input-field !text-xs font-mono">
+        </div>
+        <div>
+          <label class="input-label text-xs">الوقت المتاح</label>
+          <div class="grid-cols-3 gap-2">
+            <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-2 border-[var(--primary)] bg-[var(--primary-subtle)] text-[var(--primary)]">10:00 ص</button>
+            <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">11:30 ص</button>
+            <button type="button" class="py-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)]">04:30 م</button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('rescheduleModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إلغاء</button>
+        <button type="button" onclick="closeModal('rescheduleModal'); alert('تم تعديل موعدك بنجاح!')" class="btn-primary !rounded-xl text-xs py-2 px-5 font-bold">حفظ الموعد الجديد</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

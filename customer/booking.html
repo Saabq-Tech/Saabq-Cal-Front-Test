@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حجز موعد - سابق كال | Book an Appointment - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <a href="workspace.html" class="p-2 rounded-xl border-[var(--border-color)] hover:bg-[var(--bg-secondary)] transition-colors">
+            <svg class="w-4 h-4 rtl:rotate-180 text-[var(--text-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7h18"/></svg>
+          </a>
+          <div>
+            <div class="font-bold text-sm leading-tight text-[var(--text-primary)]" data-ar="عيادات رعاية الأسرة" data-en="Family Care Clinics">عيادات رعاية الأسرة</div>
+            <div class="text-[11px] text-[var(--primary)] font-semibold" data-ar="حجز موعد مؤكد ومضمون" data-en="Guaranteed Booking">حجز موعد مؤكد ومضمون</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button data-lang-toggle class="btn-ghost text-xs font-bold px-2.5 py-1 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MAIN WIZARD ═══════════ -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-10 flex-1 w-full space-y-8">
+
+    <!-- Stepper Indicator -->
+    <div class="max-w-2xl mx-auto">
+      <div class="flex items-center justify-between relative">
+        <div class="absolute top-1/2 left-4 right-4 h-1 bg-[var(--border-color)] -translate-y-1/2 z-0"></div>
+        <div id="stepProgress" class="absolute top-1/2 right-4 h-1 bg-[var(--primary)] -translate-y-1/2 z-0 transition-all duration-300" style="width: 25%"></div>
+
+        <!-- Step 1 Dot -->
+        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(1)">
+          <div id="dot1" class="w-8 h-8 rounded-full bg-[var(--primary)] text-white font-bold text-xs flex items-center justify-center shadow-lg ring-4 ring-[var(--primary-subtle)]">1</div>
+          <span class="text-[11px] font-bold text-[var(--primary)]" data-ar="الخدمة" data-en="Service">الخدمة</span>
+        </div>
+
+        <!-- Step 2 Dot -->
+        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(2)">
+          <div id="dot2" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">2</div>
+          <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="المتخصص" data-en="Specialist">المتخصص</span>
+        </div>
+
+        <!-- Step 3 Dot -->
+        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(3)">
+          <div id="dot3" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">3</div>
+          <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="الموعد" data-en="Slot">الموعد</span>
+        </div>
+
+        <!-- Step 4 Dot -->
+        <div class="step-node relative z-10 flex-col items-center gap-1 cursor-pointer" onclick="goToStep(4)">
+          <div id="dot4" class="w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]">4</div>
+          <span class="text-[11px] font-semibold text-[var(--text-tertiary)]" data-ar="التأكيد والدفع" data-en="Confirm & Pay">التأكيد والدفع</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wizard Main Layout -->
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+
+      <!-- Left 8 Cols: Steps Panels -->
+      <div class="lg:col-span-8 space-y-6">
+
+        <!-- ════ STEP 1: SERVICE SELECTION ════ -->
+        <div id="stepPanel1" class="card p-6 space-y-4 shadow-sm animate-fade-in-up">
+          <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+            <div>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 1: اختر الخدمة الطبية المطلوبة" data-en="Step 1: Select Service">الخطوة 1: اختر الخدمة الطبية المطلوبة</h2>
+              <p class="text-xs text-[var(--text-secondary)]">اختر نوع الكشف أو الاستشارة لعرض الأطباء المتاحين</p>
+            </div>
+            <span class="badge-primary text-xs">1 من 4</span>
+          </div>
+
+          <div class="space-y-3">
+            
+            <label class="block p-4 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] cursor-pointer transition-all shadow-sm">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-start gap-3.5">
+                  <input type="radio" name="bookingService" checked class="mt-1 w-4 h-4 text-[var(--primary)]">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-[var(--text-primary)]">كشف واستشارة طب أسرة</span>
+                      <span class="badge-emerald text-[10px]">حضوري</span>
+                    </div>
+                    <p class="text-xs text-[var(--text-secondary)] mt-1">فحص سريري متكامل، قياس المؤشرات الحيوية، والوصفة الطبية المعتمدة.</p>
+                    <span class="text-[11px] text-[var(--primary)] font-bold block mt-1">⏰ 30 دقيقة</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <span class="text-base font-extrabold text-[var(--primary)]">150 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة</span>
+                </div>
+              </div>
+            </label>
+
+            <label class="block p-4 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer transition-all">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-start gap-3.5">
+                  <input type="radio" name="bookingService" class="mt-1 w-4 h-4 text-[var(--primary)]">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-[var(--text-primary)]">فحص وتنظيف أسنان شامل</span>
+                      <span class="badge-emerald text-[10px]">حضوري</span>
+                    </div>
+                    <p class="text-xs text-[var(--text-secondary)] mt-1">إزالة الجير وتلميع الأسنان وفحص اللثة بالأشعة السينية.</p>
+                    <span class="text-[11px] text-[var(--text-tertiary)] font-bold block mt-1">⏰ 45 دقيقة</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <span class="text-base font-extrabold text-[var(--text-primary)]">200 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة</span>
+                </div>
+              </div>
+            </label>
+
+            <label class="block p-4 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer transition-all">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex items-start gap-3.5">
+                  <input type="radio" name="bookingService" class="mt-1 w-4 h-4 text-[var(--primary)]">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="font-bold text-sm text-[var(--text-primary)]">استشارة طبية عن بُعد (Telehealth)</span>
+                      <span class="badge-blue text-[10px]">Google Meet</span>
+                    </div>
+                    <p class="text-xs text-[var(--text-secondary)] mt-1">استشارة فيديو مباشرة لمراجعة التحاليل ومتابعة الخطة العلاجية.</p>
+                    <span class="text-[11px] text-[var(--text-tertiary)] font-bold block mt-1">⏰ 20 دقيقة</span>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <span class="text-base font-extrabold text-[var(--text-primary)]">100 ر.س</span>
+                  <span class="text-[10px] text-[var(--text-tertiary)] block">شامل الضريبة</span>
+                </div>
+              </div>
+            </label>
+
+          </div>
+
+          <button type="button" onclick="goToStep(2)" class="btn-primary w-full !py-3.5 !rounded-2xl justify-center font-bold text-sm shadow-md mt-4">
+            <span data-ar="متابعة: اختيار الطبيب أو الأخصائي ←" data-en="Continue: Select Specialist →">متابعة: اختيار الطبيب أو الأخصائي ←</span>
+          </button>
+        </div>
+
+        <!-- ════ STEP 2: SPECIALIST SELECTION ════ -->
+        <div id="stepPanel2" class="card p-6 space-y-4 hidden shadow-sm animate-fade-in-up">
+          <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+            <div>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 2: حدد الطبيب / الأخصائي" data-en="Step 2: Pick Specialist">الخطوة 2: حدد الطبيب / الأخصائي</h2>
+              <p class="text-xs text-[var(--text-secondary)]">اختر استشاري الحالة أو دع النظام يختار الموعد الأقرب</p>
+            </div>
+            <span class="badge-primary text-xs">2 من 4</span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+
+            <!-- Specialist 1 (Active) -->
+            <label class="p-4 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] cursor-pointer flex items-center gap-3.5 transition-all shadow-sm">
+              <input type="radio" name="specialist" checked class="w-4 h-4 text-[var(--primary)]">
+              <div class="w-12 h-12 rounded-2xl gradient-brand text-white text-xl flex items-center justify-center font-bold shadow-md flex-shrink-0">
+                👨‍⚕️
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-[var(--text-primary)]">د. فهد العتيبي</h4>
+                <p class="text-xs text-[var(--primary)] font-semibold">استشاري طب أسرة</p>
+                <div class="flex items-center gap-1 text-[10px] text-amber-500 font-bold mt-1">
+                  <span>★ 4.9 (84 تقييم)</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Specialist 2 -->
+            <label class="p-4 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex items-center gap-3.5 transition-all">
+              <input type="radio" name="specialist" class="w-4 h-4 text-[var(--primary)]">
+              <div class="w-12 h-12 rounded-2xl bg-teal-700 text-white text-xl flex items-center justify-center font-bold shadow-md flex-shrink-0">
+                👩‍⚕️
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-[var(--text-primary)]">د. سارة الدوسري</h4>
+                <p class="text-xs text-[var(--text-secondary)] font-semibold">استشارية طب وقائي</p>
+                <div class="flex items-center gap-1 text-[10px] text-amber-500 font-bold mt-1">
+                  <span>★ 5.0 (44 تقييم)</span>
+                </div>
+              </div>
+            </label>
+
+            <!-- Specialist 3 (Any Available) -->
+            <label class="p-4 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex items-center gap-3.5 transition-all sm:col-span-2">
+              <input type="radio" name="specialist" class="w-4 h-4 text-[var(--primary)]">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white text-xl flex items-center justify-center font-bold shadow-md flex-shrink-0">
+                ⚡
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-[var(--text-primary)]">أي طبيب متاح (أقرب موعد ممكن)</h4>
+                <p class="text-xs text-[var(--text-secondary)]">سيعين النظام الموعد الشاغر الأقرب تلقائياً</p>
+              </div>
+            </label>
+
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-[var(--border-color)]">
+            <button type="button" onclick="goToStep(1)" class="btn-ghost !py-3 !px-5 !rounded-2xl border text-xs font-bold" style="border-color:var(--border-color)">
+              <span>← السابق</span>
+            </button>
+            <button type="button" onclick="goToStep(3)" class="btn-primary flex-1 !py-3 !rounded-2xl justify-center font-bold text-sm shadow-md">
+              <span>متابعة: اختيار التاريخ والوقت ←</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ════ STEP 3: DATE & TIME SLOT PICKER ════ -->
+        <div id="stepPanel3" class="card p-6 space-y-6 hidden shadow-sm animate-fade-in-up">
+          <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+            <div>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 3: حدد التاريخ والوقت المناسب" data-en="Step 3: Select Date & Time">الخطوة 3: حدد التاريخ والوقت المناسب</h2>
+              <p class="text-xs text-[var(--text-secondary)]">أوقات العمل المتاحة وفق تقويم الطبيب المباشر</p>
+            </div>
+            <span class="badge-primary text-xs">3 من 4</span>
+          </div>
+
+          <!-- Horizontal Date Picker Strips -->
+          <div class="space-y-2">
+            <span class="text-xs font-bold text-[var(--text-primary)]">اختر اليوم (سبتمبر 2026):</span>
+            <div class="grid-cols-4 sm:grid-cols-6 gap-2">
+              <button type="button" class="p-2.5 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] text-center transition-all shadow-sm">
+                <span class="text-[10px] text-[var(--primary)] font-bold block">الخميس</span>
+                <span class="text-lg font-extrabold text-[var(--primary)] block">10</span>
+                <span class="text-[9px] text-emerald-600 font-bold block">4 شواغر</span>
+              </button>
+
+              <button type="button" class="p-2.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-center transition-all">
+                <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">السبت</span>
+                <span class="text-lg font-extrabold text-[var(--text-primary)] block">12</span>
+                <span class="text-[9px] text-emerald-600 font-bold block">6 شواغر</span>
+              </button>
+
+              <button type="button" class="p-2.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-center transition-all">
+                <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">الأحد</span>
+                <span class="text-lg font-extrabold text-[var(--text-primary)] block">13</span>
+                <span class="text-[9px] text-emerald-600 font-bold block">2 شواغر</span>
+              </button>
+
+              <button type="button" class="p-2.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-center transition-all">
+                <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">الإثنين</span>
+                <span class="text-lg font-extrabold text-[var(--text-primary)] block">14</span>
+                <span class="text-[9px] text-emerald-600 font-bold block">5 شواغر</span>
+              </button>
+
+              <button type="button" class="p-2.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-center transition-all">
+                <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">الثلاثاء</span>
+                <span class="text-lg font-extrabold text-[var(--text-primary)] block">15</span>
+                <span class="text-[9px] text-emerald-600 font-bold block">7 شواغر</span>
+              </button>
+
+              <button type="button" class="p-2.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] opacity-40 text-center cursor-not-allowed">
+                <span class="text-[10px] text-[var(--text-tertiary)] font-bold block">الجمعة</span>
+                <span class="text-lg font-extrabold text-[var(--text-primary)] block">11</span>
+                <span class="text-[9px] text-rose-500 font-bold block">مغلق</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Time Slots Matrix -->
+          <div class="space-y-4">
+            <!-- Morning Slots -->
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
+                <span>☀️ الفترات الصباحية:</span>
+              </span>
+              <div class="grid-cols-3 sm:grid-cols-4 gap-2.5">
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-2 border-[var(--primary)] bg-[var(--primary)] text-white shadow-sm">
+                  09:30 ص
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  10:00 ص
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  10:30 ص
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  11:00 ص
+                </button>
+              </div>
+            </div>
+
+            <!-- Evening Slots -->
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-[var(--text-secondary)] flex items-center gap-1.5">
+                <span>🌙 الفترات المسائية:</span>
+              </span>
+              <div class="grid-cols-3 sm:grid-cols-4 gap-2.5">
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  04:30 م
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  05:00 م
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  06:30 م
+                </button>
+                <button type="button" class="py-2.5 px-2 rounded-xl text-xs font-mono font-bold border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-[var(--text-primary)]">
+                  08:00 م
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-[var(--border-color)]">
+            <button type="button" onclick="goToStep(2)" class="btn-ghost !py-3 !px-5 !rounded-2xl border text-xs font-bold" style="border-color:var(--border-color)">
+              <span>← السابق</span>
+            </button>
+            <button type="button" onclick="goToStep(4)" class="btn-primary flex-1 !py-3 !rounded-2xl justify-center font-bold text-sm shadow-md">
+              <span>متابعة: البيانات والدفع ←</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ════ STEP 4: CUSTOMER DETAILS & PAYMENT ════ -->
+        <div id="stepPanel4" class="card p-6 space-y-6 hidden shadow-sm animate-fade-in-up">
+          <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+            <div>
+              <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="الخطوة 4: بيانات المراجع وعايز تدفع إزاي؟ 💳" data-en="Step 4: Details & Payment">الخطوة 4: بيانات المراجع وطريقة الدفع</h2>
+              <p class="text-xs text-[var(--text-secondary)]">أدخل بياناتك لتصلك التذكرة ورمز الدخول بالرسائل النصية</p>
+            </div>
+            <span class="badge-emerald text-xs">الخطوة الأخيرة</span>
+          </div>
+
+          <!-- Customer Input fields -->
+          <div class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="input-label text-xs">الاسم الكامل للمراجع</label>
+                <input type="text" value="أحمد علي الغامدي" class="input-field !text-xs font-semibold">
+              </div>
+              <div>
+                <label class="input-label text-xs">رقم الجوال للتأكيد وتذكرة الدخول</label>
+                <input type="tel" value="0501234567" class="input-field !text-xs font-mono">
+              </div>
+            </div>
+
+            <div>
+              <label class="input-label text-xs">ملاحظات أو أعراض طبية تود إبلاغ الطبيب بها (اختياري)</label>
+              <textarea rows="2" class="input-field !text-xs" placeholder="اكتب أي استفسار أو ملاحظة سابقة..."></textarea>
+            </div>
+          </div>
+
+          <!-- Payment Options -->
+          <div class="space-y-3 pt-2">
+            <span class="text-xs font-bold text-[var(--text-primary)]">اختر طريقة السداد:</span>
+            
+            <div class="grid sm:grid-cols-3 gap-3">
+              <label class="p-3.5 rounded-2xl border-2 border-[var(--primary)] bg-[var(--primary-subtle)] cursor-pointer flex-col justify-between transition-all shadow-sm">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-xs text-[var(--text-primary)]">مدى / Apple Pay</span>
+                  <input type="radio" name="payMethod" checked class="w-3.5 h-3.5 text-[var(--primary)]">
+                </div>
+                <span class="text-[10px] text-emerald-600 font-bold mt-2">⚡ دفع فوري وتأكيد آلي</span>
+              </label>
+
+              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex-col justify-between transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-xs text-[var(--text-primary)]">تحويل بنكي مباشر</span>
+                  <input type="radio" name="payMethod" class="w-3.5 h-3.5 text-[var(--primary)]">
+                </div>
+                <span class="text-[10px] text-[var(--text-tertiary)] mt-2">رفع إيصال التحويل</span>
+              </label>
+
+              <label class="p-3.5 rounded-2xl border-[var(--border-color)] bg-[var(--bg-card)] hover:border-[var(--primary)] cursor-pointer flex-col justify-between transition-all">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-xs text-[var(--text-primary)]">الدفع في العيادة</span>
+                  <input type="radio" name="payMethod" class="w-3.5 h-3.5 text-[var(--primary)]">
+                </div>
+                <span class="text-[10px] text-[var(--text-tertiary)] mt-2">عند الحضور</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Complete CTA Button -->
+          <div class="flex items-center gap-3 pt-4 border-t border-[var(--border-color)]">
+            <button type="button" onclick="goToStep(3)" class="btn-ghost !py-3 !px-5 !rounded-2xl border text-xs font-bold" style="border-color:var(--border-color)">
+              <span>← السابق</span>
+            </button>
+            <a href="appointment-detail.html" class="btn-primary flex-1 !py-3.5 !rounded-2xl justify-center font-bold text-sm shadow-xl flex items-center gap-2">
+              <span>تأكيد الحجز وإصدار التذكرة (150 ر.س) 🚀</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right 4 Cols: Live Booking Summary Card -->
+      <div class="lg:col-span-4 space-y-4">
+        <div class="card p-5 space-y-4 shadow-sm border-t-4 border-t-[var(--primary)] sticky top-24">
+          <h3 class="font-bold text-sm text-[var(--text-primary)] pb-2 border-border-[var(--border-color)]" data-ar="ملخص الحجز والموعد" data-en="Booking Summary">ملخص الحجز والموعد</h3>
+          
+          <div class="space-y-3 text-xs">
+            <div class="flex items-start gap-2.5">
+              <span class="text-base">🏥</span>
+              <div>
+                <span class="text-[10px] text-[var(--text-tertiary)] block">المنشأة الطبية:</span>
+                <span class="font-bold text-[var(--text-primary)]">عيادات رعاية الأسرة</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <span class="text-base">🩺</span>
+              <div>
+                <span class="text-[10px] text-[var(--text-tertiary)] block">الخدمة:</span>
+                <span class="font-bold text-[var(--text-primary)]">كشف واستشارة طب أسرة</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <span class="text-base">👨‍⚕️</span>
+              <div>
+                <span class="text-[10px] text-[var(--text-tertiary)] block">الطبيب المعالج:</span>
+                <span class="font-bold text-[var(--text-primary)]">د. فهد العتيبي (استشاري)</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-2.5">
+              <span class="text-base">⏰</span>
+              <div>
+                <span class="text-[10px] text-[var(--text-tertiary)] block">التاريخ والوقت:</span>
+                <span class="font-bold text-[var(--primary)] font-mono">الخميس، 10 سبتمبر • 09:30 ص</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Calculation Breakdown -->
+          <div class="pt-3 border-t border-[var(--border-color)] space-y-1.5 text-xs">
+            <div class="flex items-center justify-between text-[var(--text-secondary)]">
+              <span>سعر الاستشارة:</span>
+              <span class="font-mono">130.43 ر.س</span>
+            </div>
+            <div class="flex items-center justify-between text-[var(--text-secondary)]">
+              <span>ضريبة القيمة المضافة (15%):</span>
+              <span class="font-mono">19.57 ر.س</span>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-[var(--border-color)] text-sm font-extrabold text-[var(--primary)]">
+              <span>الإجمالي المطلوب:</span>
+              <span class="text-base font-mono">150.00 ر.س</span>
+            </div>
+          </div>
+
+          <!-- Trust Badge -->
+          <div class="p-3 rounded-xl bg-emerald-500/10 border-emerald-500/20 text-[11px] text-emerald-700 dark:text-emerald-300 flex items-center gap-2">
+            <span>🛡️</span>
+            <span>ضمان استرجاع كامل في حال الإلغاء قبل الموعد بـ 24 ساعة.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="mt-auto py-8 border-t" style="background: var(--bg-secondary); border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 text-center text-xs" style="color:var(--text-tertiary)">
+      <p data-ar="© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة." data-en="© 2026 Saabq — Scheduling & Appointments Platform. All rights reserved.">© 2026 سابق كال — منصة إدارة المواعيد والحجوزات. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- Stepper Script -->
+  <script>
+    function goToStep(step) {
+      for (let i = 1; i <= 4; i++) {
+        const panel = document.getElementById(`stepPanel${i}`);
+        const dot = document.getElementById(`dot${i}`);
+        if (panel) panel.classList.toggle('hidden', i !== step);
+
+        if (dot) {
+          if (i < step) {
+            dot.className = 'w-8 h-8 rounded-full bg-emerald-500 text-white font-bold text-xs flex items-center justify-center shadow-md';
+            dot.innerHTML = '✓';
+          } else if (i === step) {
+            dot.className = 'w-8 h-8 rounded-full bg-[var(--primary)] text-white font-bold text-xs flex items-center justify-center shadow-lg ring-4 ring-[var(--primary-subtle)]';
+            dot.innerHTML = `${i}`;
+          } else {
+            dot.className = 'w-8 h-8 rounded-full border-2 text-xs font-bold flex items-center justify-center bg-[var(--bg-card)] text-[var(--text-tertiary)] border-[var(--border-color)]';
+            dot.innerHTML = `${i}`;
+          }
+        }
+      }
+
+      const progress = document.getElementById('stepProgress');
+      if (progress) {
+        const widths = { 1: '25%', 2: '50%', 3: '75%', 4: '100%' };
+        progress.style.width = widths[step] || '25%';
+      }
+    }
+  </script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

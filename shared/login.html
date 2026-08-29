@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - سابق كال | Sign In - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:['selector','[data-theme="dark"]'],theme:{extend:{colors:{brand:{50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837'},primary:{DEFAULT:'#0a9099',hover:'#11646a',light:'#169393',subtle:'#e6f7f8'},secondary:{DEFAULT:'#166992',hover:'#0e4c6b'},amber:{400:'#FCD34D',500:'#F59E0B',600:'#D97706'}},fontFamily:{sans:['Inter','IBM Plex Sans Arabic','sans-serif']}}}}</script>
+  <script src="../assets/js/theme.js"></script><script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex">
+
+  <!-- Left Panel (Form) -->
+  <div class="flex-1 flex items-center justify-center p-6 lg:p-12 relative">
+    <!-- Top Actions -->
+    <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+      <a href="../public/index.html" class="flex items-center gap-2">
+        <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-8 w-auto object-contain">
+        <span class="font-black text-lg gradient-text" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+      </a>
+      <div class="flex items-center gap-2">
+        <button data-lang-toggle class="btn-ghost text-xs font-semibold px-2.5 py-1 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+        <button data-theme-toggle class="btn-ghost p-1.5 rounded-lg border" style="border-color:var(--border-color);color:var(--text-secondary)"><svg class="icon-sun w-4 h-4" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+      </div>
+    </div>
+
+    <div class="w-full max-w-md animate-fade-in-up">
+      <div class="text-center mb-8">
+        <h1 class="text-2xl sm:text-3xl font-extrabold mb-2" style="color:var(--text-primary)" data-ar="أهلاً بيك من تانى! 👋" data-en="Welcome Back">أهلاً بيك من تانى! 👋</h1>
+        <p class="text-sm" style="color:var(--text-secondary)" data-ar="ادخل على حسابك عشان تدير مواعيدك وشغلك بسهولة" data-en="Sign in to access your dashboard">ادخل على حسابك عشان تدير مواعيدك وشغلك بسهولة</p>
+      </div>
+
+      <!-- User Type Tabs -->
+      <div class="flex rounded-xl p-1 mb-6" style="background:var(--bg-secondary)" data-tab-group="userType">
+        <button class="tab-item flex-1 text-center !border-0 !rounded-lg !py-2.5 !text-sm active" data-tab-target="customer" data-ar="عميل" data-en="Customer">عميل</button>
+        <button class="tab-item flex-1 text-center !border-0 !rounded-lg !py-2.5 !text-sm" data-tab-target="member" data-ar="عضو فريق" data-en="Team Member">عضو فريق</button>
+      </div>
+
+      <!-- Google Sign In -->
+      <button class="w-full flex items-center justify-center gap-3 p-3 rounded-xl border transition-all hover:shadow-md mb-4" style="border-color:var(--border-color);background:var(--bg-card)">
+        <svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 10.22 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="font-medium text-sm" style="color:var(--text-primary)" data-ar="كمّل بحساب Google 🚀" data-en="Continue with Google">كمّل بحساب Google 🚀</span>
+      </button>
+
+      <!-- Passkey Sign In -->
+      <button class="w-full flex items-center justify-center gap-3 p-3 rounded-xl border transition-all hover:shadow-md mb-6" style="border-color:var(--border-color);background:var(--bg-card)">
+        <svg class="w-5 h-5" style="color:var(--text-secondary)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 012 2m4 0a6 6 01-7.743 5.743L11 17H9v2H7v2H4a1 1 01-1-1v-2.586a1 1 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+        <span class="font-medium text-sm" style="color:var(--text-primary)" data-ar="ادخل ببصمة صباعك أو وشك (Passkey) 🔐" data-en="Sign in with Passkey">ادخل ببصمة صباعك أو وشك (Passkey) 🔐</span>
+      </button>
+
+      <!-- Divider -->
+      <div class="flex items-center gap-4 mb-6">
+        <div class="flex-1 h-px" style="background:var(--border-color)"></div>
+        <span class="text-xs font-medium" style="color:var(--text-tertiary)" data-ar="أو سجّل بالإيميل والباسورد عادي" data-en="or with email">أو سجّل بالإيميل والباسورد عادي</span>
+        <div class="flex-1 h-px" style="background:var(--border-color)"></div>
+      </div>
+
+      <!-- Login Form -->
+      <form class="space-y-4">
+        <div>
+          <label class="input-label" data-ar="الإيميل" data-en="Email">الإيميل</label>
+          <input type="email" class="input-field" data-ar-placeholder="أدخل بريدك الإلكتروني" data-en-placeholder="Enter your email" placeholder="أدخل بريدك الإلكتروني">
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <label class="input-label !mb-0" data-ar="الباسورد" data-en="Password">الباسورد</label>
+            <a href="forgot-password.html" class="text-xs font-medium text-brand-600 hover:text-brand-700" data-ar="نسيت الباسورد؟" data-en="Forgot password?">نسيت الباسورد؟</a>
+          </div>
+          <div class="relative">
+            <input type="password" class="input-field !pe-10" data-ar-placeholder="أدخل الباسورد" data-en-placeholder="Enter your password" placeholder="أدخل كلمة المرور">
+            <button type="button" class="absolute top-1/2 -translate-y-1/2 end-3" style="color:var(--text-tertiary)" onclick="togglePassword(this)">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300 text-brand-600 focus:ring-brand-500">
+          <label for="remember" class="text-sm" style="color:var(--text-secondary)" data-ar="تذكرني" data-en="Remember me">تذكرني</label>
+        </div>
+
+        <button type="submit" class="btn-primary w-full !py-3 !rounded-xl">
+          <span data-ar="سجل دخولك" data-en="Sign In">سجل دخولك</span>
+        </button>
+      </form>
+
+      <p class="text-center text-sm mt-6" style="color:var(--text-secondary)">
+        <span data-ar="لسه معندكش حساب؟" data-en="Don't have an account?">لسه معندكش حساب؟</span>
+        <a href="register.html" class="font-semibold text-brand-600 hover:text-brand-700 ms-1" data-ar="سجل دلوقتي" data-en="Register now">سجل دلوقتي</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right Panel (Visual) -->
+  <div class="hidden lg:flex-1 items-center justify-center gradient-hero relative overflow-hidden p-12">
+    <div class="absolute orb orb-amber w-72 h-72 -top-36 -right-36 opacity-30"></div>
+    <div class="absolute orb orb-violet w-96 h-96 -bottom-48 -left-48 opacity-20"></div>
+
+    <div class="relative z-10 text-center max-w-md">
+      <div class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mx-auto mb-8 animate-float">
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 002-2V7a2 2 00-2-2H5a2 2 00-2v12a2 2 002 2z"/></svg>
+      </div>
+      <h2 class="text-2xl font-bold text-white mb-4" data-ar="أدر مواعيدك بسلاسة" data-en="Manage Appointments Seamlessly">أدر مواعيدك بسلاسة</h2>
+      <p class="text-white/60 leading-relaxed" data-ar="منصة سابق تساعدك في تنظيم حجوزاتك وإدارة فريقك ومتابعة مدفوعاتك من مكان واحد." data-en="Saabq helps you organize bookings, manage your team, and track payments from one place.">منصة سابق تساعدك في تنظيم حجوزاتك وإدارة فريقك ومتابعة مدفوعاتك من مكان واحد.</p>
+
+      <!-- Mini Stats -->
+      <div class="grid-cols-3 gap-4 mt-10">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4"><div class="text-2xl font-bold text-white">500+</div><div class="text-xs text-white/50" data-ar="مساحة عمل" data-en="Workspaces">مساحة عمل</div></div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4"><div class="text-2xl font-bold text-amber-400">10K+</div><div class="text-xs text-white/50" data-ar="حجز شهري" data-en="Monthly">حجز شهري</div></div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4"><div class="text-2xl font-bold text-emerald-400">99%</div><div class="text-xs text-white/50" data-ar="رضا العملاء" data-en="Satisfaction">رضا العملاء</div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+  <script>
+    function togglePassword(btn) {
+      const input = btn.parentElement.querySelector('input');
+      input.type = input.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>

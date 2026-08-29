@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملف الشخصي والأمان - سابق كال | Customer Account - Saabq Cal</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#e6f7f8',100:'#ccfbf1',200:'#99f6e4',300:'#5eead4',400:'#2dd4bf',500:'#14b8a6',600:'#0a9099',700:'#11646a',800:'#0e4c6b',900:'#062837' },
+            primary: { DEFAULT:'#0a9099', hover:'#11646a', light:'#169393', subtle:'#e6f7f8' },
+            secondary: { DEFAULT:'#166992', hover:'#0e4c6b' },
+            amber: { 400:'#FCD34D',500:'#F59E0B',600:'#D97706' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Cairo', 'Inter', 'sans-serif'],
+            arabic: ['Cairo', 'Readex Pro', 'Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/lang.js"></script>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] min-h-screen flex-col transition-colors duration-300">
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="sticky top-0 z-40 glass-strong border-b" style="border-color: var(--border-color)">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <div class="flex items-center gap-8">
+          <a href="explore.html" class="flex items-center gap-3">
+            <img src="../assets/images/logo.png" alt="Saabq Cal" class="h-9 sm:h-10 w-auto object-contain">
+            <span class="text-xl font-black gradient-text tracking-tight" data-ar="سابق كال" data-en="Saabq Cal">سابق كال</span>
+          </a>
+          <nav class="hidden md:flex items-center gap-1.5 p-1 bg-[var(--bg-secondary)] rounded-2xl border-[var(--border-color)]">
+            <a href="explore.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="استكشف" data-en="Explore">استكشف</a>
+            <a href="appointments.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="مواعيدي" data-en="My Appointments">مواعيدي</a>
+            <a href="payments.html" class="px-4 py-2 rounded-xl text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors" data-ar="المدفوعات" data-en="Payments">المدفوعات</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button data-lang-toggle class="btn-ghost text-xs font-bold px-3 py-1.5 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)"><span class="lang-label">EN</span></button>
+          <button data-theme-toggle class="btn-ghost p-2 rounded-xl border" style="border-color:var(--border-color);color:var(--text-secondary)">
+            <svg class="icon-sun w-5 h-5" style="display:none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="icon-moon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+          <a href="profile.html" class="flex items-center gap-2 p-1.5 rounded-xl border-[var(--primary)]" style="background:var(--bg-secondary)">
+            <div class="w-8 h-8 rounded-full gradient-brand text-white font-bold text-xs flex items-center justify-center">أ</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-6 lg:py-10 flex-1 w-full space-y-8">
+
+    <!-- ── CONSUMER PROFILE HERO CARD (Apple/Airbnb Style) ── -->
+    <div class="card p-6 sm:p-8 bg-gradient-to-br from-[var(--bg-card)] to-[var(--bg-secondary)] shadow-lg flex-col sm:flex-row sm:items-center justify-between gap-6 border-2 border-[var(--border-color)]">
+      <div class="flex items-center gap-5">
+        <div class="relative">
+          <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl gradient-brand text-white font-black text-3xl sm:text-4xl flex items-center justify-center shadow-xl">
+            أ
+          </div>
+          <button class="absolute -bottom-1 -right-1 w-7 h-7 rounded-xl bg-white dark:bg-slate-800 border-[var(--border-color)] text-xs flex items-center justify-center shadow-md text-[var(--primary)] hover:scale-110 transition-transform" title="تغيير الصورة">
+            📷
+          </button>
+        </div>
+
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-black text-[var(--text-primary)]">أحمد علي الغامدي</h1>
+            <span class="badge-emerald text-xs font-bold">موثق ✓</span>
+          </div>
+          <p class="text-xs text-[var(--text-secondary)] font-mono">ahmed.ghamdi@example.com</p>
+          <div class="flex items-center gap-3 text-xs text-[var(--text-tertiary)] pt-1">
+            <span>📍 الرياض، السعودية</span>
+            <span>•</span>
+            <span>عضو منذ أغسطس 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex sm:flex-col items-center sm:items-end justify-between gap-2 pt-4 sm:pt-0 border-t sm:border-0 border-[var(--border-color)]">
+        <div class="text-start sm:text-end">
+          <span class="text-[10px] text-[var(--text-tertiary)] block">إجمالي المواعيد والحجوزات</span>
+          <span class="text-base font-extrabold text-[var(--primary)]">10 مواعيد</span>
+        </div>
+        <span class="badge-primary text-[10px]">حساب عميل نشط</span>
+      </div>
+    </div>
+
+    <!-- ── SECTION 1: PERSONAL INFORMATION ── -->
+    <div class="card p-6 sm:p-7 space-y-5 shadow-sm">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2.5">
+          <span class="text-lg">👤</span>
+          <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="البيانات الشخصية" data-en="Personal Information">البيانات الشخصية</h2>
+        </div>
+        <button class="btn-primary !py-2 !px-4 !rounded-xl text-xs font-bold shadow-md">
+          <span>حفظ التعديلات</span>
+        </button>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="input-label text-xs font-bold">الاسم الأول</label>
+          <input type="text" value="أحمد" class="input-field !text-xs font-semibold">
+        </div>
+        <div>
+          <label class="input-label text-xs font-bold">الاسم الأخير</label>
+          <input type="text" value="الغامدي" class="input-field !text-xs font-semibold">
+        </div>
+        <div>
+          <label class="input-label text-xs font-bold">البريد الإلكتروني (لتأكيد الحجوزات)</label>
+          <div class="relative">
+            <input type="email" value="ahmed.ghamdi@example.com" class="input-field !text-xs font-mono font-medium pe-20">
+            <span class="absolute end-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-emerald-600">موثق ✓</span>
+          </div>
+        </div>
+        <div>
+          <label class="input-label text-xs font-bold">رقم الجوال لتنبيهات الرسائل والواتساب</label>
+          <div class="relative">
+            <input type="tel" value="0501234567" class="input-field !text-xs font-mono font-medium pe-20">
+            <span class="absolute end-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-emerald-600">موثق ✓</span>
+          </div>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="input-label text-xs font-bold">المدينة الافتراضية</label>
+          <select class="input-field !text-xs font-semibold">
+            <option selected>الرياض</option>
+            <option>جدة</option>
+            <option>الدمام</option>
+            <option>الخبر</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SECTION 2: BIOMETRIC & PASSKEYS SECURITY ── -->
+    <div class="card p-6 sm:p-7 space-y-5 shadow-sm">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2.5">
+          <span class="text-lg">🔐</span>
+          <div>
+            <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="مفاتيح المرور وبصمة الوجه (Passkeys)" data-en="Passkeys & Biometrics">مفاتيح المرور وبصمة الوجه (Passkeys)</h2>
+            <p class="text-xs text-[var(--text-secondary)]">سجل الدخول فوراً بضغطة واحدة عبر Face ID أو Touch ID دون الحاجة لكلمة مرور</p>
+          </div>
+        </div>
+        <button onclick="openModal('passkeyModal')" class="btn-secondary !py-2 !px-3.5 !rounded-xl text-xs font-bold">
+          <span>+ إضافة مفتاح مرور</span>
+        </button>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-[var(--primary-subtle)] text-[var(--primary)] text-xl flex items-center justify-center font-bold">
+            📱
+          </div>
+          <div>
+            <span class="text-xs font-bold text-[var(--text-primary)] block">iPhone 15 Pro (Apple Touch ID / Face ID)</span>
+            <span class="text-[10px] text-[var(--text-tertiary)] font-mono">تم الإنشاء في 28 أغسطس 2026 • آخر استخدام اليوم</span>
+          </div>
+        </div>
+        <span class="badge-emerald text-[10px] font-bold">نشط ومفعل ✓</span>
+      </div>
+    </div>
+
+    <!-- ── SECTION 3: TWO-FACTOR AUTHENTICATION (2FA) ── -->
+    <div class="card p-6 sm:p-7 space-y-5 shadow-sm">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2.5">
+          <span class="text-lg">🛡️</span>
+          <div>
+            <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="التحقق بخطوتين (2FA)" data-en="Two-Factor Authentication (2FA)">التحقق بخطوتين (2FA)</h2>
+            <p class="text-xs text-[var(--text-secondary)]">حماية إضافية لحسابك عبر تطبيقات المصادقة (Google Authenticator)</p>
+          </div>
+        </div>
+        <span class="badge-emerald text-xs font-bold">مفعل 🔒</span>
+      </div>
+
+      <div class="flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)]">
+        <div class="space-y-1">
+          <span class="text-xs font-bold text-[var(--text-primary)] block">تطبيق المصادقة (TOTP Authenticator)</span>
+          <p class="text-[11px] text-[var(--text-secondary)]">تم ربط الحساب برمز QR في 15 أغسطس 2026.</p>
+        </div>
+        <button onclick="openModal('twoFactorModal')" class="btn-ghost !py-2 !px-3 rounded-xl border text-xs font-bold text-[var(--text-secondary)]" style="border-color:var(--border-color)">
+          <span>إعادة تكوين الرمز</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ── SECTION 4: NOTIFICATION PREFERENCES ── -->
+    <div class="card p-6 sm:p-7 space-y-4 shadow-sm">
+      <div class="flex items-center gap-2.5 pb-3 border-border-[var(--border-color)]">
+        <span class="text-lg">🔔</span>
+        <h2 class="text-base font-bold text-[var(--text-primary)]" data-ar="تفضيلات تنبيهات المواعيد" data-en="Notification Preferences">تفضيلات تنبيهات المواعيد</h2>
+      </div>
+
+      <div class="space-y-3">
+        <label class="flex items-center justify-between p-3 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] cursor-pointer">
+          <div>
+            <span class="text-xs font-bold text-[var(--text-primary)] block">💬 رسائل وتذكير واتساب الفوري</span>
+            <span class="text-[11px] text-[var(--text-secondary)]">استلام تذكرة الحجز ورابط الدخول والتذكير قبل الموعد بـ ساعتين</span>
+          </div>
+          <input type="checkbox" checked class="w-4 h-4 rounded text-[var(--primary)] focus:ring-[var(--primary)]">
+        </label>
+
+        <label class="flex items-center justify-between p-3 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] cursor-pointer">
+          <div>
+            <span class="text-xs font-bold text-[var(--text-primary)] block">📲 رسائل SMS النصية</span>
+            <span class="text-[11px] text-[var(--text-secondary)]">رمز التحقق وإشعارات تأكيد الحجز وتأكيد التحويل البنكي</span>
+          </div>
+          <input type="checkbox" checked class="w-4 h-4 rounded text-[var(--primary)] focus:ring-[var(--primary)]">
+        </label>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════ PASSKEY BIOMETRIC SETUP MODAL ═══════════ -->
+  <div id="passkeyModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🔐</span>
+          <h3 class="font-bold text-base text-[var(--text-primary)]">إضافة مفتاح مرور جديد (Passkey)</h3>
+        </div>
+        <button onclick="closeModal('passkeyModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl bg-[var(--bg-secondary)] border-[var(--border-color)] space-y-3">
+        <div class="w-16 h-16 rounded-full bg-[var(--primary-subtle)] text-[var(--primary)] text-3xl flex items-center justify-center mx-auto shadow-md animate-pulse">
+          👆
+        </div>
+        <h4 class="font-bold text-sm text-[var(--text-primary)]">استخدم Face ID أو Touch ID</h4>
+        <p class="text-xs text-[var(--text-secondary)] leading-relaxed">
+          سيتم حفظ مفتاح المرور المشفر بأمان على جهازك ومزامنته مع محفظة iCloud أو Google Password Manager لتسجيل الدخول السريع في أي وقت.
+        </p>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('passkeyModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إلغاء</button>
+        <button type="button" onclick="closeModal('passkeyModal'); alert('تم تسجيل مفتاح المرور بنجاح على هذا الجهاز! ✓')" class="btn-primary !rounded-xl text-xs py-2 px-5 font-bold shadow-md">المتابعة والتسجيل 🚀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 2FA SETUP MODAL ═══════════ -->
+  <div id="twoFactorModal" class="modal-backdrop hidden">
+    <div class="modal-card p-6 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-border-[var(--border-color)]">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🛡️</span>
+          <h3 class="font-bold text-base text-[var(--text-primary)]">إعداد التحقق بخطوتين (2FA)</h3>
+        </div>
+        <button onclick="closeModal('twoFactorModal')" class="p-1 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-[var(--text-tertiary)]">✕</button>
+      </div>
+
+      <div class="space-y-3 text-xs text-[var(--text-secondary)]">
+        <p>1. امسح رمز الـ QR التالي عبر تطبيق المصادقة الخاص بك (Google Authenticator أو 1Password):</p>
+        <div class="w-36 h-36 mx-auto bg-white p-2 rounded-2xl border shadow-sm flex items-center justify-center">
+          <svg class="w-full h-full text-black" viewBox="0 0 24 24" fill="currentColor"><path d="M2 2h8v8H2zm2 2v4h4V4zm8-2h8v8h-8zm2 2v4h4V4zM2 14h8v8H2zm2 2v4h4v-4zm14-2h4v4h-4zm-6 0h4v2h-4zm2 4h4v4h-4zm4 2h2v2h-2zm-6 0h2v2h-2z"/></svg>
+        </div>
+        <div class="text-center">
+          <span class="text-[10px] text-[var(--text-tertiary)]">الرمز السري اليدوي:</span>
+          <code class="block font-mono font-bold text-xs text-[var(--primary)] select-all mt-0.5">SAABQ-CAL-K948-2109-SEC</code>
+        </div>
+        <div class="pt-2">
+          <label class="input-label text-xs font-bold">2. أدخل الرمز المكون من 6 أرقام للتأكيد:</label>
+          <input type="text" maxlength="6" placeholder="000000" class="input-field text-center font-mono text-base font-black tracking-widest">
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-3 border-t border-[var(--border-color)]">
+        <button type="button" onclick="closeModal('twoFactorModal')" class="btn-secondary !rounded-xl text-xs py-2 px-4">إلغاء</button>
+        <button type="button" onclick="closeModal('twoFactorModal'); alert('تم تفعيل التحقق بخطوتين بنجاح 🔒')" class="btn-primary !rounded-xl text-xs py-2 px-5 font-bold shadow-md">تأكيد وتفعيل</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>
